@@ -1,0 +1,44 @@
+{
+  "start": 19,
+  "body": [
+    {
+      "start": 21,
+      "expression": {
+        "start": 21,
+        "callee": {
+          "start": 21,
+          "object": {
+            "start": 21,
+            "name": "console",
+            "type": "Identifier",
+            "end": 28
+          },
+          "property": {
+            "start": 29,
+            "name": "log",
+            "type": "Identifier",
+            "end": 32
+          },
+          "computed": false,
+          "type": "MemberExpression",
+          "end": 32
+        },
+        "arguments": [
+          {
+            "start": 33,
+            "value": "hello!",
+            "raw": "\"hello!\"",
+            "type": "Literal",
+            "end": 41
+          }
+        ],
+        "type": "CallExpression",
+        "end": 42
+      },
+      "type": "ExpressionStatement",
+      "end": 43
+    }
+  ],
+  "type": "Program",
+  "end": 44
+}

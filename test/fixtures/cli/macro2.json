@@ -1,0 +1,49 @@
+{
+  "start": 0,
+  "body": [
+    {
+      "start": 0,
+      "declarations": [
+        {
+          "start": 4,
+          "id": {
+            "start": 4,
+            "name": "foo",
+            "type": "Identifier",
+            "end": 7
+          },
+          "init": {
+            "start": 10,
+            "name": "FOO",
+            "type": "Identifier",
+            "end": 13
+          },
+          "type": "VariableDeclarator",
+          "end": 13
+        },
+        {
+          "start": 19,
+          "id": {
+            "start": 19,
+            "name": "bar",
+            "type": "Identifier",
+            "end": 22
+          },
+          "init": {
+            "start": 25,
+            "name": "BAR",
+            "type": "Identifier",
+            "end": 28
+          },
+          "type": "VariableDeclarator",
+          "end": 28
+        }
+      ],
+      "kind": "var",
+      "type": "VariableDeclaration",
+      "end": 29
+    }
+  ],
+  "type": "Program",
+  "end": 30
+}

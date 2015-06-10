@@ -1,0 +1,33 @@
+{
+  "start": 0,
+  "body": [
+    {
+      "start": 0,
+      "declarations": [
+        {
+          "start": 4,
+          "id": {
+            "start": 4,
+            "name": "g",
+            "type": "Identifier",
+            "end": 5
+          },
+          "init": {
+            "start": 8,
+            "value": 27,
+            "raw": "27",
+            "type": "Literal",
+            "end": 10
+          },
+          "type": "VariableDeclarator",
+          "end": 10
+        }
+      ],
+      "kind": "var",
+      "type": "VariableDeclaration",
+      "end": 10
+    }
+  ],
+  "type": "Program",
+  "end": 11
+}

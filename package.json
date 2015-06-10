@@ -1,0 +1,65 @@
+{
+  "name": "acorn-objj",
+  "description": "JavaScript (ECMAScript) and Objective-J parser with GNU C-compliant preprocessor.",
+  "homepage": "https://github.com/cappuccino/acorn-objj",
+  "version": "1.0.0-beta.1",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "contributors": [
+    {
+      "name": "Martin Carlberg",
+      "email": "martin@carlberg.org",
+      "web": "http://carlberg.org"
+    },
+    {
+      "name": "Aparajita Fishman",
+      "email": "aparajita@aparajita.com",
+      "web": "http://www.aparajita.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cappuccino/acorn-objj.git"
+  },
+  "bugs": "https://github.com/cappuccino/acorn-objj/issues",
+  "license": "MIT",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "bin": {
+    "acorn_objj": "./bin/acorn_objj.js"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^0.13.2",
+    "gulp-istanbul": "^0.10.0",
+    "gulp-jscs": "^1.6.0",
+    "gulp-jscs-stylish": "^1.1.0",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-mocha": "^2.1.1",
+    "mocha": "^2.2.5",
+    "path-exists": "^1.0.0",
+    "run-sequence": "^1.1.0"
+  },
+  "dependencies": {
+    "acorn": "^1.2.2",
+    "chalk": "^1.0.0",
+    "optionator": "^0.6.0"
+  },
+  "keywords": [
+    "JavaScript",
+    "ECMAScript",
+    "Objective-J",
+    "objj",
+    "acorn",
+    "Cappuccino",
+    "parser",
+    "preprocessor",
+    "pre-processor",
+    "pre processor",
+    "processor"
+  ]
+}
