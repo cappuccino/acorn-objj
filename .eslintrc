@@ -146,8 +146,8 @@
             4
         ],
         "max-nested-callbacks": [
-            2,
-            2
+            3,
+            3
         ],
         "max-params": [
             0,

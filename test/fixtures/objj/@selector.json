@@ -1,0 +1,83 @@
+{
+  "start": 0,
+  "body": [
+    {
+      "start": 0,
+      "declarations": [
+        {
+          "start": 4,
+          "id": {
+            "start": 4,
+            "name": "s1",
+            "type": "Identifier",
+            "end": 6
+          },
+          "init": {
+            "start": 9,
+            "selector": "foo",
+            "type": "objj_SelectorLiteralExpression",
+            "end": 23
+          },
+          "type": "VariableDeclarator",
+          "end": 23
+        },
+        {
+          "start": 29,
+          "id": {
+            "start": 29,
+            "name": "s2",
+            "type": "Identifier",
+            "end": 31
+          },
+          "init": {
+            "start": 34,
+            "selector": "foo:",
+            "type": "objj_SelectorLiteralExpression",
+            "end": 49
+          },
+          "type": "VariableDeclarator",
+          "end": 49
+        },
+        {
+          "start": 55,
+          "id": {
+            "start": 55,
+            "name": "s3",
+            "type": "Identifier",
+            "end": 57
+          },
+          "init": {
+            "start": 60,
+            "selector": "foo:bar",
+            "type": "objj_SelectorLiteralExpression",
+            "end": 78
+          },
+          "type": "VariableDeclarator",
+          "end": 78
+        },
+        {
+          "start": 84,
+          "id": {
+            "start": 84,
+            "name": "s4",
+            "type": "Identifier",
+            "end": 86
+          },
+          "init": {
+            "start": 89,
+            "selector": "foo:bar:",
+            "type": "objj_SelectorLiteralExpression",
+            "end": 108
+          },
+          "type": "VariableDeclarator",
+          "end": 108
+        }
+      ],
+      "kind": "var",
+      "type": "VariableDeclaration",
+      "end": 109
+    }
+  ],
+  "type": "Program",
+  "end": 110
+}
