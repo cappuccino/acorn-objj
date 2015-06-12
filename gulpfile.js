@@ -4,7 +4,7 @@ var del = require("del"),
     fs = require("fs"),
     gulp = require("gulp"),
     loadPlugins = require("gulp-load-plugins"),
-    parse = require("./lib/cli").parseFileToString,
+    parse = require("./lib/parse").parseFileToString,
     path = require("path"),
     run = require("./test/lib/test-utils").run,
     runSequence = require("run-sequence");
@@ -94,6 +94,7 @@ gulp.task("generate-fixtures", function()
     var through = require("through2").obj;
 
     return gulp.src(["test/fixtures/**/*.j"])
+        .pipe($.newer({ dest: "test/fixtures", ext: ".json" }))
         .pipe(through(parseFixture))
         .pipe($.rename({ extname: ".json" }))
         .pipe(gulp.dest("test/fixtures"));
@@ -114,5 +115,5 @@ gulp.task("mocha", function()
 
 gulp.task("test", function(cb)
 {
-    runSequence("lint", "regenerate-fixtures", "mocha", cb);
+    runSequence("lint", "generate-fixtures", "mocha", cb);
 });

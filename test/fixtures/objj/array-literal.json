@@ -1,0 +1,54 @@
+{
+  "start": 0,
+  "body": [
+    {
+      "start": 0,
+      "declarations": [
+        {
+          "start": 4,
+          "id": {
+            "start": 4,
+            "name": "a",
+            "type": "Identifier",
+            "end": 5
+          },
+          "init": {
+            "start": 8,
+            "elements": [
+              {
+                "start": 19,
+                "value": "one",
+                "raw": "\"one\"",
+                "type": "Literal",
+                "end": 24
+              },
+              {
+                "start": 34,
+                "value": 1,
+                "raw": "1",
+                "type": "Literal",
+                "end": 35
+              },
+              {
+                "start": 45,
+                "value": "two",
+                "raw": "\"two\"",
+                "type": "Literal",
+                "end": 50
+              }
+            ],
+            "type": "objj_ArrayLiteral",
+            "end": 56
+          },
+          "type": "VariableDeclarator",
+          "end": 56
+        }
+      ],
+      "kind": "var",
+      "type": "VariableDeclaration",
+      "end": 57
+    }
+  ],
+  "type": "Program",
+  "end": 58
+}

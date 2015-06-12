@@ -2,7 +2,7 @@
 
 var chai = require("chai"),
     path = require("path"),
-    parse = require("./lib/test-utils").parseFileToString;
+    parse = require("../lib/parse").parseFileToString;
 
 chai.should();
 require("./lib/chai");
