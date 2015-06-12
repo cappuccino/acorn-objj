@@ -4,10 +4,10 @@ var del = require("del"),
     fs = require("fs"),
     gulp = require("gulp"),
     loadPlugins = require("gulp-load-plugins"),
+    parse = require("./lib/cli").parseFileToString,
     path = require("path"),
     run = require("./test/lib/test-utils").run,
-    runSequence = require("run-sequence"),
-    stylish = require("gulp-jscs-stylish");
+    runSequence = require("run-sequence");
 
 // jscs: disable requireMultipleVarDecl
 
@@ -41,7 +41,7 @@ gulp.task("lint:jscs", function()
     return gulp.src(sourceFiles)
         .pipe($.jscs())
         .on("error", function() {})
-        .pipe(stylish());
+        .pipe($.jscsStylish());
 });
 
 gulp.task("lint", function(cb)
@@ -53,9 +53,16 @@ gulp.task("lint", function(cb)
 
 var fixturesPath;
 
-gulp.task("generate-fixtures", function(done)
+function parseFixture(file, encoding, cb)
 {
-    fixturesPath = path.resolve("test/fixtures/cli");
+    console.log(path.relative(fixturesPath, file.path));
+    file.contents = new Buffer(parse(file.path));
+    cb(null, file);
+}
+
+gulp.task("generate-fixtures", function()
+{
+    fixturesPath = path.resolve("test/fixtures");
 
     var cliFixtures = [
             [["--allow-hash-bang"], "hash-bang.js"],
@@ -76,15 +83,20 @@ gulp.task("generate-fixtures", function(done)
         if (!dest)
             dest = path.basename(source, path.extname(source)) + ".json";
 
-        args.push(path.join(fixturesPath, source));
+        args.push(path.join(fixturesPath, "cli", source));
 
         var output = run(args, { parseOptions: { slice: 0 }}).output;
 
-        fs.writeFileSync(path.join(fixturesPath, dest), output);
+        fs.writeFileSync(path.join(fixturesPath, "cli", dest), output);
         console.log("cli/" + dest);
     });
 
-    done();
+    var through = require("through2").obj;
+
+    return gulp.src(["test/fixtures/**/*.j"])
+        .pipe(through(parseFixture))
+        .pipe($.rename({ extname: ".json" }))
+        .pipe(gulp.dest("test/fixtures"));
 });
 
 gulp.task("regenerate-fixtures", function(cb)
@@ -94,29 +106,10 @@ gulp.task("regenerate-fixtures", function(cb)
 
 // Tests
 
-gulp.task("istanbul", function(cb)
-{
-    return gulp.src("lib/*.js")
-        .pipe($.istanbul())
-        .pipe($.istanbul.hookRequire());
-});
-
 gulp.task("mocha", function()
 {
     return gulp.src("test/*.js")
         .pipe($.mocha({ reporter: "dot" }));
-});
-
-gulp.task("cover", ["istanbul"], function()
-{
-    //runSequence("istanbul");
-
-    return gulp.src("test/*.js")
-        .pipe($.mocha({ reporter: "dot" }))
-        .pipe($.istanbul.writeReports({
-            dir: "test/coverage",
-            reporters: ["lcov", "html", "text"]
-        }));
 });
 
 gulp.task("test", function(cb)
