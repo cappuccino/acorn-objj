@@ -1,0 +1,55 @@
+{
+  "start": 0,
+  "body": [
+    {
+      "start": 0,
+      "expression": {
+        "start": 0,
+        "id": {
+          "start": 9,
+          "name": "MyButtonType",
+          "type": "Identifier",
+          "end": 21
+        },
+        "type": "objj_TypeDefStatement",
+        "end": 21
+      },
+      "type": "ExpressionStatement",
+      "end": 21
+    },
+    {
+      "start": 22,
+      "expression": {
+        "start": 22,
+        "id": {
+          "start": 29,
+          "name": "CPTextView",
+          "type": "Identifier",
+          "end": 39
+        },
+        "type": "objj_ClassStatement",
+        "end": 39
+      },
+      "type": "ExpressionStatement",
+      "end": 39
+    },
+    {
+      "start": 40,
+      "expression": {
+        "start": 40,
+        "id": {
+          "start": 48,
+          "name": "FooBar",
+          "type": "Identifier",
+          "end": 54
+        },
+        "type": "objj_GlobalStatement",
+        "end": 54
+      },
+      "type": "ExpressionStatement",
+      "end": 54
+    }
+  ],
+  "type": "Program",
+  "end": 55
+}

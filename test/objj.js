@@ -98,11 +98,21 @@ describe("Objective-J plugin", function()
         });
     });
 
-    describe("@class", function()
+    describe("Type declarations", function()
     {
-        it("should generate objj_ClassStatement nodes", function()
+        it("@class should generate objj_ClassStatement nodes", function()
         {
-            testFixture("@class");
+            testFixture("type-declaration");
+        });
+
+        it("@global should generate objj_GlobalStatement nodes", function()
+        {
+            testFixture("type-declaration");
+        });
+
+        it("@typedef should generate objj_TypeDefStatement nodes", function()
+        {
+            testFixture("type-declaration");
         });
     });
 });
