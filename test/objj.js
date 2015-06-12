@@ -24,6 +24,14 @@ function makeParser(source)
 
 describe("Objective-J plugin", function()
 {
+    describe("@ strings", function()
+    {
+        it("should generate Literal string nodes", function()
+        {
+            testFixture("string");
+        });
+    });
+
     describe("@[]", function()
     {
         it("should generate objj_ArrayLiteral nodes", function()
@@ -87,6 +95,14 @@ describe("Objective-J plugin", function()
         {
             makeParser("var s = @selector(foo})")
                 .should.throw(SyntaxError, /^Expected ':'/);
+        });
+    });
+
+    describe("@class", function()
+    {
+        it("should generate objj_ClassStatement nodes", function()
+        {
+            testFixture("@class");
         });
     });
 });

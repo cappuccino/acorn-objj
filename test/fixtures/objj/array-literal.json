@@ -18,37 +18,37 @@
               {
                 "start": 19,
                 "value": "one",
-                "raw": "\"one\"",
+                "raw": "@\"one\"",
                 "type": "Literal",
-                "end": 24
+                "end": 25
               },
               {
-                "start": 34,
+                "start": 35,
                 "value": 1,
                 "raw": "1",
                 "type": "Literal",
-                "end": 35
+                "end": 36
               },
               {
-                "start": 45,
+                "start": 46,
                 "value": "two",
                 "raw": "\"two\"",
                 "type": "Literal",
-                "end": 50
+                "end": 51
               }
             ],
             "type": "objj_ArrayLiteral",
-            "end": 56
+            "end": 57
           },
           "type": "VariableDeclarator",
-          "end": 56
+          "end": 57
         }
       ],
       "kind": "var",
       "type": "VariableDeclaration",
-      "end": 57
+      "end": 58
     }
   ],
   "type": "Program",
-  "end": 58
+  "end": 59
 }

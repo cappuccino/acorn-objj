@@ -1,0 +1,51 @@
+{
+  "start": 0,
+  "body": [
+    {
+      "start": 0,
+      "declarations": [
+        {
+          "start": 4,
+          "id": {
+            "start": 4,
+            "name": "s",
+            "type": "Identifier",
+            "end": 5
+          },
+          "init": {
+            "start": 8,
+            "value": "foo",
+            "raw": "@\"foo\"",
+            "type": "Literal",
+            "end": 14
+          },
+          "type": "VariableDeclarator",
+          "end": 14
+        },
+        {
+          "start": 20,
+          "id": {
+            "start": 20,
+            "name": "f",
+            "type": "Identifier",
+            "end": 21
+          },
+          "init": {
+            "start": 24,
+            "value": "foo",
+            "raw": "\"foo\"",
+            "type": "Literal",
+            "end": 29
+          },
+          "type": "VariableDeclarator",
+          "end": 29
+        }
+      ],
+      "kind": "var",
+      "type": "VariableDeclaration",
+      "end": 30
+    }
+  ],
+  "type": "Program",
+  "end": 31
+}
