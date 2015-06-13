@@ -1,0 +1,43 @@
+{
+  "start": 0,
+  "body": [
+    {
+      "start": 0,
+      "expression": {
+        "start": 0,
+        "isLocal": true,
+        "filename": {
+          "start": 8,
+          "value": "foo/bar.j",
+          "raw": "\"foo/bar.j\"",
+          "type": "Literal",
+          "end": 19
+        },
+        "type": "objj_ImportStatement",
+        "end": 19
+      },
+      "type": "ExpressionStatement",
+      "end": 19
+    },
+    {
+      "start": 20,
+      "expression": {
+        "start": 20,
+        "isLocal": false,
+        "filename": {
+          "start": 28,
+          "value": "Frameworks/Foo.j",
+          "raw": "<Frameworks/Foo.j>",
+          "type": "Literal",
+          "end": 46
+        },
+        "type": "objj_ImportStatement",
+        "end": 46
+      },
+      "type": "ExpressionStatement",
+      "end": 46
+    }
+  ],
+  "type": "Program",
+  "end": 47
+}

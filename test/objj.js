@@ -66,6 +66,29 @@ describe("Objective-J plugin", function()
         });
     });
 
+    describe("@import", function()
+    {
+        it("should generate objj_ImportStatement nodes", function()
+        {
+            testFixture("@import");
+        });
+
+        it("should fail for unterminated filenames", function()
+        {
+            makeParser("@import \"foo.j\n")
+                .should.throw(SyntaxError, /^Unterminated string constant/);
+
+            makeParser("@import \"foo.j")
+                .should.throw(SyntaxError, /^Unterminated string constant/);
+
+            makeParser("@import <foo.j\n")
+                .should.throw(SyntaxError, /^Unterminated import statement/);
+
+            makeParser("@import <foo.j")
+                .should.throw(SyntaxError, /^Unterminated import statement/);
+        });
+    });
+
     describe("@selector", function()
     {
         it("should generate objj_SelectorLiteralExpression nodes", function()
