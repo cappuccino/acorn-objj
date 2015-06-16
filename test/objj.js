@@ -89,6 +89,52 @@ describe("Objective-J plugin", function()
         });
     });
 
+    describe("@ref", function()
+    {
+        it("should generate objj_Reference nodes", function()
+        {
+            testFixture("@ref");
+        });
+
+        it("should generate an error with an empty reference", function()
+        {
+            makeParser("var r = @ref()")
+                .should.throw(SyntaxError, /^Empty reference/);
+        });
+
+        it("should generate an error if reference is not surrounded by parens", function()
+        {
+            makeParser("var r = @ref[foo)")
+                .should.throw(SyntaxError, /^Expected '\('/);
+
+            makeParser("var r = @ref(foo]")
+                .should.throw(SyntaxError, /^Expected closing '\)'/);
+        });
+    });
+
+    describe("@deref", function()
+    {
+        it("should generate objj_Dereference nodes", function()
+        {
+            testFixture("@deref");
+        });
+
+        it("should generate an error with an empty dereference", function()
+        {
+            makeParser("@deref()")
+                .should.throw(SyntaxError, /^Empty dereference/);
+        });
+
+        it("should generate an error if reference is not surrounded by parens", function()
+        {
+            makeParser("@deref[foo)")
+                .should.throw(SyntaxError, /^Expected '\('/);
+
+            makeParser("@deref(foo]")
+                .should.throw(SyntaxError, /^Expected closing '\)'/);
+        });
+    });
+
     describe("@selector", function()
     {
         it("should generate objj_SelectorLiteralExpression nodes", function()

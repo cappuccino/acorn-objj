@@ -1,0 +1,57 @@
+{
+  "start": 0,
+  "body": [
+    {
+      "start": 0,
+      "id": {
+        "start": 9,
+        "name": "test",
+        "type": "Identifier",
+        "end": 13
+      },
+      "params": [
+        {
+          "start": 14,
+          "name": "ref",
+          "type": "Identifier",
+          "end": 17
+        }
+      ],
+      "body": {
+        "start": 19,
+        "body": [
+          {
+            "start": 25,
+            "expression": {
+              "start": 25,
+              "operator": "++",
+              "prefix": true,
+              "argument": {
+                "start": 27,
+                "element": {
+                  "start": 34,
+                  "name": "ref",
+                  "type": "Identifier",
+                  "end": 37
+                },
+                "type": "objj_Dereference",
+                "end": 38
+              },
+              "type": "UpdateExpression",
+              "end": 38
+            },
+            "type": "ExpressionStatement",
+            "end": 39
+          }
+        ],
+        "type": "BlockStatement",
+        "end": 41
+      },
+      "expression": false,
+      "type": "FunctionDeclaration",
+      "end": 41
+    }
+  ],
+  "type": "Program",
+  "end": 42
+}
