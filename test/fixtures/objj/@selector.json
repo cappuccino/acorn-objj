@@ -14,7 +14,9 @@
           },
           "init": {
             "start": 9,
-            "selector": "foo",
+            "objj": {
+              "selector": "foo"
+            },
             "type": "objj_SelectorLiteralExpression",
             "end": 23
           },
@@ -31,7 +33,9 @@
           },
           "init": {
             "start": 34,
-            "selector": "foo:",
+            "objj": {
+              "selector": "foo:"
+            },
             "type": "objj_SelectorLiteralExpression",
             "end": 49
           },
@@ -48,7 +52,9 @@
           },
           "init": {
             "start": 60,
-            "selector": "foo:bar",
+            "objj": {
+              "selector": "foo:bar"
+            },
             "type": "objj_SelectorLiteralExpression",
             "end": 78
           },
@@ -65,7 +71,9 @@
           },
           "init": {
             "start": 89,
-            "selector": "foo:bar:",
+            "objj": {
+              "selector": "foo:bar:"
+            },
             "type": "objj_SelectorLiteralExpression",
             "end": 108
           },

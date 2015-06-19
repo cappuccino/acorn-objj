@@ -87,6 +87,12 @@ describe("Objective-J plugin", function()
             makeParser("@import <foo.j")
                 .should.throw(SyntaxError, /^Unterminated import statement/);
         });
+
+        it("should fail for malformed filenames", function()
+        {
+            makeParser("@import >foo.j<")
+                .should.throw(SyntaxError, /^Expected " or < after @import/);
+        });
     });
 
     describe("@ref", function()

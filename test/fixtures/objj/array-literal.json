@@ -14,29 +14,31 @@
           },
           "init": {
             "start": 8,
-            "elements": [
-              {
-                "start": 19,
-                "value": "one",
-                "raw": "@\"one\"",
-                "type": "Literal",
-                "end": 25
-              },
-              {
-                "start": 35,
-                "value": 1,
-                "raw": "1",
-                "type": "Literal",
-                "end": 36
-              },
-              {
-                "start": 46,
-                "value": "two",
-                "raw": "\"two\"",
-                "type": "Literal",
-                "end": 51
-              }
-            ],
+            "objj": {
+              "elements": [
+                {
+                  "start": 19,
+                  "value": "one",
+                  "raw": "@\"one\"",
+                  "type": "Literal",
+                  "end": 25
+                },
+                {
+                  "start": 35,
+                  "value": 1,
+                  "raw": "1",
+                  "type": "Literal",
+                  "end": 36
+                },
+                {
+                  "start": 46,
+                  "value": "two",
+                  "raw": "\"two\"",
+                  "type": "Literal",
+                  "end": 51
+                }
+              ]
+            },
             "type": "objj_ArrayLiteral",
             "end": 57
           },

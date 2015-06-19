@@ -32,11 +32,13 @@
           },
           "init": {
             "start": 23,
-            "element": {
-              "start": 28,
-              "name": "foo",
-              "type": "Identifier",
-              "end": 31
+            "objj": {
+              "ref": {
+                "start": 28,
+                "name": "foo",
+                "type": "Identifier",
+                "end": 31
+              }
             },
             "type": "objj_Reference",
             "end": 32

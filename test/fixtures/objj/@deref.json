@@ -28,11 +28,13 @@
               "prefix": true,
               "argument": {
                 "start": 27,
-                "element": {
-                  "start": 34,
-                  "name": "ref",
-                  "type": "Identifier",
-                  "end": 37
+                "objj": {
+                  "ref": {
+                    "start": 34,
+                    "name": "ref",
+                    "type": "Identifier",
+                    "end": 37
+                  }
                 },
                 "type": "objj_Dereference",
                 "end": 38

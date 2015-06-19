@@ -5,11 +5,13 @@
       "start": 0,
       "expression": {
         "start": 0,
-        "id": {
-          "start": 9,
-          "name": "MyButtonType",
-          "type": "Identifier",
-          "end": 21
+        "objj": {
+          "id": {
+            "start": 9,
+            "name": "MyButtonType",
+            "type": "Identifier",
+            "end": 21
+          }
         },
         "type": "objj_TypeDefStatement",
         "end": 21
@@ -21,11 +23,13 @@
       "start": 22,
       "expression": {
         "start": 22,
-        "id": {
-          "start": 29,
-          "name": "CPTextView",
-          "type": "Identifier",
-          "end": 39
+        "objj": {
+          "id": {
+            "start": 29,
+            "name": "CPTextView",
+            "type": "Identifier",
+            "end": 39
+          }
         },
         "type": "objj_ClassStatement",
         "end": 39
@@ -37,11 +41,13 @@
       "start": 40,
       "expression": {
         "start": 40,
-        "id": {
-          "start": 48,
-          "name": "FooBar",
-          "type": "Identifier",
-          "end": 54
+        "objj": {
+          "id": {
+            "start": 48,
+            "name": "FooBar",
+            "type": "Identifier",
+            "end": 54
+          }
         },
         "type": "objj_GlobalStatement",
         "end": 54

@@ -14,87 +14,89 @@
           },
           "init": {
             "start": 8,
-            "keys": [
-              {
-                "start": 19,
-                "value": "one",
-                "raw": "\"one\"",
-                "type": "Literal",
-                "end": 24
-              },
-              {
-                "start": 37,
-                "value": "two",
-                "raw": "\"two\"",
-                "type": "Literal",
-                "end": 42
-              },
-              {
-                "start": 80,
-                "value": "three",
-                "raw": "\"three\"",
-                "type": "Literal",
-                "end": 87
-              },
-              {
-                "start": 100,
-                "value": "four",
-                "raw": "\"four\"",
-                "type": "Literal",
-                "end": 106
-              }
-            ],
-            "values": [
-              {
-                "start": 26,
-                "value": 7,
-                "raw": "7",
-                "type": "Literal",
-                "end": 27
-              },
-              {
-                "start": 44,
-                "elements": [
-                  {
-                    "start": 46,
-                    "value": "buckle",
-                    "raw": "\"buckle\"",
-                    "type": "Literal",
-                    "end": 54
-                  },
-                  {
-                    "start": 56,
-                    "value": "my",
-                    "raw": "\"my\"",
-                    "type": "Literal",
-                    "end": 60
-                  },
-                  {
-                    "start": 62,
-                    "value": "shoe",
-                    "raw": "\"shoe\"",
-                    "type": "Literal",
-                    "end": 68
-                  }
-                ],
-                "type": "ArrayExpression",
-                "end": 70
-              },
-              {
-                "start": 89,
-                "value": 3,
-                "raw": "3",
-                "type": "Literal",
-                "end": 90
-              },
-              {
-                "start": 108,
-                "value": "shut the door",
-                "raw": "\"shut the door\"",
-                "type": "Literal",
-                "end": 123
-              }
-            ],
+            "objj": {
+              "keys": [
+                {
+                  "start": 19,
+                  "value": "one",
+                  "raw": "\"one\"",
+                  "type": "Literal",
+                  "end": 24
+                },
+                {
+                  "start": 37,
+                  "value": "two",
+                  "raw": "\"two\"",
+                  "type": "Literal",
+                  "end": 42
+                },
+                {
+                  "start": 80,
+                  "value": "three",
+                  "raw": "\"three\"",
+                  "type": "Literal",
+                  "end": 87
+                },
+                {
+                  "start": 100,
+                  "value": "four",
+                  "raw": "\"four\"",
+                  "type": "Literal",
+                  "end": 106
+                }
+              ],
+              "values": [
+                {
+                  "start": 26,
+                  "value": 7,
+                  "raw": "7",
+                  "type": "Literal",
+                  "end": 27
+                },
+                {
+                  "start": 44,
+                  "elements": [
+                    {
+                      "start": 46,
+                      "value": "buckle",
+                      "raw": "\"buckle\"",
+                      "type": "Literal",
+                      "end": 54
+                    },
+                    {
+                      "start": 56,
+                      "value": "my",
+                      "raw": "\"my\"",
+                      "type": "Literal",
+                      "end": 60
+                    },
+                    {
+                      "start": 62,
+                      "value": "shoe",
+                      "raw": "\"shoe\"",
+                      "type": "Literal",
+                      "end": 68
+                    }
+                  ],
+                  "type": "ArrayExpression",
+                  "end": 70
+                },
+                {
+                  "start": 89,
+                  "value": 3,
+                  "raw": "3",
+                  "type": "Literal",
+                  "end": 90
+                },
+                {
+                  "start": 108,
+                  "value": "shut the door",
+                  "raw": "\"shut the door\"",
+                  "type": "Literal",
+                  "end": 123
+                }
+              ]
+            },
             "type": "objj_DictionaryLiteral",
             "end": 129
           },
