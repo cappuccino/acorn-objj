@@ -27,7 +27,6 @@
         "beforeOpeningRoundBrace": true
     },
     "disallowSpacesInsideParentheses": true,
-    "disallowTrailingWhitespace": true,
     "disallowYodaConditions": true,
     "maximumLineLength": {
         "value": 120,
