@@ -79,6 +79,21 @@ describe("cli", function()
             .should.equalFixture("cli/locations.json");
     });
 
+    it("should fail on Objective-J code with --no-objj", function()
+    {
+        var result = run(["--no-objj", path.join(dir, "objj.j")]);
+
+        result.output.should.equal(executable + ": error: Unexpected character '@' (1:0)\n");
+        result.exitCode.should.equal(1);
+    });
+
+    it("should not bother to activate the objj plugin with --no-objj and --no-preprocessor", function()
+    {
+        // This is just for code coverage
+        run(["--no-objj", "--no-preprocessor", path.join(dir, "compact.js")]).output
+            .should.equalFixture("cli/pretty.json");
+    });
+
     it("should not generate any output with --silent", function()
     {
         var result = run(["--silent", path.join(dir, "compact.js")]);

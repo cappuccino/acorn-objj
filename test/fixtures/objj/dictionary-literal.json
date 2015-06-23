@@ -102,13 +102,49 @@
           },
           "type": "VariableDeclarator",
           "end": 129
+        },
+        {
+          "start": 162,
+          "id": {
+            "start": 162,
+            "name": "d2",
+            "type": "Identifier",
+            "end": 164
+          },
+          "init": {
+            "start": 167,
+            "objj": {
+              "keys": [
+                {
+                  "start": 170,
+                  "value": "one",
+                  "raw": "\"one\"",
+                  "type": "Literal",
+                  "end": 175
+                }
+              ],
+              "values": [
+                {
+                  "start": 177,
+                  "value": 1,
+                  "raw": "1",
+                  "type": "Literal",
+                  "end": 178
+                }
+              ]
+            },
+            "type": "objj_DictionaryLiteral",
+            "end": 181
+          },
+          "type": "VariableDeclarator",
+          "end": 181
         }
       ],
       "kind": "var",
       "type": "VariableDeclaration",
-      "end": 130
+      "end": 182
     }
   ],
   "type": "Program",
-  "end": 131
+  "end": 183
 }

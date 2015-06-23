@@ -1,0 +1,21 @@
+{
+  "start": 0,
+  "body": [
+    {
+      "start": 0,
+      "objj": {
+        "name": {
+          "start": 16,
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 19
+        },
+        "body": []
+      },
+      "type": "objj_ClassDeclaration",
+      "end": 24
+    }
+  ],
+  "type": "Program",
+  "end": 25
+}

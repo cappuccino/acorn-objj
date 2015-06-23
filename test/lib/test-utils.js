@@ -1,7 +1,13 @@
 "use strict";
 
-var stripColor = require("chalk").stripColor,
-    cli = require("../../lib/cli");
+var chai = require("chai"),
+    cli = require("../../lib/cli"),
+    parse = require("../../lib/parse"),
+    path = require("path"),
+    stripColor = require("chalk").stripColor;
+
+chai.should();
+require("./chai");
 
 exports.captureStream = function(stream, silent)
 {
@@ -43,4 +49,17 @@ exports.run = function(args, options)
         exitCode: exitCode,
         output: stripColor(output)
     };
+};
+
+var fixturesDir = "test/fixtures/objj";
+
+exports.testFixture = function(file)
+{
+    parse.parseFileToString(path.join(fixturesDir, file + ".j"))
+        .should.equalFixture(path.join("objj", file + ".json"));
+};
+
+exports.makeParser = function(source, options)
+{
+    return function() { parse.parse(source, options); };
 };
