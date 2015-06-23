@@ -1,10 +1,4 @@
 {
-    "disallowDanglingUnderscores": {
-        "allExcept": [
-            "_cmd",
-            "_obj"
-        ]
-    },
     "disallowEmptyBlocks": true,
     "disallowMixedSpacesAndTabs": true,
     "disallowMultipleLineBreaks": true,
