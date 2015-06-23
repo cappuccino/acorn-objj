@@ -87,11 +87,15 @@ describe("cli", function()
         result.exitCode.should.equal(1);
     });
 
-    it("should not bother to activate the objj plugin with --no-objj and --no-preprocessor", function()
+    it("should not recognize Objective-J keywords with --no-objj", function()
     {
-        // This is just for code coverage
-        run(["--no-objj", "--no-preprocessor", path.join(dir, "compact.js")]).output
-            .should.equalFixture("cli/pretty.json");
+        run(["--no-objj", path.join(dir, "no-objj.js")]).output
+            .should.equalFixture("cli/no-objj.json");
+    });
+
+    it("should not load the objj plugin with --no-objj and --no-preprocessor", function()
+    {
+        run(["--no-objj", "--no-preprocessor", path.join(dir, "no-objj.js")]);
     });
 
     it("should not generate any output with --silent", function()

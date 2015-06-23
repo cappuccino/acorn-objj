@@ -9,7 +9,6 @@ var makeParser = utils.makeParser,
     testFixture = utils.testFixture;
 
 /* global describe, it */
-/* eslint max-nested-callbacks:0 */
 
 // jscs: disable maximumLineLength
 

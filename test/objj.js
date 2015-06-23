@@ -2,20 +2,12 @@
 
 var chai = require("chai"),
     fs = require("fs"),
-    path = require("path"),
-    parse = require("../lib/parse"),
-    utils = require("./lib/test-utils");
+    path = require("path");
 
 chai.should();
 require("./lib/chai");
 
-/* global describe, it */
-/* eslint max-nested-callbacks:0 */
-
-// jscs: disable maximumLineLength
-
-var makeParser = utils.makeParser,
-    testFixture = utils.testFixture;
+/* global describe */
 
 describe("Objective-J plugin", function()
 {

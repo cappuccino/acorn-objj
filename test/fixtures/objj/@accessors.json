@@ -1,0 +1,319 @@
+{
+  "start": 0,
+  "body": [
+    {
+      "start": 0,
+      "objj": {
+        "name": {
+          "start": 16,
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 19
+        },
+        "ivars": [
+          {
+            "start": 30,
+            "objj": {
+              "type": {
+                "start": 26,
+                "objj": {
+                  "isClass": false,
+                  "name": "int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 29
+              },
+              "id": {
+                "start": 30,
+                "name": "plainAccessors",
+                "type": "Identifier",
+                "end": 44
+              },
+              "accessors": {}
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 55
+          },
+          {
+            "start": 65,
+            "objj": {
+              "type": {
+                "start": 61,
+                "objj": {
+                  "isClass": false,
+                  "name": "int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 64
+              },
+              "id": {
+                "start": 65,
+                "name": "emptyAccessors",
+                "type": "Identifier",
+                "end": 79
+              },
+              "accessors": {}
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 92
+          },
+          {
+            "start": 102,
+            "objj": {
+              "type": {
+                "start": 98,
+                "objj": {
+                  "isClass": false,
+                  "name": "int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 101
+              },
+              "id": {
+                "start": 102,
+                "name": "getter",
+                "type": "Identifier",
+                "end": 108
+              },
+              "accessors": {
+                "getter": {
+                  "start": 127,
+                  "name": "getMe",
+                  "type": "Identifier",
+                  "end": 132
+                }
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 133
+          },
+          {
+            "start": 143,
+            "objj": {
+              "type": {
+                "start": 139,
+                "objj": {
+                  "isClass": false,
+                  "name": "int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 142
+              },
+              "id": {
+                "start": 143,
+                "name": "getter",
+                "type": "Identifier",
+                "end": 149
+              },
+              "accessors": {
+                "setter": {
+                  "start": 168,
+                  "name": "setMe:",
+                  "type": "Identifier",
+                  "end": 173
+                }
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 174
+          },
+          {
+            "start": 184,
+            "objj": {
+              "type": {
+                "start": 180,
+                "objj": {
+                  "isClass": false,
+                  "name": "int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 183
+              },
+              "id": {
+                "start": 184,
+                "name": "getter",
+                "type": "Identifier",
+                "end": 190
+              },
+              "accessors": {
+                "setter": {
+                  "start": 209,
+                  "name": "setMe:",
+                  "type": "Identifier",
+                  "end": 215
+                }
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 216
+          },
+          {
+            "start": 226,
+            "objj": {
+              "type": {
+                "start": 222,
+                "objj": {
+                  "isClass": false,
+                  "name": "int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 225
+              },
+              "id": {
+                "start": 226,
+                "name": "getter",
+                "type": "Identifier",
+                "end": 232
+              },
+              "accessors": {
+                "property": {
+                  "start": 253,
+                  "name": "me",
+                  "type": "Identifier",
+                  "end": 255
+                }
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 256
+          },
+          {
+            "start": 266,
+            "objj": {
+              "type": {
+                "start": 262,
+                "objj": {
+                  "isClass": false,
+                  "name": "int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 265
+              },
+              "id": {
+                "start": 266,
+                "name": "getter",
+                "type": "Identifier",
+                "end": 272
+              },
+              "accessors": {
+                "getter": {
+                  "start": 291,
+                  "name": "getMe",
+                  "type": "Identifier",
+                  "end": 296
+                },
+                "setter": {
+                  "start": 305,
+                  "name": "setMe:",
+                  "type": "Identifier",
+                  "end": 310
+                }
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 311
+          },
+          {
+            "start": 321,
+            "objj": {
+              "type": {
+                "start": 317,
+                "objj": {
+                  "isClass": false,
+                  "name": "int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 320
+              },
+              "id": {
+                "start": 321,
+                "name": "getter",
+                "type": "Identifier",
+                "end": 327
+              },
+              "accessors": {
+                "readonly": true
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 348
+          },
+          {
+            "start": 358,
+            "objj": {
+              "type": {
+                "start": 354,
+                "objj": {
+                  "isClass": false,
+                  "name": "int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 357
+              },
+              "id": {
+                "start": 358,
+                "name": "getter",
+                "type": "Identifier",
+                "end": 364
+              },
+              "accessors": {
+                "readonly": true,
+                "property": {
+                  "start": 395,
+                  "name": "me",
+                  "type": "Identifier",
+                  "end": 397
+                }
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 398
+          },
+          {
+            "start": 408,
+            "objj": {
+              "type": {
+                "start": 404,
+                "objj": {
+                  "isClass": false,
+                  "name": "int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 407
+              },
+              "id": {
+                "start": 408,
+                "name": "getter",
+                "type": "Identifier",
+                "end": 414
+              },
+              "accessors": {
+                "readwrite": true,
+                "copy": true,
+                "getter": {
+                  "start": 450,
+                  "name": "getMe",
+                  "type": "Identifier",
+                  "end": 455
+                },
+                "setter": {
+                  "start": 464,
+                  "name": "setMe:",
+                  "type": "Identifier",
+                  "end": 469
+                }
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 470
+          }
+        ],
+        "body": []
+      },
+      "type": "objj_ClassDeclaration",
+      "end": 479
+    }
+  ],
+  "type": "Program",
+  "end": 480
+}

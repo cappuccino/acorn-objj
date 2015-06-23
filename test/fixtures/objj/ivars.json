@@ -1,0 +1,788 @@
+{
+  "start": 0,
+  "body": [
+    {
+      "start": 0,
+      "objj": {
+        "name": {
+          "start": 16,
+          "name": "Empty",
+          "type": "Identifier",
+          "end": 21
+        },
+        "ivars": [],
+        "body": []
+      },
+      "type": "objj_ClassDeclaration",
+      "end": 29
+    },
+    {
+      "start": 31,
+      "objj": {
+        "name": {
+          "start": 47,
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 50
+        },
+        "ivars": [
+          {
+            "start": 76,
+            "objj": {
+              "type": {
+                "start": 70,
+                "objj": {
+                  "isClass": false,
+                  "name": "float"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 75
+              },
+              "id": {
+                "start": 76,
+                "name": "f",
+                "type": "Identifier",
+                "end": 77
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 77
+          },
+          {
+            "start": 90,
+            "objj": {
+              "type": {
+                "start": 83,
+                "objj": {
+                  "isClass": false,
+                  "name": "double"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 89
+              },
+              "id": {
+                "start": 90,
+                "name": "d",
+                "type": "Identifier",
+                "end": 91
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 91
+          },
+          {
+            "start": 102,
+            "objj": {
+              "type": {
+                "start": 97,
+                "objj": {
+                  "isClass": false,
+                  "name": "BOOL"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 101
+              },
+              "id": {
+                "start": 102,
+                "name": "bool",
+                "type": "Identifier",
+                "end": 106
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 106
+          },
+          {
+            "start": 116,
+            "objj": {
+              "type": {
+                "start": 112,
+                "objj": {
+                  "isClass": false,
+                  "name": "SEL"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 115
+              },
+              "id": {
+                "start": 116,
+                "name": "sel",
+                "type": "Identifier",
+                "end": 119
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 119
+          },
+          {
+            "start": 134,
+            "objj": {
+              "type": {
+                "start": 125,
+                "objj": {
+                  "isClass": false,
+                  "name": "JSObject"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 133
+              },
+              "id": {
+                "start": 134,
+                "name": "js",
+                "type": "Identifier",
+                "end": 136
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 136
+          },
+          {
+            "start": 148,
+            "objj": {
+              "type": {
+                "start": 143,
+                "objj": {
+                  "isClass": false,
+                  "name": "char"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 147
+              },
+              "id": {
+                "start": 148,
+                "name": "c",
+                "type": "Identifier",
+                "end": 149
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 149
+          },
+          {
+            "start": 167,
+            "objj": {
+              "type": {
+                "start": 155,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed char"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 166
+              },
+              "id": {
+                "start": 167,
+                "name": "sc",
+                "type": "Identifier",
+                "end": 169
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 169
+          },
+          {
+            "start": 189,
+            "objj": {
+              "type": {
+                "start": 175,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned char"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 188
+              },
+              "id": {
+                "start": 189,
+                "name": "uc",
+                "type": "Identifier",
+                "end": 191
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 191
+          },
+          {
+            "start": 203,
+            "objj": {
+              "type": {
+                "start": 198,
+                "objj": {
+                  "isClass": false,
+                  "name": "byte"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 202
+              },
+              "id": {
+                "start": 203,
+                "name": "b",
+                "type": "Identifier",
+                "end": 204
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 204
+          },
+          {
+            "start": 222,
+            "objj": {
+              "type": {
+                "start": 210,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed byte"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 221
+              },
+              "id": {
+                "start": 222,
+                "name": "sb",
+                "type": "Identifier",
+                "end": 224
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 224
+          },
+          {
+            "start": 244,
+            "objj": {
+              "type": {
+                "start": 230,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned byte"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 243
+              },
+              "id": {
+                "start": 244,
+                "name": "ub",
+                "type": "Identifier",
+                "end": 246
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 246
+          },
+          {
+            "start": 259,
+            "objj": {
+              "type": {
+                "start": 253,
+                "objj": {
+                  "isClass": false,
+                  "name": "short"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 258
+              },
+              "id": {
+                "start": 259,
+                "name": "s",
+                "type": "Identifier",
+                "end": 260
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 260
+          },
+          {
+            "start": 279,
+            "objj": {
+              "type": {
+                "start": 266,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed short"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 278
+              },
+              "id": {
+                "start": 279,
+                "name": "ss",
+                "type": "Identifier",
+                "end": 281
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 281
+          },
+          {
+            "start": 302,
+            "objj": {
+              "type": {
+                "start": 287,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned short"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 301
+              },
+              "id": {
+                "start": 302,
+                "name": "us",
+                "type": "Identifier",
+                "end": 304
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 304
+          },
+          {
+            "start": 315,
+            "objj": {
+              "type": {
+                "start": 311,
+                "objj": {
+                  "isClass": false,
+                  "name": "int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 314
+              },
+              "id": {
+                "start": 315,
+                "name": "i",
+                "type": "Identifier",
+                "end": 316
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 316
+          },
+          {
+            "start": 333,
+            "objj": {
+              "type": {
+                "start": 322,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 332
+              },
+              "id": {
+                "start": 333,
+                "name": "si",
+                "type": "Identifier",
+                "end": 335
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 335
+          },
+          {
+            "start": 354,
+            "objj": {
+              "type": {
+                "start": 341,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 353
+              },
+              "id": {
+                "start": 354,
+                "name": "ui",
+                "type": "Identifier",
+                "end": 356
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 356
+          },
+          {
+            "start": 368,
+            "objj": {
+              "type": {
+                "start": 363,
+                "objj": {
+                  "isClass": false,
+                  "name": "long"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 367
+              },
+              "id": {
+                "start": 368,
+                "name": "l",
+                "type": "Identifier",
+                "end": 369
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 369
+          },
+          {
+            "start": 387,
+            "objj": {
+              "type": {
+                "start": 375,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed long"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 386
+              },
+              "id": {
+                "start": 387,
+                "name": "l",
+                "type": "Identifier",
+                "end": 388
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 388
+          },
+          {
+            "start": 408,
+            "objj": {
+              "type": {
+                "start": 394,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned long"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 407
+              },
+              "id": {
+                "start": 408,
+                "name": "ul",
+                "type": "Identifier",
+                "end": 410
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 410
+          },
+          {
+            "start": 426,
+            "objj": {
+              "type": {
+                "start": 417,
+                "objj": {
+                  "isClass": false,
+                  "name": "long int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 425
+              },
+              "id": {
+                "start": 426,
+                "name": "li",
+                "type": "Identifier",
+                "end": 428
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 428
+          },
+          {
+            "start": 450,
+            "objj": {
+              "type": {
+                "start": 434,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed long int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 449
+              },
+              "id": {
+                "start": 450,
+                "name": "sli",
+                "type": "Identifier",
+                "end": 453
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 453
+          },
+          {
+            "start": 477,
+            "objj": {
+              "type": {
+                "start": 459,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned long int"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 476
+              },
+              "id": {
+                "start": 477,
+                "name": "uli",
+                "type": "Identifier",
+                "end": 480
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 480
+          },
+          {
+            "start": 497,
+            "objj": {
+              "type": {
+                "start": 487,
+                "objj": {
+                  "isClass": false,
+                  "name": "long long"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 496
+              },
+              "id": {
+                "start": 497,
+                "name": "ll",
+                "type": "Identifier",
+                "end": 499
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 499
+          },
+          {
+            "start": 522,
+            "objj": {
+              "type": {
+                "start": 505,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed long long"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 521
+              },
+              "id": {
+                "start": 522,
+                "name": "sll",
+                "type": "Identifier",
+                "end": 525
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 525
+          },
+          {
+            "start": 550,
+            "objj": {
+              "type": {
+                "start": 531,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned long long"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 549
+              },
+              "id": {
+                "start": 550,
+                "name": "ull",
+                "type": "Identifier",
+                "end": 553
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 553
+          },
+          {
+            "start": 571,
+            "objj": {
+              "type": {
+                "start": 560,
+                "objj": {
+                  "name": "CPTextView",
+                  "isClass": true
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 570
+              },
+              "id": {
+                "start": 571,
+                "name": "text",
+                "type": "Identifier",
+                "end": 575
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 575
+          },
+          {
+            "start": 586,
+            "objj": {
+              "type": {
+                "start": 581,
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 585
+              },
+              "id": {
+                "start": 586,
+                "name": "v",
+                "type": "Identifier",
+                "end": 587
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 587
+          },
+          {
+            "start": 597,
+            "objj": {
+              "type": {
+                "start": 594,
+                "objj": {
+                  "isClass": false,
+                  "name": "id"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 596
+              },
+              "id": {
+                "start": 597,
+                "name": "someId",
+                "type": "Identifier",
+                "end": 603
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 603
+          },
+          {
+            "start": 620,
+            "objj": {
+              "type": {
+                "start": 609,
+                "objj": {
+                  "isClass": false,
+                  "name": "id",
+                  "protocols": [
+                    {
+                      "start": 612,
+                      "name": "CPText",
+                      "type": "Identifier",
+                      "end": 618
+                    }
+                  ]
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 619
+              },
+              "id": {
+                "start": 620,
+                "name": "textId",
+                "type": "Identifier",
+                "end": 626
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 626
+          },
+          {
+            "start": 651,
+            "objj": {
+              "type": {
+                "start": 632,
+                "objj": {
+                  "isClass": false,
+                  "name": "id",
+                  "protocols": [
+                    {
+                      "start": 635,
+                      "name": "CPText",
+                      "type": "Identifier",
+                      "end": 641
+                    },
+                    {
+                      "start": 643,
+                      "name": "CPView",
+                      "type": "Identifier",
+                      "end": 649
+                    }
+                  ]
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 650
+              },
+              "id": {
+                "start": 651,
+                "name": "textId",
+                "type": "Identifier",
+                "end": 657
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 657
+          },
+          {
+            "start": 683,
+            "objj": {
+              "isOutlet": true,
+              "type": {
+                "start": 672,
+                "objj": {
+                  "name": "CPTextView",
+                  "isClass": true
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 682
+              },
+              "id": {
+                "start": 683,
+                "name": "firstName",
+                "type": "Identifier",
+                "end": 692
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 692
+          },
+          {
+            "start": 718,
+            "objj": {
+              "isOutlet": true,
+              "type": {
+                "start": 707,
+                "objj": {
+                  "name": "CPTextView",
+                  "isClass": true
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 717
+              },
+              "id": {
+                "start": 718,
+                "name": "lastName",
+                "type": "Identifier",
+                "end": 726
+              }
+            },
+            "type": "objj_IvarDeclaration",
+            "end": 726
+          }
+        ],
+        "body": []
+      },
+      "type": "objj_ClassDeclaration",
+      "end": 735
+    }
+  ],
+  "type": "Program",
+  "end": 736
+}

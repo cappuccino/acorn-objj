@@ -1,0 +1,45 @@
+{
+  "start": 0,
+  "body": [
+    {
+      "start": 0,
+      "expression": {
+        "start": 0,
+        "value": "use strict",
+        "raw": "\"use strict\"",
+        "type": "Literal",
+        "end": 12
+      },
+      "type": "ExpressionStatement",
+      "end": 13
+    },
+    {
+      "start": 15,
+      "declarations": [
+        {
+          "start": 19,
+          "id": {
+            "start": 19,
+            "name": "int",
+            "type": "Identifier",
+            "end": 22
+          },
+          "init": {
+            "start": 25,
+            "value": 7,
+            "raw": "7",
+            "type": "Literal",
+            "end": 26
+          },
+          "type": "VariableDeclarator",
+          "end": 26
+        }
+      ],
+      "kind": "var",
+      "type": "VariableDeclaration",
+      "end": 27
+    }
+  ],
+  "type": "Program",
+  "end": 28
+}

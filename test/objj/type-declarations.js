@@ -8,7 +8,6 @@ chai.should();
 var testFixture = utils.testFixture;
 
 /* global describe, it */
-/* eslint max-nested-callbacks:0 */
 
 // jscs: disable maximumLineLength
 

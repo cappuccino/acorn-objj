@@ -71,7 +71,8 @@ gulp.task("generate-fixtures", function()
             [["--ecma", "6"], "ecma.js"],
             [["--locations"], "compact.js", "locations.json"],
             [["--macro", "FOO"], "macro1.js"],
-            [["--macro", "[FOO, BAR=7]"], "macro2.js"]
+            [["--macro", "[FOO, BAR=7]"], "macro2.js"],
+            [["--no-objj"], "no-objj.js"]
         ];
 
     cliFixtures.forEach(function(fixture)
