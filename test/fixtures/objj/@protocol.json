@@ -1,0 +1,378 @@
+{
+  "start": 0,
+  "body": [
+    {
+      "start": 0,
+      "objj": {
+        "name": {
+          "start": 10,
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 13
+        }
+      },
+      "type": "objj_ProtocolDeclaration",
+      "end": 18
+    },
+    {
+      "start": 20,
+      "objj": {
+        "name": {
+          "start": 30,
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 33
+        },
+        "protocols": []
+      },
+      "type": "objj_ProtocolDeclaration",
+      "end": 41
+    },
+    {
+      "start": 43,
+      "objj": {
+        "name": {
+          "start": 53,
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 56
+        },
+        "protocols": [
+          {
+            "start": 58,
+            "name": "Bar",
+            "type": "Identifier",
+            "end": 61
+          }
+        ]
+      },
+      "type": "objj_ProtocolDeclaration",
+      "end": 67
+    },
+    {
+      "start": 69,
+      "objj": {
+        "name": {
+          "start": 79,
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 82
+        },
+        "protocols": [
+          {
+            "start": 84,
+            "name": "Bar",
+            "type": "Identifier",
+            "end": 87
+          },
+          {
+            "start": 89,
+            "name": "Baz",
+            "type": "Identifier",
+            "end": 92
+          }
+        ]
+      },
+      "type": "objj_ProtocolDeclaration",
+      "end": 98
+    },
+    {
+      "start": 100,
+      "objj": {
+        "name": {
+          "start": 110,
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 113
+        },
+        "required": [
+          {
+            "start": 115,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "start": 118,
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 122
+              },
+              "selectors": [
+                {
+                  "start": 123,
+                  "name": "foo",
+                  "type": "Identifier",
+                  "end": 126
+                }
+              ],
+              "args": []
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 127
+          }
+        ]
+      },
+      "type": "objj_ProtocolDeclaration",
+      "end": 133
+    },
+    {
+      "start": 135,
+      "objj": {
+        "name": {
+          "start": 145,
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 148
+        },
+        "optional": [
+          {
+            "start": 160,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "start": 163,
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 167
+              },
+              "selectors": [
+                {
+                  "start": 168,
+                  "name": "foo",
+                  "type": "Identifier",
+                  "end": 171
+                }
+              ],
+              "args": []
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 172
+          },
+          {
+            "start": 173,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "start": 176,
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 180
+              },
+              "selectors": [
+                {
+                  "start": 181,
+                  "name": "bar",
+                  "type": "Identifier",
+                  "end": 184
+                }
+              ],
+              "args": []
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 185
+          }
+        ]
+      },
+      "type": "objj_ProtocolDeclaration",
+      "end": 191
+    },
+    {
+      "start": 193,
+      "objj": {
+        "name": {
+          "start": 203,
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 206
+        },
+        "required": [
+          {
+            "start": 218,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "start": 221,
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 225
+              },
+              "selectors": [
+                {
+                  "start": 226,
+                  "name": "foo",
+                  "type": "Identifier",
+                  "end": 229
+                }
+              ],
+              "args": []
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 230
+          },
+          {
+            "start": 231,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "start": 234,
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 238
+              },
+              "selectors": [
+                {
+                  "start": 239,
+                  "name": "bar",
+                  "type": "Identifier",
+                  "end": 242
+                }
+              ],
+              "args": []
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 243
+          }
+        ]
+      },
+      "type": "objj_ProtocolDeclaration",
+      "end": 249
+    },
+    {
+      "start": 251,
+      "objj": {
+        "name": {
+          "start": 261,
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 264
+        },
+        "optional": [
+          {
+            "start": 276,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "start": 279,
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 283
+              },
+              "selectors": [
+                {
+                  "start": 284,
+                  "name": "foo",
+                  "type": "Identifier",
+                  "end": 287
+                }
+              ],
+              "args": []
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 288
+          },
+          {
+            "start": 289,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "start": 292,
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 296
+              },
+              "selectors": [
+                {
+                  "start": 297,
+                  "name": "bar",
+                  "type": "Identifier",
+                  "end": 300
+                }
+              ],
+              "args": []
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 301
+          }
+        ],
+        "required": [
+          {
+            "start": 313,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "start": 316,
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 320
+              },
+              "selectors": [
+                {
+                  "start": 321,
+                  "name": "req1",
+                  "type": "Identifier",
+                  "end": 325
+                }
+              ],
+              "args": []
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 326
+          },
+          {
+            "start": 327,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "start": 330,
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 334
+              },
+              "selectors": [
+                {
+                  "start": 335,
+                  "name": "req2",
+                  "type": "Identifier",
+                  "end": 339
+                }
+              ],
+              "args": []
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 340
+          }
+        ]
+      },
+      "type": "objj_ProtocolDeclaration",
+      "end": 346
+    }
+  ],
+  "type": "Program",
+  "end": 347
+}
