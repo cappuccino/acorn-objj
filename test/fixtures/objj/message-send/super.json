@@ -1,0 +1,69 @@
+{
+  "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 3,
+      "column": 0
+    }
+  },
+  "body": [
+    {
+      "start": 24,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 20
+        }
+      },
+      "expression": {
+        "start": 24,
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 19
+          }
+        },
+        "objj": {
+          "selectors": [
+            {
+              "start": 31,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 7
+                },
+                "end": {
+                  "line": 2,
+                  "column": 18
+                }
+              },
+              "name": "doSomething",
+              "type": "Identifier",
+              "end": 42
+            }
+          ],
+          "args": [],
+          "receiver": "super"
+        },
+        "type": "objj_MessageSendExpression",
+        "end": 43
+      },
+      "type": "ExpressionStatement",
+      "end": 44
+    }
+  ],
+  "type": "Program",
+  "end": 45
+}

@@ -1,0 +1,2 @@
+// receiver === "super"
+[super doSomething];

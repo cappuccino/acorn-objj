@@ -1,0 +1,87 @@
+{
+  "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 3,
+      "column": 0
+    }
+  },
+  "body": [
+    {
+      "start": 81,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 15
+        }
+      },
+      "expression": {
+        "start": 81,
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 14
+          }
+        },
+        "objj": {
+          "selectors": [
+            null
+          ],
+          "args": [
+            {
+              "start": 93,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 12
+                },
+                "end": {
+                  "line": 2,
+                  "column": 13
+                }
+              },
+              "value": 7,
+              "raw": "7",
+              "type": "Literal",
+              "end": 94
+            }
+          ],
+          "receiver": {
+            "start": 82,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 1
+              },
+              "end": {
+                "line": 2,
+                "column": 10
+              }
+            },
+            "name": "something",
+            "type": "Identifier",
+            "end": 91
+          }
+        },
+        "type": "objj_MessageSendExpression",
+        "end": 95
+      },
+      "type": "ExpressionStatement",
+      "end": 96
+    }
+  ],
+  "type": "Program",
+  "end": 97
+}

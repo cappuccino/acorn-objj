@@ -1,0 +1,137 @@
+{
+  "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 3,
+      "column": 0
+    }
+  },
+  "body": [
+    {
+      "start": 38,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 29
+        }
+      },
+      "expression": {
+        "start": 38,
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 28
+          }
+        },
+        "objj": {
+          "selectors": [
+            {
+              "start": 44,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 6
+                },
+                "end": {
+                  "line": 2,
+                  "column": 14
+                }
+              },
+              "name": "setTitle",
+              "type": "Identifier",
+              "end": 52
+            }
+          ],
+          "args": [
+            {
+              "start": 53,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 15
+                },
+                "end": {
+                  "line": 2,
+                  "column": 27
+                }
+              },
+              "objj": {
+                "selectors": [
+                  {
+                    "start": 59,
+                    "loc": {
+                      "start": {
+                        "line": 2,
+                        "column": 21
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 26
+                      }
+                    },
+                    "name": "title",
+                    "type": "Identifier",
+                    "end": 64
+                  }
+                ],
+                "args": [],
+                "receiver": {
+                  "start": 54,
+                  "loc": {
+                    "start": {
+                      "line": 2,
+                      "column": 16
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 20
+                    }
+                  },
+                  "name": "self",
+                  "type": "Identifier",
+                  "end": 58
+                }
+              },
+              "type": "objj_MessageSendExpression",
+              "end": 65
+            }
+          ],
+          "receiver": {
+            "start": 39,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 1
+              },
+              "end": {
+                "line": 2,
+                "column": 5
+              }
+            },
+            "name": "view",
+            "type": "Identifier",
+            "end": 43
+          }
+        },
+        "type": "objj_MessageSendExpression",
+        "end": 66
+      },
+      "type": "ExpressionStatement",
+      "end": 67
+    }
+  ],
+  "type": "Program",
+  "end": 68
+}

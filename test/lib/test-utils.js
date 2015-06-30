@@ -2,6 +2,7 @@
 
 var chai = require("chai"),
     cli = require("../../lib/cli"),
+    fs = require("fs"),
     parse = require("../../lib/parse"),
     path = require("path"),
     stripColor = require("chalk").stripColor;
@@ -53,9 +54,9 @@ exports.run = function(args, options)
 
 var fixturesDir = "test/fixtures/objj";
 
-exports.testFixture = function(file)
+exports.testFixture = function(file, options)
 {
-    parse.parseFileToString(path.join(fixturesDir, file + ".j"))
+    parse.parseFileToString(path.join(fixturesDir, file + ".j"), options)
         .should.equalFixture(path.join("objj", file + ".json"));
 };
 

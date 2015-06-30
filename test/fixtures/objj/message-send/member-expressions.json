@@ -1,0 +1,236 @@
+{
+  "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 3,
+      "column": 0
+    }
+  },
+  "body": [
+    {
+      "start": 37,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 80
+        }
+      },
+      "declarations": [
+        {
+          "start": 41,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 4
+            },
+            "end": {
+              "line": 2,
+              "column": 79
+            }
+          },
+          "id": {
+            "start": 41,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 4
+              },
+              "end": {
+                "line": 2,
+                "column": 8
+              }
+            },
+            "name": "view",
+            "type": "Identifier",
+            "end": 45
+          },
+          "init": {
+            "start": 48,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 11
+              },
+              "end": {
+                "line": 2,
+                "column": 79
+              }
+            },
+            "objj": {
+              "selectors": [
+                {
+                  "start": 68,
+                  "loc": {
+                    "start": {
+                      "line": 2,
+                      "column": 31
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 44
+                    }
+                  },
+                  "name": "initWithFrame",
+                  "type": "Identifier",
+                  "end": 81
+                },
+                {
+                  "start": 101,
+                  "loc": {
+                    "start": {
+                      "line": 2,
+                      "column": 64
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 69
+                    }
+                  },
+                  "name": "title",
+                  "type": "Identifier",
+                  "end": 106
+                }
+              ],
+              "args": [
+                {
+                  "start": 82,
+                  "loc": {
+                    "start": {
+                      "line": 2,
+                      "column": 45
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 63
+                    }
+                  },
+                  "object": {
+                    "start": 82,
+                    "loc": {
+                      "start": {
+                        "line": 2,
+                        "column": 45
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 51
+                      }
+                    },
+                    "name": "frames",
+                    "type": "Identifier",
+                    "end": 88
+                  },
+                  "property": {
+                    "start": 89,
+                    "loc": {
+                      "start": {
+                        "line": 2,
+                        "column": 52
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 62
+                      }
+                    },
+                    "name": "arrayIndex",
+                    "type": "Identifier",
+                    "end": 99
+                  },
+                  "computed": true,
+                  "type": "MemberExpression",
+                  "end": 100
+                },
+                {
+                  "start": 107,
+                  "loc": {
+                    "start": {
+                      "line": 2,
+                      "column": 70
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 78
+                    }
+                  },
+                  "value": "Hello",
+                  "raw": "@\"Hello\"",
+                  "type": "Literal",
+                  "end": 115
+                }
+              ],
+              "receiver": {
+                "start": 49,
+                "loc": {
+                  "start": {
+                    "line": 2,
+                    "column": 12
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 30
+                  }
+                },
+                "objj": {
+                  "selectors": [
+                    {
+                      "start": 61,
+                      "loc": {
+                        "start": {
+                          "line": 2,
+                          "column": 24
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 29
+                        }
+                      },
+                      "name": "alloc",
+                      "type": "Identifier",
+                      "end": 66
+                    }
+                  ],
+                  "args": [],
+                  "receiver": {
+                    "start": 50,
+                    "loc": {
+                      "start": {
+                        "line": 2,
+                        "column": 13
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 23
+                      }
+                    },
+                    "name": "CPTextView",
+                    "type": "Identifier",
+                    "end": 60
+                  }
+                },
+                "type": "objj_MessageSendExpression",
+                "end": 67
+              }
+            },
+            "type": "objj_MessageSendExpression",
+            "end": 116
+          },
+          "type": "VariableDeclarator",
+          "end": 116
+        }
+      ],
+      "kind": "var",
+      "type": "VariableDeclaration",
+      "end": 117
+    }
+  ],
+  "type": "Program",
+  "end": 118
+}
