@@ -64,3 +64,21 @@ exports.makeParser = function(source, options)
 {
     return function() { parse.parse(source, options); };
 };
+
+/* global describe */
+
+exports.makeDescribes = function(description, filename)
+{
+    var dir = path.basename(filename, path.extname(filename));
+
+    describe(description, function()
+    {
+        var dirs = fs.readdirSync(path.join("test", dir));
+
+        dirs.forEach(function(d)
+        {
+            if (/^.+\.js$/.test(d))
+                require(path.resolve(path.join("test", dir, d)));
+        });
+    });
+};

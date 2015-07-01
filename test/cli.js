@@ -24,7 +24,7 @@ describe("cli", function()
 
     it("should generate an error if there is #! without --allow-hash-bang", function()
     {
-        var result = run([path.join(dir, "hash-bang.js")]);
+        var result = run(["--no-preprocessor", path.join(dir, "hash-bang.js")]);
 
         result.output.should.equal(executable + ": error: Unexpected character '#' (1:0)\n");
         result.exitCode.should.equal(1);
