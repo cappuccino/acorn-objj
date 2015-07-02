@@ -36,12 +36,8 @@
         "no-fallthrough": 2,
         "no-floating-decimal": 2,
         "no-func-assign": 2,
-        "no-global-strict": 0,
         "no-implied-eval": 2,
-        "no-inner-declarations": [
-            2,
-            "functions"
-        ],
+        "no-inner-declarations": [2, "functions"],
         "no-invalid-regexp": 2,
         "no-iterator": 2,
         "no-label-var": 2,
@@ -49,10 +45,7 @@
         "no-lone-blocks": 2,
         "no-lonely-if": 2,
         "no-loop-func": 0,
-        "no-mixed-requires": [
-            2,
-            false
-        ],
+        "no-mixed-requires": [2, false],
         "no-multi-str": 2,
         "no-native-reassign": 2,
         "no-negated-in-lhs": 2,
@@ -142,7 +135,7 @@
         "space-in-brackets": [0, "never"],
         "space-infix-ops": 2,
         "space-return-throw-case": 2,
-        "strict": 2,
+        "strict": [2, "global"],
         "use-isnan": 2,
         "valid-jsdoc": 0,
         "valid-typeof": 2,
