@@ -1,30 +1,30 @@
 "use strict";
 
-var chai = require("chai"),
-    utils = require("../lib/test-utils");
+var utils = require("../lib/test-utils");
 
-chai.should();
+// jscs: disable requireMultipleVarDecl
 
 var testFixture = utils.testFixture;
 
 /* global describe, it */
 
+// jscs: enable
 // jscs: disable maximumLineLength
 
 describe("Type declarations", function()
 {
     it("@class should generate objj_ClassStatement nodes", function()
     {
-        testFixture("type-declaration");
+        testFixture("type-declarations");
     });
 
     it("@global should generate objj_GlobalStatement nodes", function()
     {
-        testFixture("type-declaration");
+        testFixture("type-declarations");
     });
 
     it("@typedef should generate objj_TypeDefStatement nodes", function()
     {
-        testFixture("type-declaration");
+        testFixture("type-declarations");
     });
 });
