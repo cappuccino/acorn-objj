@@ -1,0 +1,139 @@
+{
+  "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 9,
+      "column": 0
+    }
+  },
+  "body": [
+    {
+      "start": 0,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 4
+        }
+      },
+      "objj": {
+        "name": {
+          "start": 16,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 16
+            },
+            "end": {
+              "line": 1,
+              "column": 19
+            }
+          },
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 19
+        },
+        "body": [
+          {
+            "start": 41,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 1
+              }
+            },
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "start": 44,
+                "loc": {
+                  "end": {
+                    "line": 4,
+                    "column": 7
+                  }
+                },
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 48
+              },
+              "selectors": [
+                {
+                  "start": 49,
+                  "loc": {
+                    "start": {
+                      "line": 4,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 19
+                    }
+                  },
+                  "name": "initWithFoo",
+                  "type": "Identifier",
+                  "end": 60
+                }
+              ],
+              "args": [
+                {
+                  "id": {
+                    "start": 61,
+                    "loc": {
+                      "start": {
+                        "line": 4,
+                        "column": 20
+                      },
+                      "end": {
+                        "line": 4,
+                        "column": 23
+                      }
+                    },
+                    "name": "foo",
+                    "type": "Identifier",
+                    "end": 64
+                  }
+                }
+              ],
+              "body": {
+                "start": 65,
+                "loc": {
+                  "start": {
+                    "line": 5,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 6,
+                    "column": 1
+                  }
+                },
+                "body": [],
+                "type": "BlockStatement",
+                "end": 68
+              }
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 68
+          }
+        ]
+      },
+      "type": "objj_ClassDeclaration",
+      "end": 74
+    }
+  ],
+  "type": "Program",
+  "end": 75
+}

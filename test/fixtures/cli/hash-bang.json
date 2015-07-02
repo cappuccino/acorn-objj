@@ -1,20 +1,80 @@
 {
   "start": 19,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 19
+    },
+    "end": {
+      "line": 4,
+      "column": 0
+    }
+  },
   "body": [
     {
       "start": 21,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 22
+        }
+      },
       "expression": {
         "start": 21,
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 0
+          },
+          "end": {
+            "line": 3,
+            "column": 21
+          }
+        },
         "callee": {
           "start": 21,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 11
+            }
+          },
           "object": {
             "start": 21,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 3,
+                "column": 7
+              }
+            },
             "name": "console",
             "type": "Identifier",
             "end": 28
           },
           "property": {
             "start": 29,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 8
+              },
+              "end": {
+                "line": 3,
+                "column": 11
+              }
+            },
             "name": "log",
             "type": "Identifier",
             "end": 32
@@ -26,6 +86,16 @@
         "arguments": [
           {
             "start": 33,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 12
+              },
+              "end": {
+                "line": 3,
+                "column": 20
+              }
+            },
             "value": "hello!",
             "raw": "\"hello!\"",
             "type": "Literal",

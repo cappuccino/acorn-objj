@@ -1,0 +1,218 @@
+{
+  "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 13,
+      "column": 0
+    }
+  },
+  "body": [
+    {
+      "start": 0,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 12,
+          "column": 4
+        }
+      },
+      "objj": {
+        "name": {
+          "start": 16,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 16
+            },
+            "end": {
+              "line": 1,
+              "column": 19
+            }
+          },
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 19
+        },
+        "body": [
+          {
+            "start": 61,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 1
+              }
+            },
+            "objj": {
+              "methodType": "-",
+              "action": {
+                "start": 64,
+                "loc": {
+                  "start": {
+                    "line": 4,
+                    "column": 3
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 10
+                  }
+                },
+                "type": "objj_ActionType",
+                "end": 71
+              },
+              "returnType": {
+                "start": 72,
+                "loc": {
+                  "end": {
+                    "line": 4,
+                    "column": 17
+                  }
+                },
+                "objj": {
+                  "isClass": false,
+                  "name": "double"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 78
+              },
+              "selectors": [
+                {
+                  "start": 79,
+                  "loc": {
+                    "start": {
+                      "line": 4,
+                      "column": 18
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 33
+                    }
+                  },
+                  "name": "someOtherAction",
+                  "type": "Identifier",
+                  "end": 94
+                }
+              ],
+              "args": [],
+              "body": {
+                "start": 95,
+                "loc": {
+                  "start": {
+                    "line": 5,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 6,
+                    "column": 1
+                  }
+                },
+                "body": [],
+                "type": "BlockStatement",
+                "end": 98
+              }
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 98
+          },
+          {
+            "start": 100,
+            "loc": {
+              "start": {
+                "line": 8,
+                "column": 0
+              },
+              "end": {
+                "line": 10,
+                "column": 1
+              }
+            },
+            "objj": {
+              "methodType": "-",
+              "action": {
+                "start": 103,
+                "loc": {
+                  "start": {
+                    "line": 8,
+                    "column": 3
+                  },
+                  "end": {
+                    "line": 8,
+                    "column": 11
+                  }
+                },
+                "type": "objj_ActionType",
+                "end": 111
+              },
+              "returnType": {
+                "start": 112,
+                "loc": {
+                  "end": {
+                    "line": 8,
+                    "column": 18
+                  }
+                },
+                "objj": {
+                  "isClass": false,
+                  "name": "double"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 118
+              },
+              "selectors": [
+                {
+                  "start": 119,
+                  "loc": {
+                    "start": {
+                      "line": 8,
+                      "column": 19
+                    },
+                    "end": {
+                      "line": 8,
+                      "column": 34
+                    }
+                  },
+                  "name": "someOtherAction",
+                  "type": "Identifier",
+                  "end": 134
+                }
+              ],
+              "args": [],
+              "body": {
+                "start": 135,
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 10,
+                    "column": 1
+                  }
+                },
+                "body": [],
+                "type": "BlockStatement",
+                "end": 138
+              }
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 138
+          }
+        ]
+      },
+      "type": "objj_ClassDeclaration",
+      "end": 144
+    }
+  ],
+  "type": "Program",
+  "end": 145
+}

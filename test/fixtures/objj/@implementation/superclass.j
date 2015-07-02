@@ -1,0 +1,2 @@
+@implementation Foo : Bar
+@end

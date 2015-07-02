@@ -1,0 +1,105 @@
+{
+  "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 9,
+      "column": 0
+    }
+  },
+  "body": [
+    {
+      "start": 0,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 4
+        }
+      },
+      "objj": {
+        "name": {
+          "start": 16,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 16
+            },
+            "end": {
+              "line": 1,
+              "column": 19
+            }
+          },
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 19
+        },
+        "body": [
+          {
+            "start": 48,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 1
+              }
+            },
+            "objj": {
+              "methodType": "-",
+              "selectors": [
+                {
+                  "start": 50,
+                  "loc": {
+                    "start": {
+                      "line": 4,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 14
+                    }
+                  },
+                  "name": "noReturnType",
+                  "type": "Identifier",
+                  "end": 62
+                }
+              ],
+              "args": [],
+              "body": {
+                "start": 63,
+                "loc": {
+                  "start": {
+                    "line": 5,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 6,
+                    "column": 1
+                  }
+                },
+                "body": [],
+                "type": "BlockStatement",
+                "end": 66
+              }
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 66
+          }
+        ]
+      },
+      "type": "objj_ClassDeclaration",
+      "end": 72
+    }
+  ],
+  "type": "Program",
+  "end": 73
+}

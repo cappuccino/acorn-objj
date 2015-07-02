@@ -1,0 +1,262 @@
+{
+  "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 12,
+      "column": 0
+    }
+  },
+  "body": [
+    {
+      "start": 0,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 4
+        }
+      },
+      "objj": {
+        "name": {
+          "start": 10,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 10
+            },
+            "end": {
+              "line": 1,
+              "column": 13
+            }
+          },
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 13
+        },
+        "required": [
+          {
+            "start": 25,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 13
+              }
+            },
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "start": 28,
+                "loc": {
+                  "end": {
+                    "line": 4,
+                    "column": 7
+                  }
+                },
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 32
+              },
+              "selectors": [
+                {
+                  "start": 33,
+                  "loc": {
+                    "start": {
+                      "line": 4,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 12
+                    }
+                  },
+                  "name": "req1",
+                  "type": "Identifier",
+                  "end": 37
+                }
+              ],
+              "args": []
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 38
+          },
+          {
+            "start": 39,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 13
+              }
+            },
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "start": 42,
+                "loc": {
+                  "end": {
+                    "line": 5,
+                    "column": 7
+                  }
+                },
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 46
+              },
+              "selectors": [
+                {
+                  "start": 47,
+                  "loc": {
+                    "start": {
+                      "line": 5,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 5,
+                      "column": 12
+                    }
+                  },
+                  "name": "req2",
+                  "type": "Identifier",
+                  "end": 51
+                }
+              ],
+              "args": []
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 52
+          }
+        ],
+        "optional": [
+          {
+            "start": 64,
+            "loc": {
+              "start": {
+                "line": 8,
+                "column": 0
+              },
+              "end": {
+                "line": 8,
+                "column": 12
+              }
+            },
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "start": 67,
+                "loc": {
+                  "end": {
+                    "line": 8,
+                    "column": 7
+                  }
+                },
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 71
+              },
+              "selectors": [
+                {
+                  "start": 72,
+                  "loc": {
+                    "start": {
+                      "line": 8,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 8,
+                      "column": 11
+                    }
+                  },
+                  "name": "foo",
+                  "type": "Identifier",
+                  "end": 75
+                }
+              ],
+              "args": []
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 76
+          },
+          {
+            "start": 77,
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 0
+              },
+              "end": {
+                "line": 9,
+                "column": 12
+              }
+            },
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "start": 80,
+                "loc": {
+                  "end": {
+                    "line": 9,
+                    "column": 7
+                  }
+                },
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                },
+                "type": "objj_ObjectiveJType",
+                "end": 84
+              },
+              "selectors": [
+                {
+                  "start": 85,
+                  "loc": {
+                    "start": {
+                      "line": 9,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 9,
+                      "column": 11
+                    }
+                  },
+                  "name": "bar",
+                  "type": "Identifier",
+                  "end": 88
+                }
+              ],
+              "args": []
+            },
+            "type": "objj_MethodDeclaration",
+            "end": 89
+          }
+        ]
+      },
+      "type": "objj_ProtocolDeclaration",
+      "end": 95
+    }
+  ],
+  "type": "Program",
+  "end": 96
+}

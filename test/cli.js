@@ -1,14 +1,10 @@
 "use strict";
 
-var chai = require("chai"),
-    cli = require("../lib/cli"),
+var cli = require("../lib/cli"),
     fs = require("fs"),
     path = require("path"),
     run = require("./lib/test-utils").run,
     util = require("util");
-
-chai.should();
-require("./lib/chai");
 
 /* global before, describe, it */
 

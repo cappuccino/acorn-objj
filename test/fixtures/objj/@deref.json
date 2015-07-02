@@ -1,10 +1,40 @@
 {
   "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 5,
+      "column": 0
+    }
+  },
   "body": [
     {
       "start": 0,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 1
+        }
+      },
       "id": {
         "start": 9,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 9
+          },
+          "end": {
+            "line": 1,
+            "column": 13
+          }
+        },
         "name": "test",
         "type": "Identifier",
         "end": 13
@@ -12,6 +42,16 @@
       "params": [
         {
           "start": 14,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 14
+            },
+            "end": {
+              "line": 1,
+              "column": 17
+            }
+          },
           "name": "ref",
           "type": "Identifier",
           "end": 17
@@ -19,18 +59,68 @@
       ],
       "body": {
         "start": 19,
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 0
+          },
+          "end": {
+            "line": 4,
+            "column": 1
+          }
+        },
         "body": [
           {
             "start": 25,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 4
+              },
+              "end": {
+                "line": 3,
+                "column": 18
+              }
+            },
             "expression": {
               "start": 25,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 4
+                },
+                "end": {
+                  "line": 3,
+                  "column": 17
+                }
+              },
               "operator": "++",
               "prefix": true,
               "argument": {
                 "start": 27,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 17
+                  }
+                },
                 "objj": {
                   "ref": {
                     "start": 34,
+                    "loc": {
+                      "start": {
+                        "line": 3,
+                        "column": 13
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 16
+                      }
+                    },
                     "name": "ref",
                     "type": "Identifier",
                     "end": 37

@@ -15,16 +15,16 @@ describe("Type declarations", function()
 {
     it("@class should generate objj_ClassStatement nodes", function()
     {
-        testFixture("type-declarations");
+        testFixture("type-declarations/@class");
     });
 
     it("@global should generate objj_GlobalStatement nodes", function()
     {
-        testFixture("type-declarations");
+        testFixture("type-declarations/@global");
     });
 
     it("@typedef should generate objj_TypeDefStatement nodes", function()
     {
-        testFixture("type-declarations");
+        testFixture("type-declarations/@typedef");
     });
 });

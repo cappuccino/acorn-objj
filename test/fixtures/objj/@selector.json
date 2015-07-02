@@ -1,19 +1,69 @@
 {
   "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 5,
+      "column": 0
+    }
+  },
   "body": [
     {
       "start": 0,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 29
+        }
+      },
       "declarations": [
         {
           "start": 4,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 23
+            }
+          },
           "id": {
             "start": 4,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 4
+              },
+              "end": {
+                "line": 1,
+                "column": 6
+              }
+            },
             "name": "s1",
             "type": "Identifier",
             "end": 6
           },
           "init": {
             "start": 9,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 9
+              },
+              "end": {
+                "line": 1,
+                "column": 23
+              }
+            },
             "objj": {
               "selector": "foo"
             },
@@ -25,14 +75,44 @@
         },
         {
           "start": 29,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 4
+            },
+            "end": {
+              "line": 2,
+              "column": 24
+            }
+          },
           "id": {
             "start": 29,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 4
+              },
+              "end": {
+                "line": 2,
+                "column": 6
+              }
+            },
             "name": "s2",
             "type": "Identifier",
             "end": 31
           },
           "init": {
             "start": 34,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 9
+              },
+              "end": {
+                "line": 2,
+                "column": 24
+              }
+            },
             "objj": {
               "selector": "foo:"
             },
@@ -44,14 +124,44 @@
         },
         {
           "start": 55,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 4
+            },
+            "end": {
+              "line": 3,
+              "column": 27
+            }
+          },
           "id": {
             "start": 55,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 4
+              },
+              "end": {
+                "line": 3,
+                "column": 6
+              }
+            },
             "name": "s3",
             "type": "Identifier",
             "end": 57
           },
           "init": {
             "start": 60,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 9
+              },
+              "end": {
+                "line": 3,
+                "column": 27
+              }
+            },
             "objj": {
               "selector": "foo:bar"
             },
@@ -63,14 +173,44 @@
         },
         {
           "start": 84,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 4
+            },
+            "end": {
+              "line": 4,
+              "column": 28
+            }
+          },
           "id": {
             "start": 84,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 4
+              },
+              "end": {
+                "line": 4,
+                "column": 6
+              }
+            },
             "name": "s4",
             "type": "Identifier",
             "end": 86
           },
           "init": {
             "start": 89,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 9
+              },
+              "end": {
+                "line": 4,
+                "column": 28
+              }
+            },
             "objj": {
               "selector": "foo:bar:"
             },

@@ -1,9 +1,6 @@
 "use strict";
 
-var chai = require("chai"),
-    makeParser = require("../lib/test-utils").makeParser;
-
-chai.should();
+var makeParser = require("../lib/test-utils").makeParser;
 
 /* global describe, it */
 

@@ -1,10 +1,40 @@
 {
   "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 4,
+      "column": 0
+    }
+  },
   "body": [
     {
       "start": 0,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 13
+        }
+      },
       "expression": {
         "start": 0,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 12
+          }
+        },
         "value": "use strict",
         "raw": "\"use strict\"",
         "type": "Literal",
@@ -15,17 +45,57 @@
     },
     {
       "start": 15,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 12
+        }
+      },
       "declarations": [
         {
           "start": 19,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 4
+            },
+            "end": {
+              "line": 3,
+              "column": 11
+            }
+          },
           "id": {
             "start": 19,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 4
+              },
+              "end": {
+                "line": 3,
+                "column": 7
+              }
+            },
             "name": "int",
             "type": "Identifier",
             "end": 22
           },
           "init": {
             "start": 25,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 10
+              },
+              "end": {
+                "line": 3,
+                "column": 11
+              }
+            },
             "value": 7,
             "raw": "7",
             "type": "Literal",

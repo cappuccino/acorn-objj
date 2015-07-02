@@ -1,0 +1,65 @@
+{
+  "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 2,
+      "column": 0
+    }
+  },
+  "body": [
+    {
+      "start": 0,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 21
+        }
+      },
+      "expression": {
+        "start": 0,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 21
+          }
+        },
+        "objj": {
+          "id": {
+            "start": 9,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 9
+              },
+              "end": {
+                "line": 1,
+                "column": 21
+              }
+            },
+            "name": "MyButtonType",
+            "type": "Identifier",
+            "end": 21
+          }
+        },
+        "type": "objj_TypeDefStatement",
+        "end": 21
+      },
+      "type": "ExpressionStatement",
+      "end": 21
+    }
+  ],
+  "type": "Program",
+  "end": 22
+}

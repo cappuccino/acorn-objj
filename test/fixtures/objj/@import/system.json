@@ -1,0 +1,52 @@
+{
+  "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 2,
+      "column": 0
+    }
+  },
+  "body": [
+    {
+      "start": 0,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 26
+        }
+      },
+      "objj": {
+        "local": false,
+        "filename": {
+          "start": 8,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 8
+            },
+            "end": {
+              "line": 1,
+              "column": 26
+            }
+          },
+          "value": "Frameworks/Foo.j",
+          "raw": "<Frameworks/Foo.j>",
+          "type": "Literal",
+          "end": 26
+        }
+      },
+      "type": "objj_ImportStatement",
+      "end": 26
+    }
+  ],
+  "type": "Program",
+  "end": 27
+}

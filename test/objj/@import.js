@@ -1,22 +1,27 @@
 "use strict";
 
-var chai = require("chai"),
-    utils = require("../lib/test-utils");
+var utils = require("../lib/test-utils");
 
-chai.should();
+// jscs: disable requireMultipleVarDecl
 
 var makeParser = utils.makeParser,
     testFixture = utils.testFixture;
 
 /* global describe, it */
 
+// jscs: enable
 // jscs: disable maximumLineLength
 
 describe("@import", function()
 {
-    it("should generate objj_ImportStatement nodes", function()
+    it("should generate objj_ImportStatement nodes with local:true for @import \"path\"", function()
     {
-        testFixture("@import");
+        testFixture("@import/local");
+    });
+
+    it("should generate objj_ImportStatement nodes with local:false for @import <path>", function()
+    {
+        testFixture("@import/system");
     });
 
     it("should fail for unterminated filenames", function()

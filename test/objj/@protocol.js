@@ -1,25 +1,40 @@
 "use strict";
 
-var chai = require("chai"),
-    utils = require("../lib/test-utils");
+var utils = require("../lib/test-utils");
 
-chai.should();
+// jscs: disable requireMultipleVarDecl
 
 var makeParser = utils.makeParser,
     testFixture = utils.testFixture;
 
 /* global describe, it */
 
+// jscs: enable
 // jscs: disable maximumLineLength
 
 describe("@protocol", function()
 {
-    it("should generate objj_ProtocolDeclaration nodes with protocol, optional and required attributes, and with objj_MethodDeclaration nodes", function()
+    it("should generate objj_ProtocolDeclaration node with no protocols attributes for @protocol Foo", function()
     {
-        testFixture("@protocol");
+        testFixture("@protocol/plain");
     });
 
-    it("should generate an error if the protocols are not separated by ','", function()
+    it("should generate protocols array attribute for @protocol that has a conforming protocol list", function()
+    {
+        testFixture("@protocol/super-protocols");
+    });
+
+    it("should generate required objj_MethodDeclaration nodes for unmarked methods", function()
+    {
+        testFixture("@protocol/unmarked-methods");
+    });
+
+    it("should generate required and optional objj_MethodDeclaration nodes for marked methods", function()
+    {
+        testFixture("@protocol/marked-methods");
+    });
+
+    it("should generate an error if conforming protocols are not separated by ','", function()
     {
         makeParser("@protocol Foo <Bar Baz>")
             .should.throw(SyntaxError, /^Expected ',' between protocol names/);

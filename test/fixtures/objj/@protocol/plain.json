@@ -1,0 +1,50 @@
+{
+  "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 3,
+      "column": 0
+    }
+  },
+  "body": [
+    {
+      "start": 0,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 4
+        }
+      },
+      "objj": {
+        "name": {
+          "start": 10,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 10
+            },
+            "end": {
+              "line": 1,
+              "column": 13
+            }
+          },
+          "name": "Foo",
+          "type": "Identifier",
+          "end": 13
+        }
+      },
+      "type": "objj_ProtocolDeclaration",
+      "end": 18
+    }
+  ],
+  "type": "Program",
+  "end": 19
+}

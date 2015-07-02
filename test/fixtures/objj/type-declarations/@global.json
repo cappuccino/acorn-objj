@@ -1,0 +1,65 @@
+{
+  "start": 0,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 2,
+      "column": 0
+    }
+  },
+  "body": [
+    {
+      "start": 0,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 14
+        }
+      },
+      "expression": {
+        "start": 0,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 14
+          }
+        },
+        "objj": {
+          "id": {
+            "start": 8,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 8
+              },
+              "end": {
+                "line": 1,
+                "column": 14
+              }
+            },
+            "name": "FooBar",
+            "type": "Identifier",
+            "end": 14
+          }
+        },
+        "type": "objj_GlobalStatement",
+        "end": 14
+      },
+      "type": "ExpressionStatement",
+      "end": 14
+    }
+  ],
+  "type": "Program",
+  "end": 15
+}

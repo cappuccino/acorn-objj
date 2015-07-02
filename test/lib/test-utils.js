@@ -1,14 +1,10 @@
 "use strict";
 
-var chai = require("chai"),
-    cli = require("../../lib/cli"),
+var cli = require("../../lib/cli"),
     fs = require("fs"),
     parse = require("../../lib/parse"),
     path = require("path"),
     stripColor = require("chalk").stripColor;
-
-chai.should();
-require("./chai");
 
 exports.captureStream = function(stream, silent)
 {
@@ -67,9 +63,9 @@ exports.makeParser = function(source, options)
 
 /* global describe */
 
-exports.makeDescribes = function(description, filename)
+exports.makeDescribes = function(description, filename, isDir)
 {
-    var dir = path.basename(filename, path.extname(filename));
+    var dir = isDir ? filename : path.basename(filename, path.extname(filename));
 
     describe(description, function()
     {
