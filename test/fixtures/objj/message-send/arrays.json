@@ -1,406 +1,166 @@
 {
+  "type": "Program",
   "start": 0,
-  "loc": {
-    "start": {
-      "line": 1,
-      "column": 0
-    },
-    "end": {
-      "line": 5,
-      "column": 0
-    }
-  },
+  "end": 170,
   "body": [
     {
+      "type": "VariableDeclaration",
       "start": 31,
-      "loc": {
-        "start": {
-          "line": 2,
-          "column": 0
-        },
-        "end": {
-          "line": 4,
-          "column": 53
-        }
-      },
+      "end": 169,
       "declarations": [
         {
+          "type": "VariableDeclarator",
           "start": 35,
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 4
-            },
-            "end": {
-              "line": 2,
-              "column": 39
-            }
-          },
+          "end": 70,
           "id": {
-            "start": 35,
-            "loc": {
-              "start": {
-                "line": 2,
-                "column": 4
-              },
-              "end": {
-                "line": 2,
-                "column": 9
-              }
-            },
-            "name": "empty",
             "type": "Identifier",
-            "end": 40
+            "start": 35,
+            "end": 40,
+            "name": "empty"
           },
           "init": {
+            "type": "objj_MessageSendExpression",
             "start": 43,
-            "loc": {
-              "start": {
-                "line": 2,
-                "column": 12
-              },
-              "end": {
-                "line": 2,
-                "column": 39
-              }
-            },
+            "end": 70,
             "objj": {
               "selectors": [
                 {
-                  "start": 52,
-                  "loc": {
-                    "start": {
-                      "line": 2,
-                      "column": 21
-                    },
-                    "end": {
-                      "line": 2,
-                      "column": 35
-                    }
-                  },
-                  "name": "arrayWithArray",
                   "type": "Identifier",
-                  "end": 66
+                  "start": 52,
+                  "end": 66,
+                  "name": "arrayWithArray"
                 }
               ],
               "args": [
                 {
-                  "start": 67,
-                  "loc": {
-                    "start": {
-                      "line": 2,
-                      "column": 36
-                    },
-                    "end": {
-                      "line": 2,
-                      "column": 38
-                    }
-                  },
-                  "elements": [],
                   "type": "ArrayExpression",
-                  "end": 69
+                  "start": 67,
+                  "end": 69,
+                  "elements": []
                 }
               ],
               "receiver": {
-                "start": 44,
-                "loc": {
-                  "start": {
-                    "line": 2,
-                    "column": 13
-                  },
-                  "end": {
-                    "line": 2,
-                    "column": 20
-                  }
-                },
-                "name": "CPArray",
                 "type": "Identifier",
-                "end": 51
+                "start": 44,
+                "end": 51,
+                "name": "CPArray"
               }
-            },
-            "type": "objj_MessageSendExpression",
-            "end": 70
-          },
-          "type": "VariableDeclarator",
-          "end": 70
+            }
+          }
         },
         {
+          "type": "VariableDeclarator",
           "start": 76,
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 4
-            },
-            "end": {
-              "line": 3,
-              "column": 42
-            }
-          },
+          "end": 114,
           "id": {
-            "start": 76,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 4
-              },
-              "end": {
-                "line": 3,
-                "column": 7
-              }
-            },
-            "name": "one",
             "type": "Identifier",
-            "end": 79
+            "start": 76,
+            "end": 79,
+            "name": "one"
           },
           "init": {
+            "type": "objj_MessageSendExpression",
             "start": 82,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 10
-              },
-              "end": {
-                "line": 3,
-                "column": 42
-              }
-            },
+            "end": 114,
             "objj": {
               "selectors": [
                 {
-                  "start": 91,
-                  "loc": {
-                    "start": {
-                      "line": 3,
-                      "column": 19
-                    },
-                    "end": {
-                      "line": 3,
-                      "column": 33
-                    }
-                  },
-                  "name": "arrayWithArray",
                   "type": "Identifier",
-                  "end": 105
+                  "start": 91,
+                  "end": 105,
+                  "name": "arrayWithArray"
                 }
               ],
               "args": [
                 {
+                  "type": "ArrayExpression",
                   "start": 106,
-                  "loc": {
-                    "start": {
-                      "line": 3,
-                      "column": 34
-                    },
-                    "end": {
-                      "line": 3,
-                      "column": 41
-                    }
-                  },
+                  "end": 113,
                   "elements": [
                     {
-                      "start": 107,
-                      "loc": {
-                        "start": {
-                          "line": 3,
-                          "column": 35
-                        },
-                        "end": {
-                          "line": 3,
-                          "column": 40
-                        }
-                      },
-                      "value": "one",
-                      "raw": "\"one\"",
                       "type": "Literal",
-                      "end": 112
+                      "start": 107,
+                      "end": 112,
+                      "value": "one",
+                      "raw": "\"one\""
                     }
-                  ],
-                  "type": "ArrayExpression",
-                  "end": 113
+                  ]
                 }
               ],
               "receiver": {
-                "start": 83,
-                "loc": {
-                  "start": {
-                    "line": 3,
-                    "column": 11
-                  },
-                  "end": {
-                    "line": 3,
-                    "column": 18
-                  }
-                },
-                "name": "CPArray",
                 "type": "Identifier",
-                "end": 90
+                "start": 83,
+                "end": 90,
+                "name": "CPArray"
               }
-            },
-            "type": "objj_MessageSendExpression",
-            "end": 114
-          },
-          "type": "VariableDeclarator",
-          "end": 114
+            }
+          }
         },
         {
+          "type": "VariableDeclarator",
           "start": 120,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 4
-            },
-            "end": {
-              "line": 4,
-              "column": 52
-            }
-          },
+          "end": 168,
           "id": {
-            "start": 120,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 4
-              },
-              "end": {
-                "line": 4,
-                "column": 9
-              }
-            },
-            "name": "array",
             "type": "Identifier",
-            "end": 125
+            "start": 120,
+            "end": 125,
+            "name": "array"
           },
           "init": {
+            "type": "objj_MessageSendExpression",
             "start": 128,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 12
-              },
-              "end": {
-                "line": 4,
-                "column": 52
-              }
-            },
+            "end": 168,
             "objj": {
               "selectors": [
                 {
-                  "start": 137,
-                  "loc": {
-                    "start": {
-                      "line": 4,
-                      "column": 21
-                    },
-                    "end": {
-                      "line": 4,
-                      "column": 35
-                    }
-                  },
-                  "name": "arrayWithArray",
                   "type": "Identifier",
-                  "end": 151
+                  "start": 137,
+                  "end": 151,
+                  "name": "arrayWithArray"
                 }
               ],
               "args": [
                 {
+                  "type": "ArrayExpression",
                   "start": 152,
-                  "loc": {
-                    "start": {
-                      "line": 4,
-                      "column": 36
-                    },
-                    "end": {
-                      "line": 4,
-                      "column": 51
-                    }
-                  },
+                  "end": 167,
                   "elements": [
                     null,
                     {
+                      "type": "Literal",
                       "start": 156,
-                      "loc": {
-                        "start": {
-                          "line": 4,
-                          "column": 40
-                        },
-                        "end": {
-                          "line": 4,
-                          "column": 42
-                        }
-                      },
+                      "end": 158,
                       "value": 13,
-                      "raw": "13",
-                      "type": "Literal",
-                      "end": 158
+                      "raw": "13"
                     },
                     {
+                      "type": "Literal",
                       "start": 160,
-                      "loc": {
-                        "start": {
-                          "line": 4,
-                          "column": 44
-                        },
-                        "end": {
-                          "line": 4,
-                          "column": 46
-                        }
-                      },
+                      "end": 162,
                       "value": 27,
-                      "raw": "27",
-                      "type": "Literal",
-                      "end": 162
+                      "raw": "27"
                     },
                     {
-                      "start": 164,
-                      "loc": {
-                        "start": {
-                          "line": 4,
-                          "column": 48
-                        },
-                        "end": {
-                          "line": 4,
-                          "column": 50
-                        }
-                      },
-                      "value": 31,
-                      "raw": "31",
                       "type": "Literal",
-                      "end": 166
+                      "start": 164,
+                      "end": 166,
+                      "value": 31,
+                      "raw": "31"
                     }
-                  ],
-                  "type": "ArrayExpression",
-                  "end": 167
+                  ]
                 }
               ],
               "receiver": {
-                "start": 129,
-                "loc": {
-                  "start": {
-                    "line": 4,
-                    "column": 13
-                  },
-                  "end": {
-                    "line": 4,
-                    "column": 20
-                  }
-                },
-                "name": "CPArray",
                 "type": "Identifier",
-                "end": 136
+                "start": 129,
+                "end": 136,
+                "name": "CPArray"
               }
-            },
-            "type": "objj_MessageSendExpression",
-            "end": 168
-          },
-          "type": "VariableDeclarator",
-          "end": 168
+            }
+          }
         }
       ],
-      "kind": "var",
-      "type": "VariableDeclaration",
-      "end": 169
+      "kind": "var"
     }
-  ],
-  "type": "Program",
-  "end": 170
+  ]
 }

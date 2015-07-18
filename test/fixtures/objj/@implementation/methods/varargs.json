@@ -1,159 +1,73 @@
 {
+  "type": "Program",
   "start": 0,
-  "loc": {
-    "start": {
-      "line": 1,
-      "column": 0
-    },
-    "end": {
-      "line": 9,
-      "column": 0
-    }
-  },
+  "end": 77,
   "body": [
     {
+      "type": "objj_ClassDeclaration",
       "start": 0,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 0
-        },
-        "end": {
-          "line": 8,
-          "column": 4
-        }
-      },
+      "end": 76,
       "objj": {
         "name": {
-          "start": 16,
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 16
-            },
-            "end": {
-              "line": 1,
-              "column": 19
-            }
-          },
-          "name": "Foo",
           "type": "Identifier",
-          "end": 19
+          "start": 16,
+          "end": 19,
+          "name": "Foo"
         },
         "body": [
           {
+            "type": "objj_MethodDeclaration",
             "start": 38,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 0
-              },
-              "end": {
-                "line": 6,
-                "column": 1
-              }
-            },
+            "end": 70,
             "objj": {
               "methodType": "-",
               "returnType": {
+                "type": "objj_ObjectiveJType",
                 "start": 41,
-                "loc": {
-                  "end": {
-                    "line": 4,
-                    "column": 7
-                  }
-                },
+                "end": 45,
                 "objj": {
                   "isClass": false,
                   "name": "void"
-                },
-                "type": "objj_ObjectiveJType",
-                "end": 45
+                }
               },
               "selectors": [
                 {
-                  "start": 46,
-                  "loc": {
-                    "start": {
-                      "line": 4,
-                      "column": 8
-                    },
-                    "end": {
-                      "line": 4,
-                      "column": 16
-                    }
-                  },
-                  "name": "variable",
                   "type": "Identifier",
-                  "end": 54
+                  "start": 46,
+                  "end": 54,
+                  "name": "variable"
                 }
               ],
               "args": [
                 {
                   "type": {
+                    "type": "objj_ObjectiveJType",
                     "start": 56,
-                    "loc": {
-                      "start": {
-                        "line": 4,
-                        "column": 18
-                      },
-                      "end": {
-                        "line": 4,
-                        "column": 21
-                      }
-                    },
+                    "end": 59,
                     "objj": {
                       "isClass": false,
                       "name": "int"
-                    },
-                    "type": "objj_ObjectiveJType",
-                    "end": 59
+                    }
                   },
                   "id": {
-                    "start": 60,
-                    "loc": {
-                      "start": {
-                        "line": 4,
-                        "column": 22
-                      },
-                      "end": {
-                        "line": 4,
-                        "column": 23
-                      }
-                    },
-                    "name": "v",
                     "type": "Identifier",
-                    "end": 61
+                    "start": 60,
+                    "end": 61,
+                    "name": "v"
                   }
                 }
               ],
               "varArgs": true,
               "body": {
-                "start": 67,
-                "loc": {
-                  "start": {
-                    "line": 5,
-                    "column": 0
-                  },
-                  "end": {
-                    "line": 6,
-                    "column": 1
-                  }
-                },
-                "body": [],
                 "type": "BlockStatement",
-                "end": 70
+                "start": 67,
+                "end": 70,
+                "body": []
               }
-            },
-            "type": "objj_MethodDeclaration",
-            "end": 70
+            }
           }
         ]
-      },
-      "type": "objj_ClassDeclaration",
-      "end": 76
+      }
     }
-  ],
-  "type": "Program",
-  "end": 77
+  ]
 }

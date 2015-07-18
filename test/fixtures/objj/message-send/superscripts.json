@@ -1,242 +1,92 @@
 {
+  "type": "Program",
   "start": 0,
-  "loc": {
-    "start": {
-      "line": 1,
-      "column": 0
-    },
-    "end": {
-      "line": 9,
-      "column": 0
-    }
-  },
+  "end": 196,
   "body": [
     {
+      "type": "ExpressionStatement",
       "start": 43,
-      "loc": {
-        "start": {
-          "line": 2,
-          "column": 0
-        },
-        "end": {
-          "line": 3,
-          "column": 6
-        }
-      },
+      "end": 57,
       "expression": {
+        "type": "MemberExpression",
         "start": 43,
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 0
-          },
-          "end": {
-            "line": 3,
-            "column": 5
-          }
-        },
+        "end": 56,
         "object": {
+          "type": "MemberExpression",
           "start": 43,
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 0
-            },
-            "end": {
-              "line": 2,
-              "column": 7
-            }
-          },
+          "end": 50,
           "object": {
-            "start": 43,
-            "loc": {
-              "start": {
-                "line": 2,
-                "column": 0
-              },
-              "end": {
-                "line": 2,
-                "column": 4
-              }
-            },
-            "name": "test",
             "type": "Identifier",
-            "end": 47
+            "start": 43,
+            "end": 47,
+            "name": "test"
           },
           "property": {
-            "start": 48,
-            "loc": {
-              "start": {
-                "line": 2,
-                "column": 5
-              },
-              "end": {
-                "line": 2,
-                "column": 6
-              }
-            },
-            "name": "i",
             "type": "Identifier",
-            "end": 49
+            "start": 48,
+            "end": 49,
+            "name": "i"
           },
-          "computed": true,
-          "type": "MemberExpression",
-          "end": 50
+          "computed": true
         },
         "property": {
+          "type": "Identifier",
           "start": 52,
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 1
-            },
-            "end": {
-              "line": 3,
-              "column": 4
-            }
-          },
-          "name": "foo",
-          "type": "Identifier",
-          "end": 55
+          "end": 55,
+          "name": "foo"
         },
-        "computed": true,
-        "type": "MemberExpression",
-        "end": 56
-      },
-      "type": "ExpressionStatement",
-      "end": 57
+        "computed": true
+      }
     },
     {
+      "type": "ExpressionStatement",
       "start": 177,
-      "loc": {
-        "start": {
-          "line": 7,
-          "column": 0
-        },
-        "end": {
-          "line": 8,
-          "column": 4
-        }
-      },
+      "end": 189,
       "expression": {
+        "type": "MemberExpression",
         "start": 177,
-        "loc": {
-          "start": {
-            "line": 7,
-            "column": 0
-          },
-          "end": {
-            "line": 7,
-            "column": 7
-          }
-        },
+        "end": 184,
         "object": {
-          "start": 177,
-          "loc": {
-            "start": {
-              "line": 7,
-              "column": 0
-            },
-            "end": {
-              "line": 7,
-              "column": 4
-            }
-          },
-          "name": "test",
           "type": "Identifier",
-          "end": 181
+          "start": 177,
+          "end": 181,
+          "name": "test"
         },
         "property": {
-          "start": 182,
-          "loc": {
-            "start": {
-              "line": 7,
-              "column": 5
-            },
-            "end": {
-              "line": 7,
-              "column": 6
-            }
-          },
-          "name": "i",
           "type": "Identifier",
-          "end": 183
+          "start": 182,
+          "end": 183,
+          "name": "i"
         },
-        "computed": true,
-        "type": "MemberExpression",
-        "end": 184
-      },
-      "type": "ExpressionStatement",
-      "end": 189
+        "computed": true
+      }
     },
     {
+      "type": "ExpressionStatement",
       "start": 190,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 5
-        },
-        "end": {
-          "line": 8,
-          "column": 10
-        }
-      },
+      "end": 195,
       "expression": {
+        "type": "objj_MessageSendExpression",
         "start": 185,
-        "loc": {
-          "start": {
-            "line": 8,
-            "column": 0
-          },
-          "end": {
-            "line": 8,
-            "column": 9
-          }
-        },
+        "end": 194,
         "objj": {
           "selectors": [
             {
-              "start": 190,
-              "loc": {
-                "start": {
-                  "line": 8,
-                  "column": 5
-                },
-                "end": {
-                  "line": 8,
-                  "column": 8
-                }
-              },
-              "name": "bar",
               "type": "Identifier",
-              "end": 193
+              "start": 190,
+              "end": 193,
+              "name": "bar"
             }
           ],
           "args": [],
           "receiver": {
-            "start": 186,
-            "loc": {
-              "start": {
-                "line": 8,
-                "column": 1
-              },
-              "end": {
-                "line": 8,
-                "column": 4
-              }
-            },
-            "name": "foo",
             "type": "Identifier",
-            "end": 189
+            "start": 186,
+            "end": 189,
+            "name": "foo"
           }
-        },
-        "type": "objj_MessageSendExpression",
-        "end": 194
-      },
-      "type": "ExpressionStatement",
-      "end": 195
+        }
+      }
     }
-  ],
-  "type": "Program",
-  "end": 196
+  ]
 }

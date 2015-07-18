@@ -1,52 +1,22 @@
 {
+  "type": "Program",
   "start": 0,
-  "loc": {
-    "start": {
-      "line": 1,
-      "column": 0
-    },
-    "end": {
-      "line": 2,
-      "column": 0
-    }
-  },
+  "end": 27,
   "body": [
     {
+      "type": "objj_ImportStatement",
       "start": 0,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 0
-        },
-        "end": {
-          "line": 1,
-          "column": 26
-        }
-      },
+      "end": 26,
       "objj": {
         "local": false,
         "filename": {
-          "start": 8,
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 8
-            },
-            "end": {
-              "line": 1,
-              "column": 26
-            }
-          },
-          "value": "Frameworks/Foo.j",
-          "raw": "<Frameworks/Foo.j>",
           "type": "Literal",
-          "end": 26
+          "start": 8,
+          "end": 26,
+          "value": "Frameworks/Foo.j",
+          "raw": "<Frameworks/Foo.j>"
         }
-      },
-      "type": "objj_ImportStatement",
-      "end": 26
+      }
     }
-  ],
-  "type": "Program",
-  "end": 27
+  ]
 }

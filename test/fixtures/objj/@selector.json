@@ -1,231 +1,91 @@
 {
+  "type": "Program",
   "start": 0,
-  "loc": {
-    "start": {
-      "line": 1,
-      "column": 0
-    },
-    "end": {
-      "line": 5,
-      "column": 0
-    }
-  },
+  "end": 110,
   "body": [
     {
+      "type": "VariableDeclaration",
       "start": 0,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 0
-        },
-        "end": {
-          "line": 4,
-          "column": 29
-        }
-      },
+      "end": 109,
       "declarations": [
         {
+          "type": "VariableDeclarator",
           "start": 4,
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 4
-            },
-            "end": {
-              "line": 1,
-              "column": 23
-            }
-          },
+          "end": 23,
           "id": {
-            "start": 4,
-            "loc": {
-              "start": {
-                "line": 1,
-                "column": 4
-              },
-              "end": {
-                "line": 1,
-                "column": 6
-              }
-            },
-            "name": "s1",
             "type": "Identifier",
-            "end": 6
+            "start": 4,
+            "end": 6,
+            "name": "s1"
           },
           "init": {
+            "type": "objj_SelectorLiteralExpression",
             "start": 9,
-            "loc": {
-              "start": {
-                "line": 1,
-                "column": 9
-              },
-              "end": {
-                "line": 1,
-                "column": 23
-              }
-            },
+            "end": 23,
             "objj": {
               "selector": "foo"
-            },
-            "type": "objj_SelectorLiteralExpression",
-            "end": 23
-          },
-          "type": "VariableDeclarator",
-          "end": 23
+            }
+          }
         },
         {
+          "type": "VariableDeclarator",
           "start": 29,
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 4
-            },
-            "end": {
-              "line": 2,
-              "column": 24
-            }
-          },
+          "end": 49,
           "id": {
-            "start": 29,
-            "loc": {
-              "start": {
-                "line": 2,
-                "column": 4
-              },
-              "end": {
-                "line": 2,
-                "column": 6
-              }
-            },
-            "name": "s2",
             "type": "Identifier",
-            "end": 31
+            "start": 29,
+            "end": 31,
+            "name": "s2"
           },
           "init": {
+            "type": "objj_SelectorLiteralExpression",
             "start": 34,
-            "loc": {
-              "start": {
-                "line": 2,
-                "column": 9
-              },
-              "end": {
-                "line": 2,
-                "column": 24
-              }
-            },
+            "end": 49,
             "objj": {
               "selector": "foo:"
-            },
-            "type": "objj_SelectorLiteralExpression",
-            "end": 49
-          },
-          "type": "VariableDeclarator",
-          "end": 49
+            }
+          }
         },
         {
+          "type": "VariableDeclarator",
           "start": 55,
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 4
-            },
-            "end": {
-              "line": 3,
-              "column": 27
-            }
-          },
+          "end": 78,
           "id": {
-            "start": 55,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 4
-              },
-              "end": {
-                "line": 3,
-                "column": 6
-              }
-            },
-            "name": "s3",
             "type": "Identifier",
-            "end": 57
+            "start": 55,
+            "end": 57,
+            "name": "s3"
           },
           "init": {
+            "type": "objj_SelectorLiteralExpression",
             "start": 60,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 9
-              },
-              "end": {
-                "line": 3,
-                "column": 27
-              }
-            },
+            "end": 78,
             "objj": {
               "selector": "foo:bar"
-            },
-            "type": "objj_SelectorLiteralExpression",
-            "end": 78
-          },
-          "type": "VariableDeclarator",
-          "end": 78
+            }
+          }
         },
         {
+          "type": "VariableDeclarator",
           "start": 84,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 4
-            },
-            "end": {
-              "line": 4,
-              "column": 28
-            }
-          },
+          "end": 108,
           "id": {
-            "start": 84,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 4
-              },
-              "end": {
-                "line": 4,
-                "column": 6
-              }
-            },
-            "name": "s4",
             "type": "Identifier",
-            "end": 86
+            "start": 84,
+            "end": 86,
+            "name": "s4"
           },
           "init": {
+            "type": "objj_SelectorLiteralExpression",
             "start": 89,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 9
-              },
-              "end": {
-                "line": 4,
-                "column": 28
-              }
-            },
+            "end": 108,
             "objj": {
               "selector": "foo:bar:"
-            },
-            "type": "objj_SelectorLiteralExpression",
-            "end": 108
-          },
-          "type": "VariableDeclarator",
-          "end": 108
+            }
+          }
         }
       ],
-      "kind": "var",
-      "type": "VariableDeclaration",
-      "end": 109
+      "kind": "var"
     }
-  ],
-  "type": "Program",
-  "end": 110
+  ]
 }

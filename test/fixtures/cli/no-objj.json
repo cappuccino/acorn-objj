@@ -1,115 +1,45 @@
 {
+  "type": "Program",
   "start": 0,
-  "loc": {
-    "start": {
-      "line": 1,
-      "column": 0
-    },
-    "end": {
-      "line": 4,
-      "column": 0
-    }
-  },
+  "end": 28,
   "body": [
     {
-      "start": 0,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 0
-        },
-        "end": {
-          "line": 1,
-          "column": 13
-        }
-      },
-      "expression": {
-        "start": 0,
-        "loc": {
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 1,
-            "column": 12
-          }
-        },
-        "value": "use strict",
-        "raw": "\"use strict\"",
-        "type": "Literal",
-        "end": 12
-      },
       "type": "ExpressionStatement",
-      "end": 13
+      "start": 0,
+      "end": 13,
+      "expression": {
+        "type": "Literal",
+        "start": 0,
+        "end": 12,
+        "value": "use strict",
+        "raw": "\"use strict\""
+      }
     },
     {
+      "type": "VariableDeclaration",
       "start": 15,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 0
-        },
-        "end": {
-          "line": 3,
-          "column": 12
-        }
-      },
+      "end": 27,
       "declarations": [
         {
+          "type": "VariableDeclarator",
           "start": 19,
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 4
-            },
-            "end": {
-              "line": 3,
-              "column": 11
-            }
-          },
+          "end": 26,
           "id": {
-            "start": 19,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 4
-              },
-              "end": {
-                "line": 3,
-                "column": 7
-              }
-            },
-            "name": "int",
             "type": "Identifier",
-            "end": 22
+            "start": 19,
+            "end": 22,
+            "name": "int"
           },
           "init": {
-            "start": 25,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 10
-              },
-              "end": {
-                "line": 3,
-                "column": 11
-              }
-            },
-            "value": 7,
-            "raw": "7",
             "type": "Literal",
-            "end": 26
-          },
-          "type": "VariableDeclarator",
-          "end": 26
+            "start": 25,
+            "end": 26,
+            "value": 7,
+            "raw": "7"
+          }
         }
       ],
-      "kind": "var",
-      "type": "VariableDeclaration",
-      "end": 27
+      "kind": "var"
     }
-  ],
-  "type": "Program",
-  "end": 28
+  ]
 }

@@ -1,209 +1,89 @@
 {
+  "type": "Program",
   "start": 0,
-  "loc": {
-    "start": {
-      "line": 1,
-      "column": 0
-    },
-    "end": {
-      "line": 8,
-      "column": 0
-    }
-  },
+  "end": 84,
   "body": [
     {
+      "type": "objj_ClassDeclaration",
       "start": 0,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 0
-        },
-        "end": {
-          "line": 7,
-          "column": 4
-        }
-      },
+      "end": 83,
       "objj": {
         "name": {
-          "start": 16,
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 16
-            },
-            "end": {
-              "line": 1,
-              "column": 19
-            }
-          },
-          "name": "Foo",
           "type": "Identifier",
-          "end": 19
+          "start": 16,
+          "end": 19,
+          "name": "Foo"
         },
         "ivars": [
           {
+            "type": "objj_IvarDeclaration",
             "start": 37,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 15
-              },
-              "end": {
-                "line": 3,
-                "column": 21
-              }
-            },
+            "end": 43,
             "objj": {
               "type": {
+                "type": "objj_ObjectiveJType",
                 "start": 26,
-                "loc": {
-                  "start": {
-                    "line": 3,
-                    "column": 4
-                  },
-                  "end": {
-                    "line": 3,
-                    "column": 14
-                  }
-                },
+                "end": 36,
                 "objj": {
                   "isClass": false,
                   "name": "id",
                   "protocols": [
                     {
-                      "start": 29,
-                      "loc": {
-                        "start": {
-                          "line": 3,
-                          "column": 7
-                        },
-                        "end": {
-                          "line": 3,
-                          "column": 13
-                        }
-                      },
-                      "name": "CPText",
                       "type": "Identifier",
-                      "end": 35
+                      "start": 29,
+                      "end": 35,
+                      "name": "CPText"
                     }
                   ]
-                },
-                "type": "objj_ObjectiveJType",
-                "end": 36
+                }
               },
               "id": {
-                "start": 37,
-                "loc": {
-                  "start": {
-                    "line": 3,
-                    "column": 15
-                  },
-                  "end": {
-                    "line": 3,
-                    "column": 21
-                  }
-                },
-                "name": "textId",
                 "type": "Identifier",
-                "end": 43
+                "start": 37,
+                "end": 43,
+                "name": "textId"
               }
-            },
-            "type": "objj_IvarDeclaration",
-            "end": 43
+            }
           },
           {
+            "type": "objj_IvarDeclaration",
             "start": 68,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 23
-              },
-              "end": {
-                "line": 4,
-                "column": 29
-              }
-            },
+            "end": 74,
             "objj": {
               "type": {
+                "type": "objj_ObjectiveJType",
                 "start": 49,
-                "loc": {
-                  "start": {
-                    "line": 4,
-                    "column": 4
-                  },
-                  "end": {
-                    "line": 4,
-                    "column": 22
-                  }
-                },
+                "end": 67,
                 "objj": {
                   "isClass": false,
                   "name": "id",
                   "protocols": [
                     {
-                      "start": 52,
-                      "loc": {
-                        "start": {
-                          "line": 4,
-                          "column": 7
-                        },
-                        "end": {
-                          "line": 4,
-                          "column": 13
-                        }
-                      },
-                      "name": "CPText",
                       "type": "Identifier",
-                      "end": 58
+                      "start": 52,
+                      "end": 58,
+                      "name": "CPText"
                     },
                     {
-                      "start": 60,
-                      "loc": {
-                        "start": {
-                          "line": 4,
-                          "column": 15
-                        },
-                        "end": {
-                          "line": 4,
-                          "column": 21
-                        }
-                      },
-                      "name": "CPView",
                       "type": "Identifier",
-                      "end": 66
+                      "start": 60,
+                      "end": 66,
+                      "name": "CPView"
                     }
                   ]
-                },
-                "type": "objj_ObjectiveJType",
-                "end": 67
+                }
               },
               "id": {
-                "start": 68,
-                "loc": {
-                  "start": {
-                    "line": 4,
-                    "column": 23
-                  },
-                  "end": {
-                    "line": 4,
-                    "column": 29
-                  }
-                },
-                "name": "textId",
                 "type": "Identifier",
-                "end": 74
+                "start": 68,
+                "end": 74,
+                "name": "textId"
               }
-            },
-            "type": "objj_IvarDeclaration",
-            "end": 74
+            }
           }
         ],
         "body": []
-      },
-      "type": "objj_ClassDeclaration",
-      "end": 83
+      }
     }
-  ],
-  "type": "Program",
-  "end": 84
+  ]
 }

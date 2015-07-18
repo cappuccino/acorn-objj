@@ -1,262 +1,128 @@
 {
+  "type": "Program",
   "start": 0,
-  "loc": {
-    "start": {
-      "line": 1,
-      "column": 0
-    },
-    "end": {
-      "line": 12,
-      "column": 0
-    }
-  },
+  "end": 96,
   "body": [
     {
+      "type": "objj_ProtocolDeclaration",
       "start": 0,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 0
-        },
-        "end": {
-          "line": 11,
-          "column": 4
-        }
-      },
+      "end": 95,
       "objj": {
         "name": {
-          "start": 10,
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 10
-            },
-            "end": {
-              "line": 1,
-              "column": 13
-            }
-          },
-          "name": "Foo",
           "type": "Identifier",
-          "end": 13
+          "start": 10,
+          "end": 13,
+          "name": "Foo"
         },
         "required": [
           {
+            "type": "objj_MethodDeclaration",
             "start": 25,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 0
-              },
-              "end": {
-                "line": 4,
-                "column": 13
-              }
-            },
+            "end": 38,
             "objj": {
               "methodType": "-",
               "returnType": {
+                "type": "objj_ObjectiveJType",
                 "start": 28,
-                "loc": {
-                  "end": {
-                    "line": 4,
-                    "column": 7
-                  }
-                },
+                "end": 32,
                 "objj": {
                   "isClass": false,
                   "name": "void"
-                },
-                "type": "objj_ObjectiveJType",
-                "end": 32
+                }
               },
               "selectors": [
                 {
-                  "start": 33,
-                  "loc": {
-                    "start": {
-                      "line": 4,
-                      "column": 8
-                    },
-                    "end": {
-                      "line": 4,
-                      "column": 12
-                    }
-                  },
-                  "name": "req1",
                   "type": "Identifier",
-                  "end": 37
+                  "start": 33,
+                  "end": 37,
+                  "name": "req1"
                 }
               ],
               "args": []
-            },
-            "type": "objj_MethodDeclaration",
-            "end": 38
+            }
           },
           {
+            "type": "objj_MethodDeclaration",
             "start": 39,
-            "loc": {
-              "start": {
-                "line": 5,
-                "column": 0
-              },
-              "end": {
-                "line": 5,
-                "column": 13
-              }
-            },
+            "end": 52,
             "objj": {
               "methodType": "-",
               "returnType": {
+                "type": "objj_ObjectiveJType",
                 "start": 42,
-                "loc": {
-                  "end": {
-                    "line": 5,
-                    "column": 7
-                  }
-                },
+                "end": 46,
                 "objj": {
                   "isClass": false,
                   "name": "void"
-                },
-                "type": "objj_ObjectiveJType",
-                "end": 46
+                }
               },
               "selectors": [
                 {
-                  "start": 47,
-                  "loc": {
-                    "start": {
-                      "line": 5,
-                      "column": 8
-                    },
-                    "end": {
-                      "line": 5,
-                      "column": 12
-                    }
-                  },
-                  "name": "req2",
                   "type": "Identifier",
-                  "end": 51
+                  "start": 47,
+                  "end": 51,
+                  "name": "req2"
                 }
               ],
               "args": []
-            },
-            "type": "objj_MethodDeclaration",
-            "end": 52
+            }
           }
         ],
         "optional": [
           {
+            "type": "objj_MethodDeclaration",
             "start": 64,
-            "loc": {
-              "start": {
-                "line": 8,
-                "column": 0
-              },
-              "end": {
-                "line": 8,
-                "column": 12
-              }
-            },
+            "end": 76,
             "objj": {
               "methodType": "-",
               "returnType": {
+                "type": "objj_ObjectiveJType",
                 "start": 67,
-                "loc": {
-                  "end": {
-                    "line": 8,
-                    "column": 7
-                  }
-                },
+                "end": 71,
                 "objj": {
                   "isClass": false,
                   "name": "void"
-                },
-                "type": "objj_ObjectiveJType",
-                "end": 71
+                }
               },
               "selectors": [
                 {
-                  "start": 72,
-                  "loc": {
-                    "start": {
-                      "line": 8,
-                      "column": 8
-                    },
-                    "end": {
-                      "line": 8,
-                      "column": 11
-                    }
-                  },
-                  "name": "foo",
                   "type": "Identifier",
-                  "end": 75
+                  "start": 72,
+                  "end": 75,
+                  "name": "foo"
                 }
               ],
               "args": []
-            },
-            "type": "objj_MethodDeclaration",
-            "end": 76
+            }
           },
           {
+            "type": "objj_MethodDeclaration",
             "start": 77,
-            "loc": {
-              "start": {
-                "line": 9,
-                "column": 0
-              },
-              "end": {
-                "line": 9,
-                "column": 12
-              }
-            },
+            "end": 89,
             "objj": {
               "methodType": "-",
               "returnType": {
+                "type": "objj_ObjectiveJType",
                 "start": 80,
-                "loc": {
-                  "end": {
-                    "line": 9,
-                    "column": 7
-                  }
-                },
+                "end": 84,
                 "objj": {
                   "isClass": false,
                   "name": "void"
-                },
-                "type": "objj_ObjectiveJType",
-                "end": 84
+                }
               },
               "selectors": [
                 {
-                  "start": 85,
-                  "loc": {
-                    "start": {
-                      "line": 9,
-                      "column": 8
-                    },
-                    "end": {
-                      "line": 9,
-                      "column": 11
-                    }
-                  },
-                  "name": "bar",
                   "type": "Identifier",
-                  "end": 88
+                  "start": 85,
+                  "end": 88,
+                  "name": "bar"
                 }
               ],
               "args": []
-            },
-            "type": "objj_MethodDeclaration",
-            "end": 89
+            }
           }
         ]
-      },
-      "type": "objj_ProtocolDeclaration",
-      "end": 95
+      }
     }
-  ],
-  "type": "Program",
-  "end": 96
+  ]
 }

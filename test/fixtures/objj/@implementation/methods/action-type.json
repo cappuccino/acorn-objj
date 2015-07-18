@@ -1,218 +1,96 @@
 {
+  "type": "Program",
   "start": 0,
-  "loc": {
-    "start": {
-      "line": 1,
-      "column": 0
-    },
-    "end": {
-      "line": 13,
-      "column": 0
-    }
-  },
+  "end": 145,
   "body": [
     {
+      "type": "objj_ClassDeclaration",
       "start": 0,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 0
-        },
-        "end": {
-          "line": 12,
-          "column": 4
-        }
-      },
+      "end": 144,
       "objj": {
         "name": {
-          "start": 16,
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 16
-            },
-            "end": {
-              "line": 1,
-              "column": 19
-            }
-          },
-          "name": "Foo",
           "type": "Identifier",
-          "end": 19
+          "start": 16,
+          "end": 19,
+          "name": "Foo"
         },
         "body": [
           {
+            "type": "objj_MethodDeclaration",
             "start": 61,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 0
-              },
-              "end": {
-                "line": 6,
-                "column": 1
-              }
-            },
+            "end": 98,
             "objj": {
               "methodType": "-",
               "action": {
-                "start": 64,
-                "loc": {
-                  "start": {
-                    "line": 4,
-                    "column": 3
-                  },
-                  "end": {
-                    "line": 4,
-                    "column": 10
-                  }
-                },
                 "type": "objj_ActionType",
+                "start": 64,
                 "end": 71
               },
               "returnType": {
+                "type": "objj_ObjectiveJType",
                 "start": 72,
-                "loc": {
-                  "end": {
-                    "line": 4,
-                    "column": 17
-                  }
-                },
+                "end": 78,
                 "objj": {
                   "isClass": false,
                   "name": "double"
-                },
-                "type": "objj_ObjectiveJType",
-                "end": 78
+                }
               },
               "selectors": [
                 {
-                  "start": 79,
-                  "loc": {
-                    "start": {
-                      "line": 4,
-                      "column": 18
-                    },
-                    "end": {
-                      "line": 4,
-                      "column": 33
-                    }
-                  },
-                  "name": "someOtherAction",
                   "type": "Identifier",
-                  "end": 94
+                  "start": 79,
+                  "end": 94,
+                  "name": "someOtherAction"
                 }
               ],
               "args": [],
               "body": {
-                "start": 95,
-                "loc": {
-                  "start": {
-                    "line": 5,
-                    "column": 0
-                  },
-                  "end": {
-                    "line": 6,
-                    "column": 1
-                  }
-                },
-                "body": [],
                 "type": "BlockStatement",
-                "end": 98
+                "start": 95,
+                "end": 98,
+                "body": []
               }
-            },
-            "type": "objj_MethodDeclaration",
-            "end": 98
+            }
           },
           {
+            "type": "objj_MethodDeclaration",
             "start": 100,
-            "loc": {
-              "start": {
-                "line": 8,
-                "column": 0
-              },
-              "end": {
-                "line": 10,
-                "column": 1
-              }
-            },
+            "end": 138,
             "objj": {
               "methodType": "-",
               "action": {
-                "start": 103,
-                "loc": {
-                  "start": {
-                    "line": 8,
-                    "column": 3
-                  },
-                  "end": {
-                    "line": 8,
-                    "column": 11
-                  }
-                },
                 "type": "objj_ActionType",
+                "start": 103,
                 "end": 111
               },
               "returnType": {
+                "type": "objj_ObjectiveJType",
                 "start": 112,
-                "loc": {
-                  "end": {
-                    "line": 8,
-                    "column": 18
-                  }
-                },
+                "end": 118,
                 "objj": {
                   "isClass": false,
                   "name": "double"
-                },
-                "type": "objj_ObjectiveJType",
-                "end": 118
+                }
               },
               "selectors": [
                 {
-                  "start": 119,
-                  "loc": {
-                    "start": {
-                      "line": 8,
-                      "column": 19
-                    },
-                    "end": {
-                      "line": 8,
-                      "column": 34
-                    }
-                  },
-                  "name": "someOtherAction",
                   "type": "Identifier",
-                  "end": 134
+                  "start": 119,
+                  "end": 134,
+                  "name": "someOtherAction"
                 }
               ],
               "args": [],
               "body": {
-                "start": 135,
-                "loc": {
-                  "start": {
-                    "line": 9,
-                    "column": 0
-                  },
-                  "end": {
-                    "line": 10,
-                    "column": 1
-                  }
-                },
-                "body": [],
                 "type": "BlockStatement",
-                "end": 138
+                "start": 135,
+                "end": 138,
+                "body": []
               }
-            },
-            "type": "objj_MethodDeclaration",
-            "end": 138
+            }
           }
         ]
-      },
-      "type": "objj_ClassDeclaration",
-      "end": 144
+      }
     }
-  ],
-  "type": "Program",
-  "end": 145
+  ]
 }

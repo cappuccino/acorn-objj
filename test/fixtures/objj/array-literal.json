@@ -1,136 +1,56 @@
 {
+  "type": "Program",
   "start": 0,
-  "loc": {
-    "start": {
-      "line": 1,
-      "column": 0
-    },
-    "end": {
-      "line": 6,
-      "column": 0
-    }
-  },
+  "end": 59,
   "body": [
     {
+      "type": "VariableDeclaration",
       "start": 0,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 0
-        },
-        "end": {
-          "line": 5,
-          "column": 6
-        }
-      },
+      "end": 58,
       "declarations": [
         {
+          "type": "VariableDeclarator",
           "start": 4,
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 4
-            },
-            "end": {
-              "line": 5,
-              "column": 5
-            }
-          },
+          "end": 57,
           "id": {
-            "start": 4,
-            "loc": {
-              "start": {
-                "line": 1,
-                "column": 4
-              },
-              "end": {
-                "line": 1,
-                "column": 5
-              }
-            },
-            "name": "a",
             "type": "Identifier",
-            "end": 5
+            "start": 4,
+            "end": 5,
+            "name": "a"
           },
           "init": {
+            "type": "objj_ArrayLiteral",
             "start": 8,
-            "loc": {
-              "start": {
-                "line": 1,
-                "column": 8
-              },
-              "end": {
-                "line": 5,
-                "column": 5
-              }
-            },
+            "end": 57,
             "objj": {
               "elements": [
                 {
+                  "type": "Literal",
                   "start": 19,
-                  "loc": {
-                    "start": {
-                      "line": 2,
-                      "column": 8
-                    },
-                    "end": {
-                      "line": 2,
-                      "column": 14
-                    }
-                  },
+                  "end": 25,
                   "value": "one",
-                  "raw": "@\"one\"",
-                  "type": "Literal",
-                  "end": 25
+                  "raw": "@\"one\""
                 },
                 {
+                  "type": "Literal",
                   "start": 35,
-                  "loc": {
-                    "start": {
-                      "line": 3,
-                      "column": 8
-                    },
-                    "end": {
-                      "line": 3,
-                      "column": 9
-                    }
-                  },
+                  "end": 36,
                   "value": 1,
-                  "raw": "1",
-                  "type": "Literal",
-                  "end": 36
+                  "raw": "1"
                 },
                 {
-                  "start": 46,
-                  "loc": {
-                    "start": {
-                      "line": 4,
-                      "column": 8
-                    },
-                    "end": {
-                      "line": 4,
-                      "column": 13
-                    }
-                  },
-                  "value": "two",
-                  "raw": "\"two\"",
                   "type": "Literal",
-                  "end": 51
+                  "start": 46,
+                  "end": 51,
+                  "value": "two",
+                  "raw": "\"two\""
                 }
               ]
-            },
-            "type": "objj_ArrayLiteral",
-            "end": 57
-          },
-          "type": "VariableDeclarator",
-          "end": 57
+            }
+          }
         }
       ],
-      "kind": "var",
-      "type": "VariableDeclaration",
-      "end": 58
+      "kind": "var"
     }
-  ],
-  "type": "Program",
-  "end": 59
+  ]
 }

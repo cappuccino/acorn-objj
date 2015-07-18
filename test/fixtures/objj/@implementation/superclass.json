@@ -1,67 +1,27 @@
 {
+  "type": "Program",
   "start": 0,
-  "loc": {
-    "start": {
-      "line": 1,
-      "column": 0
-    },
-    "end": {
-      "line": 3,
-      "column": 0
-    }
-  },
+  "end": 31,
   "body": [
     {
+      "type": "objj_ClassDeclaration",
       "start": 0,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 0
-        },
-        "end": {
-          "line": 2,
-          "column": 4
-        }
-      },
+      "end": 30,
       "objj": {
         "name": {
-          "start": 16,
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 16
-            },
-            "end": {
-              "line": 1,
-              "column": 19
-            }
-          },
-          "name": "Foo",
           "type": "Identifier",
-          "end": 19
+          "start": 16,
+          "end": 19,
+          "name": "Foo"
         },
         "superclass": {
-          "start": 22,
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 22
-            },
-            "end": {
-              "line": 1,
-              "column": 25
-            }
-          },
-          "name": "Bar",
           "type": "Identifier",
-          "end": 25
+          "start": 22,
+          "end": 25,
+          "name": "Bar"
         },
         "body": []
-      },
-      "type": "objj_ClassDeclaration",
-      "end": 30
+      }
     }
-  ],
-  "type": "Program",
-  "end": 31
+  ]
 }
