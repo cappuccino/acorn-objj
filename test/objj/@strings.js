@@ -9,6 +9,6 @@ describe("@ strings", function()
 {
     it("should generate Literal string nodes", function()
     {
-        testFixture("string");
+        testFixture("objj", "string");
     });
 });

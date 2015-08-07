@@ -1,7 +1,7 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 170,
+  "end": 180,
   "body": [
     {
       "type": "VariableDeclaration",
@@ -125,7 +125,13 @@
                   "start": 152,
                   "end": 167,
                   "elements": [
-                    null,
+                    {
+                      "type": "Literal",
+                      "start": 153,
+                      "end": 154,
+                      "value": 7,
+                      "raw": "7"
+                    },
                     {
                       "type": "Literal",
                       "start": 156,
@@ -161,6 +167,18 @@
         }
       ],
       "kind": "var"
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 171,
+      "end": 179,
+      "expression": {
+        "type": "Literal",
+        "start": 171,
+        "end": 178,
+        "value": "hello",
+        "raw": "\"hello\""
+      }
     }
   ]
 }

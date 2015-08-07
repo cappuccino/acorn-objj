@@ -16,7 +16,7 @@ describe("@ref", function()
 {
     it("should generate objj_Reference nodes", function()
     {
-        testFixture("@ref");
+        testFixture("objj", "@ref");
     });
 
     it("should generate an error with an empty reference", function()

@@ -16,7 +16,7 @@ describe("@selector", function()
 {
     it("should generate objj_SelectorLiteralExpression nodes", function()
     {
-        testFixture("@selector");
+        testFixture("objj", "@selector");
     });
 
     it("should generate an error with an empty selector", function()

@@ -16,22 +16,22 @@ describe("accessors", function()
 {
     it("should generate an empty accessors object for @acessors or @accessors()", function()
     {
-        testFixture("@accessors/empty");
+        testFixture("objj", "@accessors/empty");
     });
 
     it("should generate an accessors object with property:\"name\" or getter:\"name\" for @acessors(property=name) or @accessors(getter=name)", function()
     {
-        testFixture("@accessors/property-getter");
+        testFixture("objj", "@accessors/property-getter");
     });
 
     it("should generate an accessors object with setter:\"name:\" for @acessors(setter=name) or @accessors(setter=name:)", function()
     {
-        testFixture("@accessors/setter");
+        testFixture("objj", "@accessors/setter");
     });
 
     it("should generate an accessors object with <attribute>:true for readonly, readwrite, and copy attributes", function()
     {
-        testFixture("@accessors/attributes");
+        testFixture("objj", "@accessors/attributes");
     });
 
     it("should generate an error for unknown @accessor attributes", function()

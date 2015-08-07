@@ -16,12 +16,12 @@ describe("@import", function()
 {
     it("should generate objj_ImportStatement nodes with local:true for @import \"path\"", function()
     {
-        testFixture("@import/local");
+        testFixture("objj", "@import/local");
     });
 
     it("should generate objj_ImportStatement nodes with local:false for @import <path>", function()
     {
-        testFixture("@import/system");
+        testFixture("objj", "@import/system");
     });
 
     it("should fail for unterminated filenames", function()

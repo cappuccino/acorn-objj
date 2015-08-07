@@ -16,22 +16,22 @@ describe("@protocol", function()
 {
     it("should generate objj_ProtocolDeclaration node with no protocols attributes for @protocol Foo", function()
     {
-        testFixture("@protocol/plain");
+        testFixture("objj", "@protocol/plain");
     });
 
     it("should generate protocols array attribute for @protocol that has a conforming protocol list", function()
     {
-        testFixture("@protocol/super-protocols");
+        testFixture("objj", "@protocol/super-protocols");
     });
 
     it("should generate required objj_MethodDeclaration nodes for unmarked methods", function()
     {
-        testFixture("@protocol/unmarked-methods");
+        testFixture("objj", "@protocol/unmarked-methods");
     });
 
     it("should generate required and optional objj_MethodDeclaration nodes for marked methods", function()
     {
-        testFixture("@protocol/marked-methods");
+        testFixture("objj", "@protocol/marked-methods");
     });
 
     it("should generate an error if conforming protocols are not separated by ','", function()

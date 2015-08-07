@@ -1,2 +1,2 @@
-// Message send with and without args
+// Message send with args
 [view setTitle:[self title]];

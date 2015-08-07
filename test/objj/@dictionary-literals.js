@@ -16,7 +16,7 @@ describe("@{}", function()
 {
     it("should generate objj_DictionaryLiteral nodes, ignoring dangling commas", function()
     {
-        testFixture("dictionary-literal");
+        testFixture("objj", "dictionary-literal");
     });
 
     it("should fail with missing commas between items", function()

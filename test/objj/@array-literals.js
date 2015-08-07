@@ -16,7 +16,7 @@ describe("@[]", function()
 {
     it("should generate objj_ArrayLiteral nodes", function()
     {
-        testFixture("array-literal");
+        testFixture("objj", "array-literal");
     });
 
     it("should fail with missing commas between elements", function()

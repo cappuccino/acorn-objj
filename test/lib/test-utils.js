@@ -48,17 +48,21 @@ exports.run = function(args, options)
     };
 };
 
-var fixturesDir = "test/fixtures/objj";
+var fixturesDir = "test/fixtures";
 
-exports.testFixture = function(file, options)
+exports.testFixture = function(base, file, options)
 {
-    parse.parseFileToString(path.join(fixturesDir, file + ".j"), options)
-        .should.equalFixture(path.join("objj", file + ".json"));
+    var filePath = path.join(fixturesDir, base, file + ".j");
+
+    parse.parseFileToString(filePath, options)
+        .should.equalFixture(path.join(base, file + ".json"));
 };
 
 exports.makeParser = function(source, options)
 {
-    return function() { parse.parse(source, options); };
+    return function() {
+        parse.parse(source, options);
+    };
 };
 
 /* global describe */

@@ -16,22 +16,22 @@ describe("ivars", function()
 {
     it("should generate objj_ClassDeclaration with empty ivars array attribute for {}", function()
     {
-        testFixture("ivars/empty");
+        testFixture("objj", "ivars/empty");
     });
 
     it("should generate objj_IvarDeclaration and objj_ObjectiveJType nodes with isClass:false for built in types", function()
     {
-        testFixture("ivars/types");
+        testFixture("objj", "ivars/types");
     });
 
     it("should generate objj_ObjectiveJType nodes with isOutlet:true for ivars marked with @outlet or IBOutlet", function()
     {
-        testFixture("ivars/outlets");
+        testFixture("objj", "ivars/outlets");
     });
 
     it("should generate objj_ObjectiveJType nodes with protocols array attribute set for id<Foo, Bar>", function()
     {
-        testFixture("ivars/protocols");
+        testFixture("objj", "ivars/protocols");
     });
 
     it("should generate an empty protocol list error for id<> as a type", function()

@@ -16,7 +16,7 @@ describe("@deref", function()
 {
     it("should generate objj_Dereference nodes", function()
     {
-        testFixture("@deref");
+        testFixture("objj", "@deref");
     });
 
     it("should generate an error with an empty dereference", function()

@@ -16,22 +16,22 @@ describe("declaration", function()
 {
     it("should generate objj_ClassDeclaration node", function()
     {
-        testFixture("@implementation/simple");
+        testFixture("objj", "@implementation/simple");
     });
 
     it("should generate superclass attribute for subclasses", function()
     {
-        testFixture("@implementation/superclass");
+        testFixture("objj", "@implementation/superclass");
     });
 
     it("should generate category attribute for categories", function()
     {
-        testFixture("@implementation/category");
+        testFixture("objj", "@implementation/category");
     });
 
     it("should generate protocols array attribute for classes conforming to protocols", function()
     {
-        testFixture("@implementation/protocols");
+        testFixture("objj", "@implementation/protocols");
     });
 
     it("should generate an error if @implementation or @interface is nested", function()

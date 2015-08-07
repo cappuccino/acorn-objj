@@ -16,32 +16,32 @@ describe("Message send", function()
 {
     it("should generate objj_MessageSend nodes with or without args", function()
     {
-        testFixture("message-send/args");
+        testFixture("objj", "message-send/args");
     });
 
     it("should correctly parse arrays within message sends", function()
     {
-        testFixture("message-send/arrays");
+        testFixture("objj", "message-send/arrays");
     });
 
     it("should work with empty selectors", function()
     {
-        testFixture("message-send/empty");
+        testFixture("objj", "message-send/empty");
     });
 
     it("should correctly parse member expressions within message sends", function()
     {
-        testFixture("message-send/member-expressions");
+        testFixture("objj", "message-send/member-expressions");
     });
 
     it("should correctly set the receiver to \"super\"", function()
     {
-        testFixture("message-send/super");
+        testFixture("objj", "message-send/super");
     });
 
     it("should deal with subscript -> allowed implicit semicolon -> message send", function()
     {
-        testFixture("message-send/superscripts", { strictSemicolons: false });
+        testFixture("objj", "message-send/superscripts", { strictSemicolons: false });
     });
 
     it("should fail with subscript -> strict implicit semicolon -> message send", function()
@@ -52,7 +52,7 @@ describe("Message send", function()
 
     it("should parse variable arguments and store them in the varArgs attribute", function()
     {
-        testFixture("message-send/varargs");
+        testFixture("objj", "message-send/varargs");
     });
 
     it("should fail if a selector component is not followed by a colon", function()

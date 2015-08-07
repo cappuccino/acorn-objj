@@ -11,7 +11,7 @@
         {
           "type": "VariableDeclarator",
           "start": 4,
-          "end": 13,
+          "end": 9,
           "id": {
             "type": "Identifier",
             "start": 4,
@@ -19,16 +19,17 @@
             "name": "foo"
           },
           "init": {
-            "type": "Identifier",
-            "start": 10,
-            "end": 13,
-            "name": "FOO"
+            "type": "Literal",
+            "start": 4,
+            "end": 5,
+            "value": 1,
+            "raw": "1"
           }
         },
         {
           "type": "VariableDeclarator",
           "start": 19,
-          "end": 28,
+          "end": 24,
           "id": {
             "type": "Identifier",
             "start": 19,
@@ -36,10 +37,11 @@
             "name": "bar"
           },
           "init": {
-            "type": "Identifier",
-            "start": 25,
-            "end": 28,
-            "name": "BAR"
+            "type": "Literal",
+            "start": 4,
+            "end": 5,
+            "value": 7,
+            "raw": "7"
           }
         }
       ],
