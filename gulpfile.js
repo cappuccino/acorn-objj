@@ -3,6 +3,7 @@
 var del = require("del"),
     fs = require("fs"),
     gulp = require("gulp"),
+    changed = require("gulp-changed"),
     loadPlugins = require("gulp-load-plugins"),
     parse = require("./lib/parse").parseFileToString,
     path = require("path"),
@@ -84,17 +85,39 @@ gulp.task("generate-fixtures", function()
         if (!dest)
             dest = path.basename(source, path.extname(source)) + ".json";
 
-        args.push(path.join(fixturesPath, "cli", source));
+        var basePath = path.join(fixturesPath, "cli"),
+            sourcePath = path.join(basePath, source),
+            destPath = path.join(basePath, dest),
+            sourceStat,
+            destStat;
+
+        try
+        {
+            sourceStat = fs.statSync(sourcePath);
+            destStat = fs.statSync(destPath);
+
+            // Don't bother if the source file has not changed since
+            // the last write of the dest file.
+            if (sourceStat.mtime <= destStat.mtime)
+                return;
+        }
+        catch (ex)
+        {
+            // Don't do anything
+        }
+
+        args.push(sourcePath);
 
         var output = run(args, { parseOptions: { slice: 0 }}).output;
 
-        fs.writeFileSync(path.join(fixturesPath, "cli", dest), output);
+        fs.writeFileSync(destPath, output);
         console.log("cli/" + dest);
     });
 
     var through = require("through2").obj;
 
     return gulp.src(["test/fixtures/**/*.j"])
+        .pipe($.changed("test/fixtures", { extension: ".json" }))
         .pipe(through(parseFixture))
         .pipe($.rename({ extname: ".json" }))
         .pipe(gulp.dest("test/fixtures"));
