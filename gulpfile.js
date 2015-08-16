@@ -3,7 +3,6 @@
 var del = require("del"),
     fs = require("fs"),
     gulp = require("gulp"),
-    changed = require("gulp-changed"),
     loadPlugins = require("gulp-load-plugins"),
     parse = require("./lib/parse").parseFileToString,
     path = require("path"),
@@ -26,8 +25,9 @@ gulp.task("clean", function(done)
 var sourceFiles = [
         "gulpfile.js",
         "lib/*.js",
-        "test/*.js",
-        "test/lib/*.js"
+        "test/**/*.js",
+        "!test/coverage/**/*.js",
+        "!test/fixtures/**/*.js"
     ];
 
 gulp.task("lint:eslint", function()
@@ -63,22 +63,26 @@ function parseFixture(file, encoding, cb)
 
 gulp.task("generate-fixtures", function()
 {
-    fixturesPath = path.resolve("test/fixtures");
+    fixturesPath = "test/fixtures";
 
     var cliFixtures = [
+            [["--no-preprocessor", "--no-color"], "hash-bang.js", "hash-bang.txt"],
             [["--allow-hash-bang"], "hash-bang.js"],
             [[], "compact.js", "pretty.json"],
             [["--compact"], "compact.js"],
+            [[], "ecma.js", "ecma.txt"],
             [["--ecma", "6"], "ecma.js"],
             [["--locations"], "compact.js", "locations.json"],
             [["--macro", "FOO"], "macro1.js"],
             [["--macro", "[FOO, BAR=7]"], "macro2.js"],
-            [["--no-objj"], "no-objj.js"]
+            [["--no-objj"], "objj.j", "objj.txt"],
+            [["--no-objj"], "no-objj.js"],
+            [["--strict-semicolons"], "strict-semicolons.js", "strict-semicolons.txt"]
         ];
 
     cliFixtures.forEach(function(fixture)
     {
-        var args = fixture[0].slice(0),
+        var args = fixture[0].slice(),
             source = fixture[1],
             dest = fixture[2];
 
