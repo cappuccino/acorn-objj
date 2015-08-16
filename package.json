@@ -28,7 +28,7 @@
     "test": "gulp test"
   },
   "bin": {
-    "acorn_objj": "./bin/acorn_objj.js"
+    "acorn-objj": "./bin/acorn-objj.js"
   },
   "devDependencies": {
     "chai": "^3.0.0",
