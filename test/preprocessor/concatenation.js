@@ -1,7 +1,6 @@
 "use strict";
 
-var run = require("../lib/test-utils").run,
-    utils = require("../lib/test-utils");
+var utils = require("../lib/test-utils");
 
 // jscs: disable requireMultipleVarDecl
 
@@ -23,13 +22,6 @@ describe("Concatenation", function()
     it("should leave tokens as is if the concatenated token is invalid", function()
     {
         testFixture("preprocessor", baseDir + "invalid-token");
-    });
-
-    it("should generate a warning if the concatenated token is invalid", function()
-    {
-        var result = run(["--no-color", "test/fixtures/preprocessor/3.5 Concatenation/invalid-token.j"]);
-
-        result.output.should.equalFixture("preprocessor/3.5 Concatenation/invalid-token.txt", "invalid-token.j");
     });
 
     it("should paste only the trailing token on the left and leading token on the right", function()

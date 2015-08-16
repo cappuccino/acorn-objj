@@ -77,13 +77,7 @@ gulp.task("generate-fixtures", function()
             [["--macro", "[FOO, BAR=7]"], "macro2.js"],
             [["--no-objj"], "objj.j", "objj.txt"],
             [["--no-objj"], "no-objj.js"],
-            [["--strict-semicolons"], "strict-semicolons.js", "strict-semicolons.txt"],
-            [
-                [],
-                "invalid-token.j",
-                "invalid-token.txt",
-                "preprocessor/3.5 Concatenation"
-            ]
+            [["--strict-semicolons"], "strict-semicolons.js", "strict-semicolons.txt"]
         ];
 
     cliFixtures.forEach(function(fixture)

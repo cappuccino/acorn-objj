@@ -58,10 +58,10 @@ exports.testFixture = function(base, file, options)
         .should.equalFixture(path.join(base, file + ".json"));
 };
 
-exports.makeParser = function(source, options)
+exports.makeParser = function(source, options, issues)
 {
     return function() {
-        parse.parse(source, options);
+        parse.parse(source, options, issues);
     };
 };
 
