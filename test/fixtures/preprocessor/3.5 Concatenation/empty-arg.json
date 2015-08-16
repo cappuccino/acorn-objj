@@ -1,0 +1,53 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 168,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 54,
+      "end": 67
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 68,
+      "end": 125
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 127,
+      "end": 150,
+      "expression": {
+        "type": "AssignmentExpression",
+        "start": 127,
+        "end": 130,
+        "operator": "=",
+        "left": {
+          "type": "Identifier",
+          "start": 127,
+          "end": 128,
+          "name": "x"
+        },
+        "right": {
+          "type": "BinaryExpression",
+          "start": 66,
+          "end": 130,
+          "left": {
+            "type": "Literal",
+            "start": 66,
+            "end": 105,
+            "value": 4,
+            "raw": "4"
+          },
+          "operator": "+",
+          "right": {
+            "type": "Identifier",
+            "start": 0,
+            "end": 4,
+            "name": "foo7"
+          }
+        }
+      }
+    }
+  ]
+}

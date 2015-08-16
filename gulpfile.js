@@ -77,19 +77,26 @@ gulp.task("generate-fixtures", function()
             [["--macro", "[FOO, BAR=7]"], "macro2.js"],
             [["--no-objj"], "objj.j", "objj.txt"],
             [["--no-objj"], "no-objj.js"],
-            [["--strict-semicolons"], "strict-semicolons.js", "strict-semicolons.txt"]
+            [["--strict-semicolons"], "strict-semicolons.js", "strict-semicolons.txt"],
+            [
+                [],
+                "invalid-token.j",
+                "invalid-token.txt",
+                "preprocessor/3.5 Concatenation"
+            ]
         ];
 
     cliFixtures.forEach(function(fixture)
     {
         var args = fixture[0].slice(),
             source = fixture[1],
-            dest = fixture[2];
+            dest = fixture[2],
+            baseDir = fixture[3] || "cli";
 
         if (!dest)
             dest = path.basename(source, path.extname(source)) + ".json";
 
-        var basePath = path.join(fixturesPath, "cli"),
+        var basePath = path.join(fixturesPath, baseDir),
             sourcePath = path.join(basePath, source),
             destPath = path.join(basePath, dest),
             sourceStat,
@@ -115,7 +122,7 @@ gulp.task("generate-fixtures", function()
         var output = run(args, { parseOptions: { slice: 0 }}).output;
 
         fs.writeFileSync(destPath, output);
-        console.log("cli/" + dest);
+        console.log(baseDir + "/" + dest);
     });
 
     var through = require("through2").obj;

@@ -1,0 +1,5 @@
+test/fixtures/cli/hash-bang.js:1:1: error: unexpected character '#' 
+#!/usr/bin/env node
+^
+
+1 error generated.

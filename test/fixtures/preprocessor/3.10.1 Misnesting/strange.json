@@ -1,0 +1,56 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 106,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 0,
+      "end": 21
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 22,
+      "end": 69,
+      "expression": {
+        "type": "CallExpression",
+        "start": 22,
+        "end": 68,
+        "callee": {
+          "type": "Identifier",
+          "start": 22,
+          "end": 29,
+          "name": "fprintf"
+        },
+        "arguments": [
+          {
+            "type": "Identifier",
+            "start": 54,
+            "end": 35,
+            "name": "stderr"
+          },
+          {
+            "type": "Literal",
+            "start": 37,
+            "end": 45,
+            "value": "%s %d",
+            "raw": "\"%s %d\""
+          },
+          {
+            "type": "Identifier",
+            "start": 62,
+            "end": 63,
+            "name": "p"
+          },
+          {
+            "type": "Literal",
+            "start": 65,
+            "end": 67,
+            "value": 35,
+            "raw": "35"
+          }
+        ]
+      }
+    }
+  ]
+}

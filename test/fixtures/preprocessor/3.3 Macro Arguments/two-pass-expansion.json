@@ -1,0 +1,122 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 391,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 108,
+      "end": 138
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 139,
+      "end": 178
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 180,
+      "end": 197,
+      "expression": {
+        "type": "AssignmentExpression",
+        "start": 180,
+        "end": 183,
+        "operator": "=",
+        "left": {
+          "type": "Identifier",
+          "start": 180,
+          "end": 181,
+          "name": "x"
+        },
+        "right": {
+          "type": "BinaryExpression",
+          "start": 129,
+          "end": 183,
+          "left": {
+            "type": "BinaryExpression",
+            "start": 129,
+            "end": 174,
+            "left": {
+              "type": "Literal",
+              "start": 194,
+              "end": 133,
+              "value": 7,
+              "raw": "7"
+            },
+            "operator": "*",
+            "right": {
+              "type": "Literal",
+              "start": 137,
+              "end": 174,
+              "value": 2,
+              "raw": "2"
+            }
+          },
+          "operator": "*",
+          "right": {
+            "type": "Literal",
+            "start": 177,
+            "end": 178,
+            "value": 2,
+            "raw": "2"
+          }
+        }
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 243,
+      "end": 286
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 288,
+      "end": 318,
+      "expression": {
+        "type": "AssignmentExpression",
+        "start": 288,
+        "end": 291,
+        "operator": "=",
+        "left": {
+          "type": "Identifier",
+          "start": 288,
+          "end": 289,
+          "name": "x"
+        },
+        "right": {
+          "type": "BinaryExpression",
+          "start": 129,
+          "end": 291,
+          "left": {
+            "type": "BinaryExpression",
+            "start": 129,
+            "end": 174,
+            "left": {
+              "type": "Literal",
+              "start": 314,
+              "end": 133,
+              "value": 7,
+              "raw": "7"
+            },
+            "operator": "*",
+            "right": {
+              "type": "Literal",
+              "start": 137,
+              "end": 174,
+              "value": 2,
+              "raw": "2"
+            }
+          },
+          "operator": "*",
+          "right": {
+            "type": "Literal",
+            "start": 177,
+            "end": 178,
+            "value": 2,
+            "raw": "2"
+          }
+        }
+      }
+    }
+  ]
+}

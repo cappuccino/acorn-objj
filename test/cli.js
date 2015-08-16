@@ -20,9 +20,9 @@ describe("cli", function()
 
     it("should generate an error if there is #! without --allow-hash-bang", function()
     {
-        var result = run(["--no-preprocessor", path.join(dir, "hash-bang.js")]);
+        var result = run(["--no-preprocessor", "--no-color", path.join(dir, "hash-bang.js")]);
 
-        result.output.should.equal(executable + ": error: Unexpected character '#' (1:0)\n");
+        result.output.should.equalFixture("cli/hash-bang.txt", "hash-bang.js");
         result.exitCode.should.equal(1);
     });
 
@@ -48,7 +48,7 @@ describe("cli", function()
     {
         var result = run([path.join(dir, "ecma.js")]);
 
-        result.output.should.equal(executable + ": error: Unexpected token (1:4)\n");
+        result.output.should.equalFixture("cli/ecma.txt", "ecma.js");
         result.exitCode.should.equal(1);
     });
 
@@ -79,7 +79,7 @@ describe("cli", function()
     {
         var result = run(["--no-objj", path.join(dir, "objj.j")]);
 
-        result.output.should.equal(executable + ": error: Unexpected character '@' (1:0)\n");
+        result.output.should.equalFixture("cli/objj.txt", "objj.j");
         result.exitCode.should.equal(1);
     });
 
@@ -99,6 +99,7 @@ describe("cli", function()
         var result = run(["--silent", path.join(dir, "compact.js")]);
 
         /* eslint-disable no-unused-expressions */
+
         result.exitCode.should.equal(0);
         result.output.should.be.empty;
 
@@ -106,13 +107,15 @@ describe("cli", function()
 
         result.exitCode.should.equal(1);
         result.output.should.be.empty;
+
+        /* eslint-enable */
     });
 
     it("should generate an error for missing semicolons with --strict-semicolons", function()
     {
-        var result = run(["--strict-semicolons", path.join(dir, "compact.js")]);
+        var result = run(["--strict-semicolons", path.join(dir, "strict-semicolons.js")]);
 
-        result.output.should.equal(executable + ": error: Expected a semicolon (1:10)\n");
+        result.output.should.equalFixture("cli/strict-semicolons.txt", "strict-semicolons.js");
         result.exitCode.should.equal(1);
     });
 

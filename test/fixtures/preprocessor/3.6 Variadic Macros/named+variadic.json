@@ -1,0 +1,80 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 260,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 60,
+      "end": 89
+    },
+    {
+      "type": "IfStatement",
+      "start": 91,
+      "end": 185,
+      "test": {
+        "type": "Identifier",
+        "start": 95,
+        "end": 104,
+        "name": "debugging"
+      },
+      "consequent": {
+        "type": "ExpressionStatement",
+        "start": 106,
+        "end": 185,
+        "expression": {
+          "type": "CallExpression",
+          "start": 106,
+          "end": 138,
+          "callee": {
+            "type": "MemberExpression",
+            "start": 106,
+            "end": 117,
+            "object": {
+              "type": "Identifier",
+              "start": 106,
+              "end": 113,
+              "name": "console"
+            },
+            "property": {
+              "type": "Identifier",
+              "start": 114,
+              "end": 117,
+              "name": "log"
+            },
+            "computed": false
+          },
+          "arguments": [
+            {
+              "type": "Literal",
+              "start": 149,
+              "end": 124,
+              "value": "%s: (%d, %d)",
+              "raw": "\"%s: (%d, %d)\""
+            },
+            {
+              "type": "Literal",
+              "start": 165,
+              "value": "foo",
+              "raw": "\"foo\""
+            },
+            {
+              "type": "Literal",
+              "start": 172,
+              "value": 13.27,
+              "raw": "13.27"
+            },
+            {
+              "type": "Literal",
+              "start": 179,
+              "end": 138,
+              "value": 31.7,
+              "raw": "31.7"
+            }
+          ]
+        }
+      },
+      "alternate": null
+    }
+  ]
+}

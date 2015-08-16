@@ -9,13 +9,7 @@
       "end": 19,
       "objj": {
         "local": true,
-        "filename": {
-          "type": "Literal",
-          "start": 8,
-          "end": 19,
-          "value": "foo/bar.j",
-          "raw": "\"foo/bar.j\""
-        }
+        "filename": "foo/bar.j"
       }
     }
   ]

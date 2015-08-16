@@ -1,0 +1,43 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 182,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 51,
+      "end": 98
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 99,
+      "end": 153,
+      "expression": {
+        "type": "CallExpression",
+        "start": 99,
+        "end": 124,
+        "callee": {
+          "type": "Identifier",
+          "start": 99,
+          "end": 111,
+          "name": "someFunction"
+        },
+        "arguments": [
+          {
+            "type": "Literal",
+            "start": 142,
+            "value": "foo",
+            "raw": "\"foo\""
+          },
+          {
+            "type": "Literal",
+            "start": 149,
+            "end": 124,
+            "value": 13,
+            "raw": "13"
+          }
+        ]
+      }
+    }
+  ]
+}

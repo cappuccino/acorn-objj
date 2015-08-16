@@ -1,0 +1,66 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 186,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 28,
+      "end": 79
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 80,
+      "end": 52
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 54,
+      "end": 150,
+      "expression": {
+        "type": "CallExpression",
+        "start": 54,
+        "end": 111,
+        "callee": {
+          "type": "Identifier",
+          "start": 54,
+          "end": 66,
+          "name": "someFunction"
+        },
+        "arguments": [
+          {
+            "type": "Literal",
+            "start": 125,
+            "value": "foo",
+            "raw": "\"foo\""
+          },
+          {
+            "type": "BinaryExpression",
+            "start": 142,
+            "left": {
+              "type": "Literal",
+              "start": 142,
+              "end": 107,
+              "value": 7,
+              "raw": "7"
+            },
+            "operator": "+",
+            "right": {
+              "type": "Literal",
+              "start": 110,
+              "value": 1,
+              "raw": "1"
+            }
+          },
+          {
+            "type": "Literal",
+            "start": 146,
+            "end": 79,
+            "value": 13,
+            "raw": "13"
+          }
+        ]
+      }
+    }
+  ]
+}

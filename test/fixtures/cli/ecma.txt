@@ -1,0 +1,5 @@
+test/fixtures/cli/ecma.js:1:5: error: unexpected token 
+let a = 7;
+    ^
+
+1 error generated.

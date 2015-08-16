@@ -1,0 +1,92 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 220,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 82,
+      "end": 95
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 96,
+      "end": 153
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 155,
+      "end": 189,
+      "expression": {
+        "type": "AssignmentExpression",
+        "start": 155,
+        "end": 158,
+        "operator": "=",
+        "left": {
+          "type": "Identifier",
+          "start": 155,
+          "end": 156,
+          "name": "x"
+        },
+        "right": {
+          "type": "BinaryExpression",
+          "start": 94,
+          "end": 158,
+          "left": {
+            "type": "BinaryExpression",
+            "start": 94,
+            "end": 181,
+            "left": {
+              "type": "BinaryExpression",
+              "start": 94,
+              "end": 174,
+              "left": {
+                "type": "BinaryExpression",
+                "start": 94,
+                "end": 133,
+                "left": {
+                  "type": "Literal",
+                  "start": 94,
+                  "end": 174,
+                  "value": 4,
+                  "raw": "4"
+                },
+                "operator": "+",
+                "right": {
+                  "type": "Literal",
+                  "start": 177,
+                  "end": 133,
+                  "value": 1,
+                  "raw": "1"
+                }
+              },
+              "operator": "+",
+              "right": {
+                "type": "Literal",
+                "start": 94,
+                "end": 174,
+                "value": 4,
+                "raw": "4"
+              }
+            },
+            "operator": "+",
+            "right": {
+              "type": "Literal",
+              "start": 0,
+              "end": 181,
+              "value": 17,
+              "raw": "17"
+            }
+          },
+          "operator": "+",
+          "right": {
+            "type": "Identifier",
+            "start": 0,
+            "end": 4,
+            "name": "foo7"
+          }
+        }
+      }
+    }
+  ]
+}

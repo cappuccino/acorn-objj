@@ -1,0 +1,54 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 192,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 90,
+      "end": 134
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 136,
+      "end": 168,
+      "expression": {
+        "type": "AssignmentExpression",
+        "start": 136,
+        "end": 139,
+        "operator": "=",
+        "left": {
+          "type": "Identifier",
+          "start": 136,
+          "end": 137,
+          "name": "x"
+        },
+        "right": {
+          "type": "BinaryExpression",
+          "start": 151,
+          "end": 139,
+          "left": {
+            "type": "Literal",
+            "start": 151,
+            "end": 159,
+            "value": "paste",
+            "raw": "\"paste\""
+          },
+          "operator": "+",
+          "right": {
+            "type": "Literal",
+            "start": 162,
+            "end": 166,
+            "value": "me",
+            "raw": "\"me\""
+          }
+        }
+      }
+    }
+  ]
+}
+test/fixtures/preprocessor/3.5 Concatenation/invalid-token.j:3:38: warning: pasting formed '"paste"+', an invalid token
+#define paste_fail(arg1, arg2)  arg1 ## arg2
+                                     ^
+
+1 warning generated.

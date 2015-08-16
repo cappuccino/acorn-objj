@@ -1,0 +1,5 @@
+test/fixtures/cli/strict-semicolons.js:1:13: error: expected a semicolon 
+"use strict"
+            ^
+
+1 error generated.

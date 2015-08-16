@@ -1,7 +1,6 @@
 "use strict";
 
-var chai = require("chai"),
-    testFixture = require("../lib/test-utils").testFixture;
+var testFixture = require("../lib/test-utils").testFixture;
 
 /* global describe, it */
 

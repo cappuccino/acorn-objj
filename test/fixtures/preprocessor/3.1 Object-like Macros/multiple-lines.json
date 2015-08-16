@@ -1,0 +1,223 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 255,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 35,
+      "end": 94
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 96,
+      "end": 110,
+      "expression": {
+        "type": "AssignmentExpression",
+        "start": 96,
+        "end": 109,
+        "operator": "=",
+        "left": {
+          "type": "Identifier",
+          "start": 96,
+          "end": 97,
+          "name": "x"
+        },
+        "right": {
+          "type": "ArrayExpression",
+          "start": 100,
+          "end": 109,
+          "elements": [
+            {
+              "type": "Literal",
+              "start": 51,
+              "end": 52,
+              "value": 1,
+              "raw": "1"
+            },
+            {
+              "type": "Literal",
+              "start": 72,
+              "end": 73,
+              "value": 2,
+              "raw": "2"
+            },
+            {
+              "type": "Literal",
+              "start": 93,
+              "end": 94,
+              "value": 3,
+              "raw": "3"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 130,
+      "end": 149
+    },
+    {
+      "type": "IfStatement",
+      "start": 152,
+      "end": 237,
+      "test": {
+        "type": "BinaryExpression",
+        "start": 248,
+        "end": 180,
+        "left": {
+          "type": "BinaryExpression",
+          "start": 248,
+          "end": 173,
+          "left": {
+            "type": "Literal",
+            "start": 248,
+            "end": 157,
+            "value": 13.27,
+            "raw": "13.27"
+          },
+          "operator": "-",
+          "right": {
+            "type": "CallExpression",
+            "start": 160,
+            "end": 173,
+            "callee": {
+              "type": "MemberExpression",
+              "start": 160,
+              "end": 170,
+              "object": {
+                "type": "Identifier",
+                "start": 160,
+                "end": 164,
+                "name": "Math"
+              },
+              "property": {
+                "type": "Identifier",
+                "start": 165,
+                "end": 170,
+                "name": "floor"
+              },
+              "computed": false
+            },
+            "arguments": [
+              {
+                "type": "Literal",
+                "start": 248,
+                "end": 172,
+                "value": 13.27,
+                "raw": "13.27"
+              }
+            ]
+          }
+        },
+        "operator": ">=",
+        "right": {
+          "type": "Literal",
+          "start": 177,
+          "end": 180,
+          "value": 0.5,
+          "raw": "0.5"
+        }
+      },
+      "consequent": {
+        "type": "ExpressionStatement",
+        "start": 245,
+        "end": 206,
+        "expression": {
+          "type": "AssignmentExpression",
+          "start": 245,
+          "end": 205,
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "start": 245,
+            "end": 189,
+            "name": "x"
+          },
+          "right": {
+            "type": "CallExpression",
+            "start": 192,
+            "end": 205,
+            "callee": {
+              "type": "MemberExpression",
+              "start": 192,
+              "end": 202,
+              "object": {
+                "type": "Identifier",
+                "start": 192,
+                "end": 196,
+                "name": "Math"
+              },
+              "property": {
+                "type": "Identifier",
+                "start": 197,
+                "end": 202,
+                "name": "floor"
+              },
+              "computed": false
+            },
+            "arguments": [
+              {
+                "type": "Literal",
+                "start": 248,
+                "end": 204,
+                "value": 13.27,
+                "raw": "13.27"
+              }
+            ]
+          }
+        }
+      },
+      "alternate": {
+        "type": "ExpressionStatement",
+        "start": 245,
+        "end": 237,
+        "expression": {
+          "type": "AssignmentExpression",
+          "start": 245,
+          "end": 236,
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "start": 245,
+            "end": 221,
+            "name": "x"
+          },
+          "right": {
+            "type": "CallExpression",
+            "start": 224,
+            "end": 237,
+            "callee": {
+              "type": "MemberExpression",
+              "start": 224,
+              "end": 233,
+              "object": {
+                "type": "Identifier",
+                "start": 224,
+                "end": 228,
+                "name": "Math"
+              },
+              "property": {
+                "type": "Identifier",
+                "start": 229,
+                "end": 233,
+                "name": "ceil"
+              },
+              "computed": false
+            },
+            "arguments": [
+              {
+                "type": "Literal",
+                "start": 248,
+                "end": 235,
+                "value": 13.27,
+                "raw": "13.27"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

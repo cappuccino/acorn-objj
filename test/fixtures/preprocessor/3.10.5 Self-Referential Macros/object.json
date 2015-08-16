@@ -1,0 +1,35 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 46,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 0,
+      "end": 19
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 21,
+      "end": 31,
+      "expression": {
+        "type": "AssignmentExpression",
+        "start": 21,
+        "end": 24,
+        "operator": "=",
+        "left": {
+          "type": "Identifier",
+          "start": 21,
+          "end": 22,
+          "name": "x"
+        },
+        "right": {
+          "type": "Identifier",
+          "start": 14,
+          "end": 19,
+          "name": "EPERM"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 107,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 35,
+      "end": 72
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 74,
+      "end": 95,
+      "expression": {
+        "type": "AssignmentExpression",
+        "start": 74,
+        "end": 77,
+        "operator": "=",
+        "left": {
+          "type": "Identifier",
+          "start": 74,
+          "end": 75,
+          "name": "x"
+        },
+        "right": {
+          "type": "Literal",
+          "start": 0,
+          "value": "",
+          "raw": "\"\""
+        }
+      }
+    }
+  ]
+}

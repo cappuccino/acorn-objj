@@ -1,0 +1,129 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 222,
+  "body": [
+    {
+      "type": "FunctionDeclaration",
+      "start": 55,
+      "end": 104,
+      "id": {
+        "type": "Identifier",
+        "start": 64,
+        "end": 70,
+        "name": "foobar"
+      },
+      "params": [],
+      "body": {
+        "type": "BlockStatement",
+        "start": 73,
+        "end": 104,
+        "body": [
+          {
+            "type": "ExpressionStatement",
+            "start": 75,
+            "end": 102,
+            "expression": {
+              "type": "CallExpression",
+              "start": 75,
+              "end": 101,
+              "callee": {
+                "type": "MemberExpression",
+                "start": 75,
+                "end": 86,
+                "object": {
+                  "type": "Identifier",
+                  "start": 75,
+                  "end": 82,
+                  "name": "console"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "start": 83,
+                  "end": 86,
+                  "name": "log"
+                },
+                "computed": false
+              },
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "start": 87,
+                  "end": 100,
+                  "value": "out of line",
+                  "raw": "\"out of line\""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "expression": false
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 106,
+      "end": 122
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 124,
+      "end": 156,
+      "expression": {
+        "type": "CallExpression",
+        "start": 124,
+        "end": 145,
+        "callee": {
+          "type": "MemberExpression",
+          "start": 124,
+          "end": 135,
+          "object": {
+            "type": "Identifier",
+            "start": 124,
+            "end": 131,
+            "name": "console"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 132,
+            "end": 135,
+            "name": "log"
+          },
+          "computed": false
+        },
+        "arguments": [
+          {
+            "type": "Literal",
+            "start": 136,
+            "end": 145,
+            "value": "inline",
+            "raw": "\"inline\""
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 184,
+      "end": 201,
+      "expression": {
+        "type": "AssignmentExpression",
+        "start": 184,
+        "end": 200,
+        "operator": "=",
+        "left": {
+          "type": "Identifier",
+          "start": 184,
+          "end": 191,
+          "name": "funcptr"
+        },
+        "right": {
+          "type": "Identifier",
+          "start": 194,
+          "end": 200,
+          "name": "foobar"
+        }
+      }
+    }
+  ]
+}

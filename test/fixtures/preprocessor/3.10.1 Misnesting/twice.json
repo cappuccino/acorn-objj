@@ -1,0 +1,42 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 85,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 0,
+      "end": 24
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 25,
+      "end": 16
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 17,
+      "end": 74,
+      "expression": {
+        "type": "BinaryExpression",
+        "start": 18,
+        "end": 24,
+        "left": {
+          "type": "Literal",
+          "start": 18,
+          "end": 19,
+          "value": 2,
+          "raw": "2"
+        },
+        "operator": "*",
+        "right": {
+          "type": "Literal",
+          "start": 50,
+          "end": 22,
+          "value": 1,
+          "raw": "1"
+        }
+      }
+    }
+  ]
+}

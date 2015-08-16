@@ -1,0 +1,35 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 164,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 85,
+      "end": 113
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 115,
+      "end": 140,
+      "expression": {
+        "type": "AssignmentExpression",
+        "start": 115,
+        "end": 118,
+        "operator": "=",
+        "left": {
+          "type": "Identifier",
+          "start": 115,
+          "end": 116,
+          "name": "x"
+        },
+        "right": {
+          "type": "Literal",
+          "start": 0,
+          "value": "\\\"foo\\tbar\\\"",
+          "raw": "\"\\\"foo\\tbar\\\"\""
+        }
+      }
+    }
+  ]
+}
