@@ -3,7 +3,7 @@
 var cli = require("../lib/cli"),
     fs = require("fs"),
     path = require("path"),
-    run = require("./lib/test-utils").run,
+    run = require("./lib/test-utils.js").run,
     util = require("util");
 
 /* global before, describe, it */

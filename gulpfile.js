@@ -4,9 +4,9 @@ var del = require("del"),
     fs = require("fs"),
     gulp = require("gulp"),
     loadPlugins = require("gulp-load-plugins"),
-    parse = require("./lib/parse").parseFileToString,
+    parse = require("./lib/parse.js").parseFileToString,
     path = require("path"),
-    run = require("./test/lib/test-utils").run,
+    run = require("./test/lib/test-utils.js").run,
     runSequence = require("run-sequence");
 
 // jscs: disable requireMultipleVarDecl

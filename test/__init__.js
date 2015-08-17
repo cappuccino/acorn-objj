@@ -4,4 +4,4 @@
 var chai = require("chai");
 
 chai.should();
-require("./lib/chai");
+require("./lib/chai.js");
