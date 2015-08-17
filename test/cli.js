@@ -149,12 +149,14 @@ describe("cli", function()
             .should.equalFixture("cli/pretty.json", "compact.js");
     });
 
-    it("should define macros passed with --macro", function()
+    it("should define 'FOO=1' for '--macro FOO'", function()
     {
-        // TODO: regenerate fixture when macros are implemented
         run(["--macro", "FOO", path.join(dir, "macro1.js")]).output
             .should.equalFixture("cli/macro1.json");
+    });
 
+    it("should define 'FOO=1' and 'BAR=7' for '--macro [FOO, BAR=7]'", function()
+    {
         run(["--macro", "[FOO, BAR=7]", path.join(dir, "macro2.js")]).output
             .should.equalFixture("cli/macro2.json");
     });
