@@ -1,0 +1,61 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 116,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 0,
+      "end": 12
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 13,
+      "end": 23,
+      "expression": {
+        "type": "Literal",
+        "start": 13,
+        "end": 22,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 29,
+      "end": 18
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 9,
+      "end": 44,
+      "expression": {
+        "type": "Literal",
+        "start": 9,
+        "end": 44,
+        "value": "v0.12.7",
+        "raw": "\"v0.12.7\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 62,
+      "end": 67
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 86,
+      "end": 92
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 93,
+      "end": 98
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 109,
+      "end": 115
+    }
+  ]
+}

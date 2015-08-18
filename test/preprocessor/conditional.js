@@ -73,4 +73,14 @@ describe("Conditional syntax", function()
     {
         testFixture("preprocessor", baseDir + "function-like-macros");
     });
+
+    it("Sequential tests may be performed with #elif", function()
+    {
+        testFixture("preprocessor", baseDir + "#elif");
+    });
+
+    it("#if clauses may be nested", function()
+    {
+        testFixture("preprocessor", baseDir + "nesting");
+    });
 });
