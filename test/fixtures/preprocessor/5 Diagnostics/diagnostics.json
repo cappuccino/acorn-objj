@@ -1,0 +1,22 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 86,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 0,
+      "end": 28
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 29,
+      "end": 58
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 59,
+      "end": 85
+    }
+  ]
+}

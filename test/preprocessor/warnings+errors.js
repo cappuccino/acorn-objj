@@ -1,6 +1,7 @@
 "use strict";
 
-var utils = require("../lib/test-utils");
+var issueHandler = require("acorn-issue-handler"),
+    utils = require("../lib/test-utils");
 
 // jscs: disable requireMultipleVarDecl
 
@@ -49,7 +50,7 @@ describe("Warnings & Errors", function()
 
         makeParser("#define __NODE__\n", null, issues)();
         issues.length.should.equal(1);
-        issues[0].message.should.equal("Warning: '__NODE__' macro redefined");
+        issues[0].message.should.equal("'__NODE__' macro redefined");
     });
 
     it("Using __VA_ARGS__ as a macro name is an error", function()
@@ -130,6 +131,16 @@ describe("Warnings & Errors", function()
             .should.throw(SyntaxError, /^'##' cannot be at the end of a macro expansion/);
     });
 
+    it("Concatenation that forms an invalid token is a warning", function()
+    {
+        var issues = [];
+
+        makeParser("#define paste(arg1, arg2) arg1 ## arg2\npaste(\"paste\", + \"me\")\n", null, issues)();
+        issues.length.should.equal(1);
+        issues[0].should.be.an.instanceof(issueHandler.Warning);
+        issues[0].message.should.equal("pasting formed '\"paste\"+', an invalid token");
+    });
+
     it("Reaching EOF before a macro call is complete is an error", function()
     {
         makeParser("#define foo(arg) arg\nfoo('bar'")
@@ -140,5 +151,175 @@ describe("Warnings & Errors", function()
     {
         makeParser("#define foo(arg1, arg2) arg1 + arg2\nfoo(7)")
             .should.throw(SyntaxError, /^Macro defines 2 parameters, called with 1 argument/);
+    });
+
+    it("#if without balancing #endif at EOF is an error", function()
+    {
+        makeParser("#if 7\n")
+            .should.throw(SyntaxError, /^Unterminated #if at EOF/);
+    });
+
+    it("#ifdef without balancing #endif at EOF is an error", function()
+    {
+        makeParser("#ifdef FOO\n")
+            .should.throw(SyntaxError, /^Unterminated #ifdef at EOF/);
+    });
+
+    it("#else without balancing #if is an error", function()
+    {
+        makeParser("#else\n")
+            .should.throw(SyntaxError, /^#else without matching #if/);
+    });
+
+    it("Nested #else without matching #if is an error", function()
+    {
+        var issues = [];
+
+        makeParser("#if FOO\n#else\n#else\n", null, issues)
+            .should.throw(issueHandler.AbortError);
+
+        issues.length.should.equal(2);
+
+        issues[0].should.be.an.instanceof(issueHandler.Error);
+        issues[0].message.should.equal("expected #endif, saw #else");
+
+        issues[1].should.be.an.instanceof(issueHandler.Note);
+        issues[1].message.should.equal("matching #if is here:");
+    });
+
+    it("#elif without matching #if is an error", function()
+    {
+        makeParser("#elif FOO\n")
+            .should.throw(SyntaxError, /^#elif without matching #if/);
+    });
+
+    it("Nested #elif without matching #if is an error", function()
+    {
+        var issues = [];
+
+        makeParser("#if FOO\n#else\n#elif BAR\n", null, issues)
+            .should.throw(issueHandler.AbortError);
+
+        issues.length.should.equal(2);
+
+        issues[0].should.be.an.instanceof(issueHandler.Error);
+        issues[0].message.should.equal("expected #endif, saw #elif");
+
+        issues[1].should.be.an.instanceof(issueHandler.Note);
+        issues[1].message.should.equal("matching #if is here:");
+    });
+
+    it("#endif without matching #if is an error", function()
+    {
+        makeParser("#endif\n")
+            .should.throw(SyntaxError, /^#endif without matching #if/);
+    });
+
+    it("#ifdef without a name is an error", function()
+    {
+        makeParser("#ifdef\n")
+            .should.throw(SyntaxError, /^Missing name after #ifdef/);
+    });
+
+    it("#ifndef without a name is an error", function()
+    {
+        makeParser("#ifndef\n")
+            .should.throw(SyntaxError, /^Missing name after #ifndef/);
+    });
+
+    it("#ifdef expression not terminated by EOL is an error", function()
+    {
+        makeParser("#ifdef FOO BAR\n")
+            .should.throw(SyntaxError, /^#ifdef expressions must be followed by EOL/);
+    });
+
+    it("#ifndef expression not terminated by EOL is an error", function()
+    {
+        makeParser("#ifndef FOO BAR\n")
+            .should.throw(SyntaxError, /^#ifndef expressions must be followed by EOL/);
+    });
+
+    it("#else not followed by EOL is an error", function()
+    {
+        makeParser("#if FOO\n#else BAR\n#endif\n")
+            .should.throw(SyntaxError, /^#else must be followed by EOL/);
+    });
+
+    it("#endif not followed by EOL is an error", function()
+    {
+        makeParser("#if FOO\n#endif BAR\n")
+            .should.throw(SyntaxError, /^#endif must be followed by EOL/);
+    });
+
+    it("Floating point literal in a preprocessor expression is an error", function()
+    {
+        makeParser("#if 7.27\n#endif\n")
+            .should.throw(SyntaxError, /^Non-integer number in preprocesor expression/);
+    });
+
+    it("Scientific literal in a preprocessor expression is an error", function()
+    {
+        makeParser("#if 7e13\n#endif\n")
+            .should.throw(SyntaxError, /^Non-integer number in preprocesor expression/);
+    });
+
+    it("Invalid #if expression operator is an error", function()
+    {
+        makeParser("#if 1 = 1\n#endif\n")
+            .should.throw(SyntaxError, /^Token is not a valid binary operator in a preprocessor subexpression/);
+    });
+
+    it("Invalid #elif expression operator is an error", function()
+    {
+        makeParser("#if 0\n#elif 1 = 1\n#endif\n")
+            .should.throw(SyntaxError, /^Token is not a valid binary operator in a preprocessor subexpression/);
+    });
+
+    it("Unclosed parenthetical expression is an error", function()
+    {
+        makeParser("#if (27\n#endif\n")
+            .should.throw(SyntaxError, /^Expected '\)' in preprocessor expression/);
+    });
+
+    it("Invalid expression token is an error", function()
+    {
+        makeParser("#if [foo]\n#endif\n")
+            .should.throw(SyntaxError, /^Invalid preprocessor expression token/);
+    });
+
+    it("'defined' without a name is an error", function()
+    {
+        makeParser("#if defined\n#endif\n")
+            .should.throw(SyntaxError, /^Macro name missing/);
+    });
+
+    it("'defined()' without a closing parens is an error", function()
+    {
+        makeParser("#if defined(foo\n#endif\n")
+            .should.throw(SyntaxError, /^Missing '\)' after macro name/);
+    });
+
+    it("#warning not followed by a string is an error", function()
+    {
+        makeParser("#warning 7\n")
+            .should.throw(SyntaxError, /^#warning must be followed by a string/);
+    });
+
+    it("#error not followed by a string is an error", function()
+    {
+        makeParser("#error 7\n")
+            .should.throw(SyntaxError, /^#error must be followed by a string/);
+    });
+
+    it("#warning message not followed by EOL is an error", function()
+    {
+        makeParser("#warning \"hello\" 7\n")
+            .should.throw(SyntaxError, /^#warning message must be followed by EOL/);
+    });
+
+    it("#error message not followed by EOL is an error", function()
+    {
+        makeParser("#error \"hello\" 7\n")
+            .should.throw(SyntaxError, /^#error message must be followed by EOL/);
     });
 });

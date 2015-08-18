@@ -1,0 +1,331 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 559,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 0,
+      "end": 9
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 10,
+      "end": 20,
+      "expression": {
+        "type": "Literal",
+        "start": 10,
+        "end": 19,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 21,
+      "end": 26
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 38,
+      "end": 44
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 46,
+      "end": 55
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 67,
+      "end": 72
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 73,
+      "end": 83,
+      "expression": {
+        "type": "Literal",
+        "start": 73,
+        "end": 82,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 84,
+      "end": 90
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 92,
+      "end": 102
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 103,
+      "end": 113,
+      "expression": {
+        "type": "Literal",
+        "start": 103,
+        "end": 112,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 114,
+      "end": 119
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 131,
+      "end": 137
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 139,
+      "end": 149
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 161,
+      "end": 166
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 167,
+      "end": 177,
+      "expression": {
+        "type": "Literal",
+        "start": 167,
+        "end": 176,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 178,
+      "end": 184
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 186,
+      "end": 196
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 197,
+      "end": 207,
+      "expression": {
+        "type": "Literal",
+        "start": 197,
+        "end": 206,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 208,
+      "end": 213
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 225,
+      "end": 231
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 233,
+      "end": 242
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 243,
+      "end": 253,
+      "expression": {
+        "type": "Literal",
+        "start": 243,
+        "end": 252,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 254,
+      "end": 259
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 271,
+      "end": 277
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 279,
+      "end": 288
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 300,
+      "end": 305
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 306,
+      "end": 316,
+      "expression": {
+        "type": "Literal",
+        "start": 306,
+        "end": 315,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 317,
+      "end": 323
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 325,
+      "end": 335
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 336,
+      "end": 346,
+      "expression": {
+        "type": "Literal",
+        "start": 336,
+        "end": 345,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 347,
+      "end": 352
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 364,
+      "end": 370
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 372,
+      "end": 382
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 383,
+      "end": 393,
+      "expression": {
+        "type": "Literal",
+        "start": 383,
+        "end": 392,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 394,
+      "end": 399
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 411,
+      "end": 417
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 419,
+      "end": 429
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 441,
+      "end": 446
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 447,
+      "end": 457,
+      "expression": {
+        "type": "Literal",
+        "start": 447,
+        "end": 456,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 458,
+      "end": 464
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 466,
+      "end": 476
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 477,
+      "end": 487,
+      "expression": {
+        "type": "Literal",
+        "start": 477,
+        "end": 486,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 488,
+      "end": 493
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 505,
+      "end": 511
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 513,
+      "end": 523
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 535,
+      "end": 540
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 541,
+      "end": 551,
+      "expression": {
+        "type": "Literal",
+        "start": 541,
+        "end": 550,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 552,
+      "end": 558
+    }
+  ]
+}

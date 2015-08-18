@@ -1,0 +1,169 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 275,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 0,
+      "end": 9
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 21,
+      "end": 26
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 27,
+      "end": 37,
+      "expression": {
+        "type": "Literal",
+        "start": 27,
+        "end": 36,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 38,
+      "end": 44
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 46,
+      "end": 55
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 56,
+      "end": 66,
+      "expression": {
+        "type": "Literal",
+        "start": 56,
+        "end": 65,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 67,
+      "end": 72
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 84,
+      "end": 90
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 92,
+      "end": 101
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 102,
+      "end": 112,
+      "expression": {
+        "type": "Literal",
+        "start": 102,
+        "end": 111,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 113,
+      "end": 118
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 130,
+      "end": 136
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 138,
+      "end": 147
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 159,
+      "end": 164
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 165,
+      "end": 175,
+      "expression": {
+        "type": "Literal",
+        "start": 165,
+        "end": 174,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 176,
+      "end": 182
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 184,
+      "end": 193
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 194,
+      "end": 204,
+      "expression": {
+        "type": "Literal",
+        "start": 194,
+        "end": 203,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 205,
+      "end": 210
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 222,
+      "end": 228
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 230,
+      "end": 239
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 251,
+      "end": 256
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 257,
+      "end": 267,
+      "expression": {
+        "type": "Literal",
+        "start": 257,
+        "end": 266,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 268,
+      "end": 274
+    }
+  ]
+}

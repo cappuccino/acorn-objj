@@ -1,0 +1,120 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 264,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 0,
+      "end": 11
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 13,
+      "end": 29
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 30,
+      "end": 40,
+      "expression": {
+        "type": "Literal",
+        "start": 30,
+        "end": 39,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 41,
+      "end": 46
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 58,
+      "end": 64
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 66,
+      "end": 81
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 82,
+      "end": 92,
+      "expression": {
+        "type": "Literal",
+        "start": 82,
+        "end": 91,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 93,
+      "end": 98
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 110,
+      "end": 116
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 118,
+      "end": 154
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 155,
+      "end": 165,
+      "expression": {
+        "type": "Literal",
+        "start": 155,
+        "end": 164,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 166,
+      "end": 171
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 183,
+      "end": 189
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 191,
+      "end": 228
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 229,
+      "end": 239,
+      "expression": {
+        "type": "Literal",
+        "start": 229,
+        "end": 238,
+        "value": "success",
+        "raw": "\"success\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 240,
+      "end": 245
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 257,
+      "end": 263
+    }
+  ]
+}
