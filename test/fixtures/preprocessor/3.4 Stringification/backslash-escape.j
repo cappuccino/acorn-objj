@@ -1,10 +1,16 @@
-// The preprocessor backslash-escapes the quotes surrounding embedded string constants,
-// and all backslashes within string and character constants
+// The preprocessor backslash-escapes quotes surrounding embedded string constants,
+// and all backslashes within strings.
 
 #define stringify(arg)  #arg
 
-x = stringify(p = "foo\n");
-// x = "p = \"foo\\n\"";
+stringify(p = "foo\n");
+// "p = \"foo\\n\"";
 
-x = stringify(p = 'foo\n');
-// x = "p = 'foo\\n'";
+stringify(p = 'foo\n');
+// "p = \'foo\\n\'";
+
+stringify('bar	\n');
+// "\'bar\t\\n\'";
+
+stringify("bar	\n");
+// '\"bar\t\\n\"'

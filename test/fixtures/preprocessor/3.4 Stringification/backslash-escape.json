@@ -1,57 +1,55 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 285,
+  "end": 326,
   "body": [
     {
       "type": "objj_PreprocessorStatement",
-      "start": 150,
-      "end": 178
+      "start": 124
     },
     {
       "type": "ExpressionStatement",
-      "start": 180,
-      "end": 207,
+      "start": 0,
       "expression": {
-        "type": "AssignmentExpression",
-        "start": 180,
-        "end": 183,
-        "operator": "=",
-        "left": {
-          "type": "Identifier",
-          "start": 180,
-          "end": 181,
-          "name": "x"
-        },
-        "right": {
-          "type": "Literal",
-          "start": 0,
-          "value": "p = \\\"foo\\\\n\\\"",
-          "raw": "\"p = \\\"foo\\\\n\\\"\""
-        }
+        "type": "Literal",
+        "start": 0,
+        "end": 152,
+        "value": "p = \\\"foo\\\\n\\\"",
+        "raw": "\"p = \\\"foo\\\\n\\\"\""
       }
     },
     {
       "type": "ExpressionStatement",
-      "start": 234,
-      "end": 261,
+      "start": 0,
       "expression": {
-        "type": "AssignmentExpression",
-        "start": 234,
-        "end": 237,
-        "operator": "=",
-        "left": {
-          "type": "Identifier",
-          "start": 234,
-          "end": 235,
-          "name": "x"
-        },
-        "right": {
-          "type": "Literal",
-          "start": 0,
-          "value": "p = 'foo\\\\n'",
-          "raw": "\"p = 'foo\\\\n'\""
-        }
+        "type": "Literal",
+        "start": 0,
+        "end": 177,
+        "value": "p = 'foo\\n'",
+        "raw": "\"p = 'foo\\n'\""
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 0,
+      "expression": {
+        "type": "Literal",
+        "start": 0,
+        "end": 223,
+        "value": "'bar \\n'",
+        "raw": "\"'bar \\n'\""
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 0,
+      "end": 307,
+      "expression": {
+        "type": "Literal",
+        "start": 0,
+        "end": 266,
+        "value": "\\\"bar\t\\\\n\\\"",
+        "raw": "\"\\\"bar\t\\\\n\\\"\""
       }
     }
   ]

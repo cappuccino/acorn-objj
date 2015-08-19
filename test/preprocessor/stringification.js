@@ -18,12 +18,7 @@ describe("Stringification", function()
         testFixture("preprocessor", "3.4 Stringification/backslash-escape");
     });
 
-    it("should not duplicate backslashes that are not inside string or character constants", function()
-    {
-        testFixture("preprocessor", "3.4 Stringification/backslash-no-string");
-    });
-
-    it("create empty string for empty arg", function()
+    it("should create an empty string for empty arg", function()
     {
         testFixture("preprocessor", "3.4 Stringification/empty-arg");
     });

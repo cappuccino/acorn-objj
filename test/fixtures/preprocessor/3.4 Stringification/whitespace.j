@@ -4,6 +4,6 @@
 
 #define stringify(arg)  #arg
 
-x = stringify(   foo  =
+stringify(   foo  =
                 '  b a r  '   );
-// x = "foo = '  b a r  '";
+// "foo = '  b a r  '";
