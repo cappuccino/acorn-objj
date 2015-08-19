@@ -127,6 +127,12 @@ describe("Warnings & errors", function()
             .should.throw(SyntaxError, /^# \(stringify\) must be followed by a name/);
     });
 
+    it("stringify followed by a name that is not a macro parameter is an error", function()
+    {
+        makeParser("#define foo(arg) #bar\n")
+            .should.throw(SyntaxError, /^# is not followed by a macro parameter/);
+    });
+
     it("using __VA_ARGS__ in a macro body when there are named variadic parameters is an error", function()
     {
         makeParser("#define foo(args...) __VA_ARGS__\n")
