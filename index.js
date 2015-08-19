@@ -11,6 +11,5 @@ exports.utils = require("./lib/utils.js");
 
     parse
     readWord
-    readWord1
     skipSpace
 */
