@@ -14,3 +14,6 @@ else \
     v = Math.ceil(n);
 
 ROUND(x, 13.27)
+
+// Make sure \ outside of macro has normal meaning
+\u0067ood = "good";

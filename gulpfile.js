@@ -56,8 +56,13 @@ var fixturesPath;
 
 function parseFixture(file, encoding, cb)
 {
+    var options = {};
+
+    if (path.basename(file.path) === "multiple-lines.j")
+        options.locations = true;
+
     console.log(path.relative(fixturesPath, file.path));
-    file.contents = new Buffer(parse(file.path));
+    file.contents = new Buffer(parse(file.path, options));
     cb(null, file);
 }
 
@@ -77,7 +82,9 @@ gulp.task("generate-fixtures", function()
             [["--macro", "[FOO, BAR=7]"], "macro2.js"],
             [["--no-objj"], "objj.j", "objj.txt"],
             [["--no-objj"], "no-objj.js"],
-            [["--strict-semicolons"], "strict-semicolons.js", "strict-semicolons.txt"]
+            [["--strict-semicolons"], "strict-semicolons.js", "strict-semicolons.txt"],
+            [["--no-color"], "AbortError.js", "AbortError.txt"],
+            [["--no-color"], "#warning.js", "#warning.txt"],
         ];
 
     cliFixtures.forEach(function(fixture)

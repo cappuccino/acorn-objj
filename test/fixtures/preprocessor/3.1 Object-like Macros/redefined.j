@@ -17,3 +17,9 @@ foo = TABLESIZE;
 
 foo = TABLESIZE;
 // foo = 37;
+
+// Redefining with the same definition does not warn
+#define BUFSIZE 37
+
+#define stringify(arg) #arg
+#define stringify(arg) #arg

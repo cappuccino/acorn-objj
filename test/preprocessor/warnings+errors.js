@@ -12,15 +12,15 @@ var makeParser = utils.makeParser;
 // jscs: enable
 // jscs: disable maximumLineLength
 
-describe("Warnings & Errors", function()
+describe("Warnings & errors", function()
 {
-    it("Command line macro definition with missing name is an error", function()
+    it("command line macro definition with missing name is an error", function()
     {
         makeParser("x = foo;\n", { objjOptions: { macros: ["=1"] }})
             .should.throw(SyntaxError, /^Invalid option-defined macro definition:/);
     });
 
-    it("Invalid # directive is an error", function()
+    it("invalid # directive is an error", function()
     {
         makeParser("#foo\n")
             .should.throw(SyntaxError, /^Invalid preprocessing directive/);
@@ -44,52 +44,72 @@ describe("Warnings & Errors", function()
             .should.throw(SyntaxError, /^Macro name missing/);
     });
 
-    it("Redefining a macro is a warning", function()
+    it("redefining a macro with a different definition is a warning", function()
     {
         var issues = [];
 
-        makeParser("#define __NODE__\n", null, issues)();
+        makeParser("#define foo\n#define foo 7\n", null, issues)();
         issues.length.should.equal(1);
-        issues[0].message.should.equal("'__NODE__' macro redefined");
+        issues[0].message.should.equal("'foo' macro redefined");
+
+        issues = [];
+        makeParser("#define foo 7\n#define foo 13\n", null, issues)();
+        issues.length.should.equal(1);
+        issues[0].message.should.equal("'foo' macro redefined");
+
+        issues = [];
+        makeParser("#define foo 7\n#define foo 'bar'\n", null, issues)();
+        issues.length.should.equal(1);
+        issues[0].message.should.equal("'foo' macro redefined");
+
+        issues = [];
+        makeParser("#define foo() 7\n#define foo(arg) 7\n", null, issues)();
+        issues.length.should.equal(1);
+        issues[0].message.should.equal("'foo' macro redefined");
+
+        issues = [];
+        makeParser("#define foo(arg) 7\n#define foo(bar) 7\n", null, issues)();
+        issues.length.should.equal(1);
+        issues[0].message.should.equal("'foo' macro redefined");
     });
 
-    it("Using __VA_ARGS__ as a macro name is an error", function()
+    it("using __VA_ARGS__ as a macro name is an error", function()
     {
         makeParser("#define __VA_ARGS__\n")
             .should.throw(SyntaxError, /^__VA_ARGS__ may only be used within the body of a variadic macro/);
     });
 
-    it("Using 'defined' as a macro name is an error", function()
+    it("using 'defined' as a macro name is an error", function()
     {
         makeParser("#define defined\n")
             .should.throw(SyntaxError, /^'defined' may not be used as a macro name/);
     });
 
-    it("Missing , between macro arguments is an error", function()
+    it("missing , between macro arguments is an error", function()
     {
         makeParser("#define foo(a b)\n")
             .should.throw(SyntaxError, /^Expected ',' between macro parameters/);
     });
 
-    it("Using __VA_ARGS__ as a macro argument name is an error", function()
+    it("using __VA_ARGS__ as a macro argument name is an error", function()
     {
         makeParser("#define foo(__VA_ARGS__)\n")
             .should.throw(SyntaxError, /^__VA_ARGS__ may only be used within the body of a variadic macro/);
     });
 
-    it("Using a macro argument name more than once is an error", function()
+    it("using a macro argument name more than once is an error", function()
     {
         makeParser("#define foo(bar, bar)\n")
             .should.throw(SyntaxError, /^Duplicate macro parameter name 'bar'/);
     });
 
-    it("Specifying macro arguments after ... is an error", function()
+    it("specifying macro arguments after ... is an error", function()
     {
         makeParser("#define foo(bar, ..., baz)\n")
             .should.throw(SyntaxError, /^Expected '\)' after \.\.\. in macro parameter list/);
     });
 
-    it("Invalid token in a macro argument is an error", function()
+    it("invalid token in a macro argument is an error", function()
     {
         makeParser("#define foo(bar, +)\n")
             .should.throw(SyntaxError, /^Invalid token in macro parameter list/);
@@ -107,13 +127,13 @@ describe("Warnings & Errors", function()
             .should.throw(SyntaxError, /^# \(stringify\) must be followed by a name/);
     });
 
-    it("Using __VA_ARGS__ in a macro body when there are named variadic parameters is an error", function()
+    it("using __VA_ARGS__ in a macro body when there are named variadic parameters is an error", function()
     {
         makeParser("#define foo(args...) __VA_ARGS__\n")
             .should.throw(SyntaxError, /^__VA_ARGS__ may not be used when there are named variadic parameters/);
     });
 
-    it("Using __VA_ARGS__ in a macro body when there no variadic parameters is an error", function()
+    it("using __VA_ARGS__ in a macro body when there no variadic parameters is an error", function()
     {
         makeParser("#define foo(args) __VA_ARGS__\n")
             .should.throw(SyntaxError, /^__VA_ARGS__ may only be used within the body of a variadic macro/);
@@ -131,7 +151,7 @@ describe("Warnings & Errors", function()
             .should.throw(SyntaxError, /^'##' cannot be at the end of a macro expansion/);
     });
 
-    it("Concatenation that forms an invalid token is a warning", function()
+    it("concatenation that forms an invalid token is a warning", function()
     {
         var issues = [];
 
@@ -141,16 +161,22 @@ describe("Warnings & Errors", function()
         issues[0].message.should.equal("pasting formed '\"paste\"+', an invalid token");
     });
 
-    it("Reaching EOF before a macro call is complete is an error", function()
+    it("reaching EOF before a macro call is complete is an error", function()
     {
         makeParser("#define foo(arg) arg\nfoo('bar'")
             .should.throw(SyntaxError, /^Unexpected EOF in macro call/);
     });
 
-    it("Calling a macro with a wrong argument count is an error", function()
+    it("calling a macro with too few arguments is an error", function()
     {
         makeParser("#define foo(arg1, arg2) arg1 + arg2\nfoo(7)")
             .should.throw(SyntaxError, /^Macro defines 2 parameters, called with 1 argument/);
+    });
+
+    it("calling a macro with too many arguments is an error", function()
+    {
+        makeParser("#define foo(arg1) arg1\nfoo(7, 27, 31)")
+            .should.throw(SyntaxError, /^Macro defines 1 parameter, called with 2 arguments/);
     });
 
     it("#if without balancing #endif at EOF is an error", function()
@@ -171,7 +197,7 @@ describe("Warnings & Errors", function()
             .should.throw(SyntaxError, /^#else without matching #if/);
     });
 
-    it("Nested #else without matching #if is an error", function()
+    it("nested #else without matching #if is an error", function()
     {
         var issues = [];
 
@@ -193,7 +219,7 @@ describe("Warnings & Errors", function()
             .should.throw(SyntaxError, /^#elif without matching #if/);
     });
 
-    it("Nested #elif without matching #if is an error", function()
+    it("nested #elif without matching #if is an error", function()
     {
         var issues = [];
 
@@ -251,37 +277,37 @@ describe("Warnings & Errors", function()
             .should.throw(SyntaxError, /^#endif must be followed by EOL/);
     });
 
-    it("Floating point literal in a preprocessor expression is an error", function()
+    it("floating point literal in a preprocessor expression is an error", function()
     {
         makeParser("#if 7.27\n#endif\n")
             .should.throw(SyntaxError, /^Non-integer number in preprocesor expression/);
     });
 
-    it("Scientific literal in a preprocessor expression is an error", function()
+    it("scientific literal in a preprocessor expression is an error", function()
     {
         makeParser("#if 7e13\n#endif\n")
             .should.throw(SyntaxError, /^Non-integer number in preprocesor expression/);
     });
 
-    it("Invalid #if expression operator is an error", function()
+    it("invalid #if expression operator is an error", function()
     {
         makeParser("#if 1 = 1\n#endif\n")
             .should.throw(SyntaxError, /^Token is not a valid binary operator in a preprocessor subexpression/);
     });
 
-    it("Invalid #elif expression operator is an error", function()
+    it("invalid #elif expression operator is an error", function()
     {
         makeParser("#if 0\n#elif 1 = 1\n#endif\n")
             .should.throw(SyntaxError, /^Token is not a valid binary operator in a preprocessor subexpression/);
     });
 
-    it("Unclosed parenthetical expression is an error", function()
+    it("unclosed parenthetical expression is an error", function()
     {
         makeParser("#if (27\n#endif\n")
             .should.throw(SyntaxError, /^Expected '\)' in preprocessor expression/);
     });
 
-    it("Invalid expression token is an error", function()
+    it("invalid expression token is an error", function()
     {
         makeParser("#if [foo]\n#endif\n")
             .should.throw(SyntaxError, /^Invalid preprocessor expression token/);

@@ -20,7 +20,11 @@ describe("Object-like macros", function()
 
     it("may span multiple lines", function()
     {
-        testFixture("preprocessor", "3.1 Object-like Macros/multiple-lines");
+        testFixture(
+            "preprocessor",
+            "3.1 Object-like Macros/multiple-lines",
+            { locations: true }
+        );
     });
 
     it("should only take effect from the point of definition", function()

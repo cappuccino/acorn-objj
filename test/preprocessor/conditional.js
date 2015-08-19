@@ -59,12 +59,12 @@ describe("Conditional syntax", function()
         testFixture("preprocessor", baseDir + "defined");
     });
 
-    it("Macros are expanded in #if expressions", function()
+    it("macros are expanded in #if expressions", function()
     {
         testFixture("preprocessor", baseDir + "macros");
     });
 
-    it("Identifiers in #if expressions that are not macros resolve to 0", function()
+    it("identifiers and keywords in #if expressions that are not macros resolve to 0", function()
     {
         testFixture("preprocessor", baseDir + "identifiers");
     });
@@ -74,7 +74,7 @@ describe("Conditional syntax", function()
         testFixture("preprocessor", baseDir + "function-like-macros");
     });
 
-    it("Sequential tests may be performed with #elif", function()
+    it("sequential tests may be performed with #elif", function()
     {
         testFixture("preprocessor", baseDir + "#elif");
     });
@@ -82,5 +82,10 @@ describe("Conditional syntax", function()
     it("#if clauses may be nested", function()
     {
         testFixture("preprocessor", baseDir + "nesting");
+    });
+
+    it("directives should be ignored when expressions evaluate false", function()
+    {
+        testFixture("preprocessor", baseDir + "skipping");
     });
 });

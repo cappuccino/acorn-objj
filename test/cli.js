@@ -18,6 +18,14 @@ describe("cli", function()
         executable = cli.getEnvironment().executable;
     });
 
+    it("should generate an error if the file does not exist", function()
+    {
+        var result = run(["--no-color", "foo.j"]);
+
+        result.output.should.equal("error: ENOENT, no such file or directory 'foo.j'\n");
+        result.exitCode.should.equal(1);
+    });
+
     it("should generate an error if there is #! without --allow-hash-bang", function()
     {
         var result = run(["--no-preprocessor", "--no-color", path.join(dir, "hash-bang.js")]);
@@ -128,7 +136,7 @@ describe("cli", function()
     {
         var result = run([]);
 
-        result.output.should.equal(executable + ": error: No input file\n");
+        result.output.should.equal("error: No input file\n");
         result.exitCode.should.equal(1);
     });
 
@@ -136,7 +144,7 @@ describe("cli", function()
     {
         var result = run(["foo.js", "bar.js"]);
 
-        result.output.should.equal(executable + ": error: Only one file may be parsed at a time\n");
+        result.output.should.equal("error: Only one file may be parsed at a time\n");
         result.exitCode.should.equal(1);
     });
 
@@ -159,5 +167,21 @@ describe("cli", function()
     {
         run(["--macro", "[FOO, BAR=7]", path.join(dir, "macro2.js")]).output
             .should.equalFixture("cli/macro2.json");
+    });
+
+    it("should not log AbortError", function()
+    {
+        var result = run(["--no-color", path.join(dir, "AbortError.js")]);
+
+        result.output.should.equalFixture("cli/AbortError.txt");
+        result.exitCode.should.equal(1);
+    });
+
+    it("should generate an AST and warnings with #warning", function()
+    {
+        var result = run(["--no-color", path.join(dir, "#warning.js")]);
+
+        result.output.should.equalFixture("cli/#warning.txt");
+        result.exitCode.should.equal(0);
     });
 });

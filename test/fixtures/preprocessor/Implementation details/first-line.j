@@ -1,4 +1,4 @@
 #define FOO 7
-// preprocessor statement may be on first line
+// preprocessor directives may be on the first line
 
 foo = FOO;
