@@ -13,7 +13,7 @@ var testFixture = utils.testFixture;
 
 describe("Pragmas", function()
 {
-    it("completely ignore what comes after the directive", function()
+    it("completely ignore everything up to EOL not preceded by \\", function()
     {
         testFixture("preprocessor", "7 Pragmas/pragmas");
     });
