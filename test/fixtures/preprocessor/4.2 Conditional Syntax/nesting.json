@@ -1,61 +1,100 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 116,
+  "end": 247,
   "body": [
     {
-      "type": "objj_PreprocessorStatement",
+      "type": "ExpressionStatement",
       "start": 0,
-      "end": 12
+      "end": 8,
+      "expression": {
+        "type": "Literal",
+        "start": 0,
+        "end": 7,
+        "value": "start",
+        "raw": "\"start\""
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 10,
+      "end": 22
     },
     {
       "type": "ExpressionStatement",
-      "start": 13,
-      "end": 23,
+      "start": 23,
+      "end": 33,
       "expression": {
         "type": "Literal",
-        "start": 13,
-        "end": 22,
+        "start": 23,
+        "end": 32,
         "value": "success",
         "raw": "\"success\""
       }
     },
     {
       "type": "objj_PreprocessorStatement",
-      "start": 29,
+      "start": 39,
+      "end": 49
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 69,
+      "end": 87
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 107,
       "end": 18
     },
     {
       "type": "ExpressionStatement",
       "start": 9,
-      "end": 44,
+      "end": 129,
       "expression": {
         "type": "Literal",
         "start": 9,
-        "end": 44,
+        "end": 129,
         "value": "v0.12.7",
         "raw": "\"v0.12.7\""
       }
     },
     {
       "type": "objj_PreprocessorStatement",
-      "start": 62,
-      "end": 67
+      "start": 147,
+      "end": 152
     },
     {
       "type": "objj_PreprocessorStatement",
-      "start": 86,
-      "end": 92
+      "start": 171,
+      "end": 177
     },
     {
       "type": "objj_PreprocessorStatement",
-      "start": 93,
-      "end": 98
+      "start": 179,
+      "end": 204
     },
     {
       "type": "objj_PreprocessorStatement",
-      "start": 109,
-      "end": 115
+      "start": 216,
+      "end": 221
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 232,
+      "end": 238
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 240,
+      "end": 246,
+      "expression": {
+        "type": "Literal",
+        "start": 240,
+        "end": 245,
+        "value": "end",
+        "raw": "\"end\""
+      }
     }
   ]
 }
