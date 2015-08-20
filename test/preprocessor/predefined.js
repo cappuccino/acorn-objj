@@ -1,55 +1,68 @@
 "use strict";
 
-var utils = require("../lib/test-utils");
+var acorn = require("acorn"),
+    makeParser = require("../lib/test-utils").makeParser;
 
-// jscs: disable requireMultipleVarDecl
+/* global describe, it, should */
 
-var testFixture = utils.testFixture;
-
-/* global describe, it */
-
-// jscs: enable
 // jscs: disable maximumLineLength
 
 describe("Predefined macros", function()
 {
-    it("should ignore empty named parameters", function()
+    it("__CAPPUCCINO__ should always be 1", function()
     {
-        testFixture("preprocessor", "3.6 Variadic Macros/empty-named-parameters");
+        var ast = makeParser("__CAPPUCCINO__;")();
+
+        ast.should.be.an.instanceof(acorn.Node);
+        ast.body[0].expression.value.should.equal(1);
     });
 
-    it("should ignore empty variadic args", function()
+    it("__PLATFORM__ should be the current platform ('" + process.platform + "')", function()
     {
-        testFixture("preprocessor", "3.6 Variadic Macros/empty-varargs");
+        var ast = makeParser("__PLATFORM__;")();
+
+        ast.should.be.an.instanceof(acorn.Node);
+        ast.body[0].expression.value.should.equal(process.platform);
     });
 
-    it("should macro-expand arguments", function()
+    it("__NODE__ should be the current node version ('" + process.version + "')", function()
     {
-        testFixture("preprocessor", "3.6 Variadic Macros/macro-expanded-args");
+        var ast = makeParser("__NODE__;")();
+
+        ast.should.be.an.instanceof(acorn.Node);
+        ast.body[0].expression.value.should.equal(process.version);
     });
 
-    it("should allow use of named and variadic args together", function()
+    it("__OBJJ__ should be 1 when Objective-J is active", function()
     {
-        testFixture("preprocessor", "3.6 Variadic Macros/named+variadic");
+        var ast = makeParser("__OBJJ__;")();
+
+        ast.should.be.an.instanceof(acorn.Node);
+        ast.body[0].expression.value.should.equal(1);
     });
 
-    it("should allow variadic args to be omitted if there is a named parameter", function()
+    it("__OBJJ__ should be undefined when Objective-J is inactive", function()
     {
-        testFixture("preprocessor", "3.6 Variadic Macros/named-parameter");
+        var ast = makeParser("__OBJJ__;", { objjOptions: { objj: false }})();
+
+        ast.should.be.an.instanceof(acorn.Node);
+
+        var node = ast.body[0].expression;
+
+        node.type.should.equal("Identifier");
+        node.name.should.equal("__OBJJ__");
     });
 
-    it("should allow the variadic parameter to be named", function()
+    it("__ECMA_VERSION__ should be the numeric ECMA version given to the parser", function()
     {
-        testFixture("preprocessor", "3.6 Variadic Macros/named-varargs");
-    });
+        var ast = makeParser("__ECMA_VERSION__;", { ecmaVersion: 5 })();
 
-    it("should allow named variadic args to be omitted if they are prefixed with ##", function()
-    {
-        testFixture("preprocessor", "3.6 Variadic Macros/omit-varargs");
-    });
+        ast.should.be.an.instanceof(acorn.Node);
+        ast.body[0].expression.value.should.equal(5);
 
-    it("can be used to create a sequence statement", function()
-    {
-        testFixture("preprocessor", "3.6 Variadic Macros/sequence");
+        ast = makeParser("__ECMA_VERSION__;", { ecmaVersion: 6 })();
+
+        ast.should.be.an.instanceof(acorn.Node);
+        ast.body[0].expression.value.should.equal(6);
     });
 });

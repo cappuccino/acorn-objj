@@ -61,7 +61,7 @@ exports.testFixture = function(base, file, options)
 exports.makeParser = function(source, options, issues)
 {
     return function() {
-        parse.parse(source, options, issues);
+        return parse.parse(source, options, issues);
     };
 };
 
