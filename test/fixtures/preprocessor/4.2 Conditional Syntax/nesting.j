@@ -15,6 +15,15 @@
 
 #elif defined __BROWSER__
 "failure";
+
+    #ifdef FOO
+    "failure";
+    #elif defined(BAR)
+    "failure";
+    #else
+    "failure";
+    #endif
+
 #else
 "failure"
 #endif
