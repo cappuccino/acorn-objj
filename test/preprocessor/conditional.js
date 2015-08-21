@@ -5,7 +5,7 @@ var utils = require("../lib/test-utils");
 // jscs: disable requireMultipleVarDecl
 
 var testFixture = utils.testFixture,
-    baseDir = "4.2 Conditional Syntax/";
+    dir = "4.2 Conditional Syntax/";
 
 /* global describe, it */
 
@@ -16,76 +16,76 @@ describe("Conditional syntax", function()
 {
     it("#ifdef/#ifndef should evaluate the existence of a macro", function()
     {
-        testFixture("preprocessor", baseDir + "#ifdef-#ifndef");
+        testFixture("preprocessor", dir + "#ifdef-#ifndef");
     });
 
     it("#if expressions may use integers", function()
     {
-        testFixture("preprocessor", baseDir + "integers");
+        testFixture("preprocessor", dir + "integers");
     });
 
     it("#if expressions may use arithmetic operators", function()
     {
-        testFixture("preprocessor", baseDir + "arithmetic-operators");
+        testFixture("preprocessor", dir + "arithmetic-operators");
     });
 
     it("#if expressions may use bit shift operators", function()
     {
-        testFixture("preprocessor", baseDir + "bitshift-operators");
+        testFixture("preprocessor", dir + "bitshift-operators");
     });
 
     it("#if expressions may use bitwise operators", function()
     {
-        testFixture("preprocessor", baseDir + "bitwise-operators");
+        testFixture("preprocessor", dir + "bitwise-operators");
     });
 
     it("#if expressions may use comparison operators", function()
     {
-        testFixture("preprocessor", baseDir + "comparison-operators");
+        testFixture("preprocessor", dir + "comparison-operators");
     });
 
     it("#if expressions may use unary operators", function()
     {
-        testFixture("preprocessor", baseDir + "unary-operators");
+        testFixture("preprocessor", dir + "unary-operators");
     });
 
     it("#if expressions may use logical operators", function()
     {
-        testFixture("preprocessor", baseDir + "logical-operators");
+        testFixture("preprocessor", dir + "logical-operators");
     });
 
     it("#if expressions may test for macro definitions with 'defined'", function()
     {
-        testFixture("preprocessor", baseDir + "defined");
+        testFixture("preprocessor", dir + "defined");
     });
 
     it("macros are expanded in #if expressions", function()
     {
-        testFixture("preprocessor", baseDir + "macros");
+        testFixture("preprocessor", dir + "macros");
     });
 
     it("identifiers and keywords in #if expressions that are not macros resolve to 0", function()
     {
-        testFixture("preprocessor", baseDir + "identifiers");
+        testFixture("preprocessor", dir + "identifiers");
     });
 
     it("Function-like macros without parens in #if expressions resolve to 0", function()
     {
-        testFixture("preprocessor", baseDir + "function-like-macros");
+        testFixture("preprocessor", dir + "function-like-macros");
     });
 
     it("sequential tests may be performed with #elif", function()
     {
-        testFixture("preprocessor", baseDir + "#elif");
+        testFixture("preprocessor", dir + "#elif");
     });
 
     it("#if clauses may be nested", function()
     {
-        testFixture("preprocessor", baseDir + "nesting");
+        testFixture("preprocessor", dir + "nesting");
     });
 
     it("directives should be ignored when expressions evaluate false", function()
     {
-        testFixture("preprocessor", baseDir + "skipping");
+        testFixture("preprocessor", dir + "skipping");
     });
 });

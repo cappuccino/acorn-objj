@@ -4,7 +4,8 @@ var utils = require("../lib/test-utils");
 
 // jscs: disable requireMultipleVarDecl
 
-var testFixture = utils.testFixture;
+var dir = "3.2 Function-like Macros/",
+    testFixture = utils.testFixture;
 
 /* global describe, it */
 
@@ -15,16 +16,16 @@ describe("Function-like macros", function()
 {
     it("can be called like functions", function()
     {
-        testFixture("preprocessor", "3.2 Function-like Macros/called-like-functions");
+        testFixture("preprocessor", dir + "called-like-functions");
     });
 
     it("should not be expanded if called with args", function()
     {
-        testFixture("preprocessor", "3.2 Function-like Macros/function-macros-without-args");
+        testFixture("preprocessor", dir + "function-macros-without-args");
     });
 
     it("should not recognize parameter lists unless they directly follow the macro name", function()
     {
-        testFixture("preprocessor", "3.2 Function-like Macros/parameters-must-follow-name");
+        testFixture("preprocessor", dir + "parameters-must-follow-name");
     });
 });

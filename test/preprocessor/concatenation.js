@@ -4,8 +4,8 @@ var utils = require("../lib/test-utils");
 
 // jscs: disable requireMultipleVarDecl
 
-var testFixture = utils.testFixture,
-    baseDir = "3.5 Concatenation/";
+var dir = "3.5 Concatenation/",
+    testFixture = utils.testFixture;
 
 /* global describe, it */
 
@@ -16,26 +16,26 @@ describe("Concatenation", function()
 {
     it("should be ignored if an argument on either side of ## is empty", function()
     {
-        testFixture("preprocessor", baseDir + "empty-arg");
+        testFixture("preprocessor", dir + "empty-arg");
     });
 
     it("should leave tokens as is if the concatenated token is invalid", function()
     {
-        testFixture("preprocessor", baseDir + "invalid-token");
+        testFixture("preprocessor", dir + "invalid-token");
     });
 
     it("should paste only the trailing token on the left and leading token on the right", function()
     {
-        testFixture("preprocessor", baseDir + "leading-trailing");
+        testFixture("preprocessor", dir + "leading-trailing");
     });
 
     it("should not macro-expand arguments", function()
     {
-        testFixture("preprocessor", baseDir + "no-expand-arg");
+        testFixture("preprocessor", dir + "no-expand-arg");
     });
 
     it("should work alongside stringification", function()
     {
-        testFixture("preprocessor", baseDir + "stringify-and-concatenate");
+        testFixture("preprocessor", dir + "stringify-and-concatenate");
     });
 });

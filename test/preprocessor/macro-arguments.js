@@ -4,7 +4,8 @@ var utils = require("../lib/test-utils");
 
 // jscs: disable requireMultipleVarDecl
 
-var testFixture = utils.testFixture;
+var dir = "3.3 Macro Arguments/",
+    testFixture = utils.testFixture;
 
 /* global describe, it */
 
@@ -15,41 +16,41 @@ describe("Macro arguments", function()
 {
     it("should be substituted within the macro body", function()
     {
-        testFixture("preprocessor", "3.3 Macro Arguments/arguments");
+        testFixture("preprocessor", dir + "arguments");
     });
 
     it("may contain commas", function()
     {
-        testFixture("preprocessor", "3.3 Macro Arguments/commas");
+        testFixture("preprocessor", dir + "commas");
     });
 
     it("may be empty", function()
     {
-        testFixture("preprocessor", "3.3 Macro Arguments/empty");
+        testFixture("preprocessor", dir + "empty");
     });
 
     it("should be macro-expanded before substitution", function()
     {
-        testFixture("preprocessor", "3.3 Macro Arguments/expanded");
+        testFixture("preprocessor", dir + "expanded");
     });
 
     it("should allow unbalanced square brackets", function()
     {
-        testFixture("preprocessor", "3.3 Macro Arguments/square-brackets");
+        testFixture("preprocessor", dir + "square-brackets");
     });
 
     it("should be substituted if they appear within a string literal", function()
     {
-        testFixture("preprocessor", "3.3 Macro Arguments/strings");
+        testFixture("preprocessor", dir + "strings");
     });
 
     it("should be expanded after substitution", function()
     {
-        testFixture("preprocessor", "3.3 Macro Arguments/two-pass-expansion");
+        testFixture("preprocessor", dir + "two-pass-expansion");
     });
 
     it("should trim leading/trailing whitespace and collapse whitespace between tokens", function()
     {
-        testFixture("preprocessor", "3.3 Macro Arguments/whitespace");
+        testFixture("preprocessor", dir + "whitespace");
     });
 });

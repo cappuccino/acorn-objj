@@ -4,7 +4,8 @@ var utils = require("../lib/test-utils");
 
 // jscs: disable requireMultipleVarDecl
 
-var testFixture = utils.testFixture;
+var dir = "3.6 Variadic Macros/",
+    testFixture = utils.testFixture;
 
 /* global describe, it */
 
@@ -15,41 +16,41 @@ describe("Variadic macros", function()
 {
     it("should ignore empty named parameters", function()
     {
-        testFixture("preprocessor", "3.6 Variadic Macros/empty-named-parameters");
+        testFixture("preprocessor", dir + "empty-named-parameters");
     });
 
     it("should ignore empty variadic args", function()
     {
-        testFixture("preprocessor", "3.6 Variadic Macros/empty-varargs");
+        testFixture("preprocessor", dir + "empty-varargs");
     });
 
     it("should macro-expand arguments", function()
     {
-        testFixture("preprocessor", "3.6 Variadic Macros/macro-expanded-args");
+        testFixture("preprocessor", dir + "macro-expanded-args");
     });
 
     it("should allow use of named and variadic args together", function()
     {
-        testFixture("preprocessor", "3.6 Variadic Macros/named+variadic");
+        testFixture("preprocessor", dir + "named+variadic");
     });
 
     it("should allow variadic args to be omitted if there is a named parameter", function()
     {
-        testFixture("preprocessor", "3.6 Variadic Macros/named-parameter");
+        testFixture("preprocessor", dir + "named-parameter");
     });
 
     it("should allow the variadic parameter to be named", function()
     {
-        testFixture("preprocessor", "3.6 Variadic Macros/named-varargs");
+        testFixture("preprocessor", dir + "named-varargs");
     });
 
     it("should allow named variadic args to be omitted if they are prefixed with ##", function()
     {
-        testFixture("preprocessor", "3.6 Variadic Macros/omit-varargs");
+        testFixture("preprocessor", dir + "omit-varargs");
     });
 
     it("can be used to create a sequence statement", function()
     {
-        testFixture("preprocessor", "3.6 Variadic Macros/sequence");
+        testFixture("preprocessor", dir + "sequence");
     });
 });

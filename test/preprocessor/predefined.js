@@ -3,7 +3,7 @@
 var acorn = require("acorn"),
     makeParser = require("../lib/test-utils").makeParser;
 
-/* global describe, it, should */
+/* global describe, it */
 
 // jscs: disable maximumLineLength
 

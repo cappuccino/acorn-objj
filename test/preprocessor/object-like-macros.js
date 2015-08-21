@@ -4,7 +4,8 @@ var utils = require("../lib/test-utils");
 
 // jscs: disable requireMultipleVarDecl
 
-var testFixture = utils.testFixture;
+var dir = "3.1 Object-like Macros/",
+    testFixture = utils.testFixture;
 
 /* global describe, it */
 
@@ -15,7 +16,7 @@ describe("Object-like macros", function()
 {
     it("should expand their body tokens when they are expanded", function()
     {
-        testFixture("preprocessor", "3.1 Object-like Macros/evaluated-when-expanded");
+        testFixture("preprocessor", dir + "evaluated-when-expanded");
     });
 
     it("may span multiple lines", function()
@@ -29,11 +30,11 @@ describe("Object-like macros", function()
 
     it("should only take effect from the point of definition", function()
     {
-        testFixture("preprocessor", "3.1 Object-like Macros/point-of-definition");
+        testFixture("preprocessor", dir + "point-of-definition");
     });
 
     it("may be redefined", function()
     {
-        testFixture("preprocessor", "3.1 Object-like Macros/redefined");
+        testFixture("preprocessor", dir + "redefined");
     });
 });
