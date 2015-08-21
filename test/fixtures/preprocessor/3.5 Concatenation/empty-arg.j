@@ -5,3 +5,8 @@
 
 x = concatenate(foo, );
 // x = 4 + foo7;
+
+#define empty(arg1, arg2) arg1 ## arg2
+
+empty(,);
+// ;

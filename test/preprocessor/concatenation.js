@@ -14,6 +14,11 @@ var dir = "3.5 Concatenation/",
 
 describe("Concatenation", function()
 {
+    it("should work if a macro has no parameters", function()
+    {
+        testFixture("preprocessor", dir + "no-parameters");
+    });
+
     it("should be ignored if an argument on either side of ## is empty", function()
     {
         testFixture("preprocessor", dir + "empty-arg");
