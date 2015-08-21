@@ -1,4 +1,4 @@
-test/fixtures/cli/ecma.js:1:5: error: unexpected token 
+test/fixtures/cli/ecma.js:1:5: error: expected ';' after expression 
 let a = 7;
     ^
 
