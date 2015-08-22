@@ -14,14 +14,17 @@ var makeParser = utils.makeParser,
 
 describe("@import", function()
 {
+    // Turn the preprocessor off so we get code coverage of the non-preprocessor code
+    var options = { objjOptions: { preprocessor: false }};
+
     it("should generate objj_ImportStatement nodes with local:true for @import \"path\"", function()
     {
-        testFixture("objj", "@import/local");
+        testFixture("objj", "@import/local", options);
     });
 
     it("should generate objj_ImportStatement nodes with local:false for @import <path>", function()
     {
-        testFixture("objj", "@import/system");
+        testFixture("objj", "@import/system", options);
     });
 
     it("should fail for unterminated filenames", function()

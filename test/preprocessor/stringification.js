@@ -19,6 +19,11 @@ describe("Stringification", function()
         testFixture("preprocessor", dir + "backslash-escape");
     });
 
+    it("should stringify the same arg multiple times if requested", function()
+    {
+        testFixture("preprocessor", dir + "multiple");
+    });
+
     it("should create an empty string for empty arg", function()
     {
         testFixture("preprocessor", dir + "empty-arg");
