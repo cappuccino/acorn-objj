@@ -34,6 +34,14 @@ describe("cli", function()
         result.exitCode.should.equal(1);
     });
 
+    it("should generate stack trace with --stack-trace", function()
+    {
+        var result = run(["--stack-trace", "--no-color", path.join(dir, "ecma.js")]);
+
+        result.output.should.match(/^(.*\n)+1 error generated.\n\nSyntaxError: Expected ';' after expression\n\s+at Object.exports.run \(.+?\n/g);
+        result.exitCode.should.equal(1);
+    });
+
     it("should not generate an error if there is #! with --allow-hash-bang", function()
     {
         run(["--allow-hash-bang", path.join(dir, "hash-bang.js")]).output
