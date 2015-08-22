@@ -22,7 +22,7 @@ describe("cli", function()
     {
         var result = run(["--no-color", "foo.j"]);
 
-        result.output.should.equal("error: ENOENT, no such file or directory 'foo.j'\n");
+        result.output.should.equal("acorn-objj: error: ENOENT, no such file or directory 'foo.j'\n");
         result.exitCode.should.equal(1);
     });
 
@@ -136,7 +136,7 @@ describe("cli", function()
     {
         var result = run([]);
 
-        result.output.should.equal("error: No input file\n");
+        result.output.should.equal("acorn-objj: error: No input file\n");
         result.exitCode.should.equal(1);
     });
 
@@ -144,7 +144,7 @@ describe("cli", function()
     {
         var result = run(["foo.js", "bar.js"]);
 
-        result.output.should.equal("error: Only one file may be parsed at a time\n");
+        result.output.should.equal("acorn-objj: error: Only one file may be parsed at a time\n");
         result.exitCode.should.equal(1);
     });
 
