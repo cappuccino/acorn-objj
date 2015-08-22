@@ -160,7 +160,7 @@ describe("Warnings & errors", function()
     it("concatenation that forms an invalid token is a fatal error", function()
     {
         makeParser("#define paste(arg1, arg2) arg1 ## arg2\npaste(\"paste\", + \"me\")\n")
-            .should.throw(issueHandler.FatalError, /^FatalError: pasting formed '"paste"\+', an invalid token/);
+            .should.throw(issueHandler.Error, /^Error: pasting formed '"paste"\+', an invalid token/);
     });
 
     it("reaching EOF before a macro call is complete is an error", function()
