@@ -24,14 +24,9 @@ describe("Concatenation", function()
         testFixture("preprocessor", dir + "empty-arg");
     });
 
-    it("should leave tokens as is if the concatenated token is invalid", function()
+    it("should paste only tokens adjacent to ## after argument substitution/stringification", function()
     {
-        testFixture("preprocessor", dir + "invalid-token");
-    });
-
-    it("should paste only the trailing token on the left and leading token on the right", function()
-    {
-        testFixture("preprocessor", dir + "leading-trailing");
+        testFixture("preprocessor", dir + "adjacent-tokens");
     });
 
     it("should not macro-expand arguments", function()
@@ -39,8 +34,8 @@ describe("Concatenation", function()
         testFixture("preprocessor", dir + "no-expand-arg");
     });
 
-    it("should work alongside stringification", function()
+    it("should stringify concatenated args", function()
     {
-        testFixture("preprocessor", dir + "stringify-and-concatenate");
+        testFixture("preprocessor", dir + "stringify");
     });
 });
