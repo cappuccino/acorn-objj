@@ -19,7 +19,7 @@ describe("Diagnostics", function()
         issues[0].should.be.an.instanceof(issueHandler.Warning);
 
         // Note that the first character of issue messages is lowercased
-        issues[0].message.should.equal("this is a warning");
+        issues[0].message.should.equal("This is a warning");
 
         issues[1].should.be.an.instanceof(issueHandler.Error);
         issues[1].message.should.equal("and this is an error");

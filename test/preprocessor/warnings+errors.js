@@ -209,10 +209,10 @@ describe("Warnings & errors", function()
         issues.length.should.equal(2);
 
         issues[0].should.be.an.instanceof(issueHandler.Error);
-        issues[0].message.should.equal("expected #endif, saw #else");
+        issues[0].message.should.equal("Expected #endif, saw #else");
 
         issues[1].should.be.an.instanceof(issueHandler.Note);
-        issues[1].message.should.equal("matching #if is here:");
+        issues[1].message.should.equal("Matching #if is here:");
     });
 
     it("#elif without matching #if is an error", function()
@@ -231,10 +231,10 @@ describe("Warnings & errors", function()
         issues.length.should.equal(2);
 
         issues[0].should.be.an.instanceof(issueHandler.Error);
-        issues[0].message.should.equal("expected #endif, saw #elif");
+        issues[0].message.should.equal("Expected #endif, saw #elif");
 
         issues[1].should.be.an.instanceof(issueHandler.Note);
-        issues[1].message.should.equal("matching #if is here:");
+        issues[1].message.should.equal("Matching #if is here:");
     });
 
     it("#endif without matching #if is an error", function()
