@@ -1,4 +1,4 @@
-test/fixtures/cli/strict-semicolons.js:1:13: error: expected a semicolon 
+test/fixtures/cli/strict-semicolons.js:1:13: error: expected a semicolon
 "use strict"
             ^
 
