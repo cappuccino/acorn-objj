@@ -19,7 +19,7 @@ describe("Function-like macros", function()
         testFixture("preprocessor", dir + "called-like-functions");
     });
 
-    it("should not be expanded if called with args", function()
+    it("should not be expanded if referenced without args", function()
     {
         testFixture("preprocessor", dir + "function-macros-without-args");
     });

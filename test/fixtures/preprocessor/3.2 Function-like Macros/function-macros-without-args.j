@@ -9,3 +9,9 @@ foobar();
 
 funcptr = foobar;
 // funcptr = foobar
+
+#define bar() 7
+#define foo() bar
+
+foo();
+// bar;

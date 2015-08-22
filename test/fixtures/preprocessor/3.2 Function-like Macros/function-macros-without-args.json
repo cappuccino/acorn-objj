@@ -1,7 +1,7 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 222,
+  "end": 273,
   "body": [
     {
       "type": "FunctionDeclaration",
@@ -123,6 +123,27 @@
           "end": 200,
           "name": "foobar"
         }
+      }
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 223,
+      "end": 238
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 239,
+      "end": 264
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 263,
+      "end": 264,
+      "expression": {
+        "type": "Identifier",
+        "start": 263,
+        "end": 256,
+        "name": "bar"
       }
     }
   ]
