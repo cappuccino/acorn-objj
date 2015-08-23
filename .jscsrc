@@ -5,7 +5,6 @@
     "disallowMultipleLineStrings": true,
     "disallowMultipleSpaces": true,
     "disallowNamedUnassignedFunctions": true,
-    "disallowNotOperatorsInConditionals": true,
     "disallowPaddingNewlinesInBlocks": true,
     "disallowQuotedKeysInObjects": "allButReserved",
     "disallowSpaceAfterPrefixUnaryOperators": true,
