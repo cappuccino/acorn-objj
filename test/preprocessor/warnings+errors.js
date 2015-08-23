@@ -157,10 +157,13 @@ describe("Warnings & errors", function()
             .should.throw(SyntaxError, /^'##' cannot be at the end of a macro expansion/);
     });
 
-    it("concatenation that forms an invalid token is a fatal error", function()
+    it("concatenation that forms an invalid token is an error", function()
     {
-        makeParser("#define paste(arg1, arg2) arg1 ## arg2\npaste(\"paste\", + \"me\")\n")
-            .should.throw(issueHandler.Error, /^Error: pasting formed '"paste"\+', an invalid token/);
+        var issues = [];
+
+        makeParser("#define paste(arg1, arg2) arg1 ## arg2\npaste(\"paste\", + \"me\")\n", null, issues)();
+        issues.length.should.equal(1);
+        issues[0].message.should.equal("pasting formed '\"paste\"+', an invalid token");
     });
 
     it("reaching EOF before a macro call is complete is an error", function()
