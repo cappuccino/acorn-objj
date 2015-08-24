@@ -81,6 +81,7 @@
         ],
         "no-with": 2,
         "block-scoped-var": 2,
+        "block-spacing": [2, "always"],
         "brace-style": [0, "1tbs"],
         "complexity": [0, 11],
         "consistent-return": 2,
