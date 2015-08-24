@@ -84,7 +84,7 @@ gulp.task("generate-fixtures", function()
             [["--no-objj"], "no-objj.js"],
             [["--strict-semicolons"], "strict-semicolons.js", "strict-semicolons.txt"],
             [["--no-color"], "AbortError.js", "AbortError.txt"],
-            [["--no-color"], "#warning.js", "#warning.txt"],
+            [["--no-color"], "#warning.js", "#warning.txt"]
         ];
 
     cliFixtures.forEach(function(fixture)

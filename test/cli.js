@@ -34,19 +34,27 @@ describe("cli", function()
         result.exitCode.should.equal(1);
     });
 
-    it("should generate stack trace with --stack-trace", function()
+    it("should generate a stack trace with --stack-trace for thrown Error", function()
     {
-        var result = run(["--stack-trace", "--no-color", path.join(dir, "ecma.js")]);
+        var result = run(["--no-color", "--stack-trace", "foo.j"]);
 
-        result.output.should.match(/^(.*\n)+1 error generated.\n\nSyntaxError: Expected ';' after expression\n\s+at Object.exports.run \(.+?\n/g);
+        result.output.should.match(/^acorn-objj: error: ENOENT, no such file or directory 'foo\.j'\n\nError: ENOENT, no such file or directory 'foo\.j'\n\s+at Error \(native\)/);
         result.exitCode.should.equal(1);
     });
 
-    it("should generate a stack trace with --stack-trace", function()
+    it("should generate a stack trace with --stack-trace for thrown SyntaxError", function()
     {
         var result = run(["--stack-trace", "--no-color", path.join(dir, "ecma.js")]);
 
-        result.output.should.match(/^(.*\n)+1 error generated.\n\nSyntaxError: Expected ';' after expression\n\s+at Object.exports.run \(.+?\n/g);
+        result.output.should.match(/^(.*\n)+1 error generated\.\n\nSyntaxError: Expected ';' after expression \(1:4\)\n\s+at Parser.pp.raise \(.+?\n/g);
+        result.exitCode.should.equal(1);
+    });
+
+    it("should generate a stack trace with --stack-trace for thrown acorn-issue-handler#Error", function()
+    {
+        var result = run(["--stack-trace", "--no-color", path.join(dir, "stack-trace.js")]);
+
+        result.output.should.match(/^(.*\n)+1 error generated\.\n\nError: Expected #endif, saw #else\n\s+at Parser.acorn.Parser.objj_expectedPreEndif \(.+?\n/g);
         result.exitCode.should.equal(1);
     });
 
