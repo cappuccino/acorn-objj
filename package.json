@@ -52,6 +52,7 @@
     "optionator": "^0.6.0"
   },
   "peerDependencies": {
+    "eslint": "^1.2.0",
     "mocha": "^2.2.5"
   },
   "keywords": [
