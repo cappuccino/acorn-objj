@@ -31,6 +31,6 @@ describe("@deref", function()
             .should.throw(SyntaxError, /^Expected '\('/);
 
         makeParser("@deref(foo]")
-            .should.throw(SyntaxError, /^Expected closing '\)'/);
+            .should.throw(SyntaxError, /^Expected '\)' after ref/);
     });
 });

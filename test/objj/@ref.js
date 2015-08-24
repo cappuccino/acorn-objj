@@ -31,6 +31,6 @@ describe("@ref", function()
             .should.throw(SyntaxError, /^Expected '\('/);
 
         makeParser("var r = @ref(foo]")
-            .should.throw(SyntaxError, /^Expected closing '\)'/);
+            .should.throw(SyntaxError, /^Expected '\)'/);
     });
 });

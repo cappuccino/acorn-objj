@@ -12,4 +12,9 @@ exports.utils = require("./lib/utils.js");
     parse
     readWord
     skipSpace
+    expect  (no longer calls unexpected)
+    expectContextual  (no longer calls unexpected)
+
+    If other plugins want to override these methods, they will need to
+    plan accordingly.
 */

@@ -43,6 +43,6 @@ describe("accessors", function()
     it("should generate an error for unterminated @accessor attributes", function()
     {
         makeParser("@implementation Foo\n{ int foo @accessors(readonly]; }\n@end")
-            .should.throw(SyntaxError, /^Expected closing '\)' after accessor attributes/);
+            .should.throw(SyntaxError, /^Expected '\)' after accessor attributes/);
     });
 });

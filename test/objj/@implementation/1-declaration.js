@@ -43,7 +43,7 @@ describe("declaration", function()
     it("should generate an error if the category is not terminated with ')'", function()
     {
         makeParser("@implementation Foo (Bar]")
-            .should.throw(SyntaxError, /^Expected closing '\)' after category name/);
+            .should.throw(SyntaxError, /^Expected '\)' after category name/);
     });
 
     it("should generate an error if the protocols are not separated by ','", function()

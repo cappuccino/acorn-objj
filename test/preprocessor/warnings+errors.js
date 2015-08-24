@@ -327,7 +327,7 @@ describe("Warnings & errors", function()
     it("'defined()' without a closing parens is an error", function()
     {
         makeParser("#if defined(foo\n#endif\n")
-            .should.throw(SyntaxError, /^Missing '\)' after macro name/);
+            .should.throw(SyntaxError, /^Expected '\)' after macro name/);
     });
 
     it("#warning not followed by a string is an error", function()
