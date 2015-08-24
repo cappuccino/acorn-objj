@@ -34,10 +34,18 @@ describe("Implementation", function()
         var macroList = [],
             options = { objjOptions: { macroList: macroList } };
 
-        utils.makeParser("#define FOO 7\n#define foo(arg1, arg2) (arg1) + (arg2)\n", options)();
+        utils.makeParser(
+            "#define    FOO\n" +
+            "#define  BAR    7\n" +
+            "#define foo(  arg1  ,arg2 )\n" +
+            "#define bar(  arg1  ,arg2 )        (   arg1  ) +(arg2  )\n",
+            options
+        )();
 
-        macroList.length.should.equal(2);
-        macroList[0].should.equal("FOO=7");
-        macroList[1].should.equal("foo(arg1, arg2)=(arg1) + (arg2)");
+        macroList.length.should.equal(4);
+        macroList[0].should.equal("FOO=");
+        macroList[1].should.equal("BAR=7");
+        macroList[2].should.equal("foo(  arg1  ,arg2 )=");
+        macroList[3].should.equal("bar(  arg1  ,arg2 )=(   arg1  ) +(arg2  )");
     });
 });

@@ -27,4 +27,28 @@ describe("Diagnostics", function()
         issues[2].should.be.an.instanceof(issueHandler.Warning);
         issues[2].message.should.equal("another warning");
     });
+
+    it("#warning not followed by a string is an error", function()
+    {
+        makeParser("#warning 7\n")
+            .should.throw(SyntaxError, /^#warning must be followed by a string/);
+    });
+
+    it("#error not followed by a string is an error", function()
+    {
+        makeParser("#error 7\n")
+            .should.throw(SyntaxError, /^#error must be followed by a string/);
+    });
+
+    it("#warning message not followed by EOL is an error", function()
+    {
+        makeParser("#warning \"hello\" 7\n")
+            .should.throw(SyntaxError, /^#warning message must be followed by EOL/);
+    });
+
+    it("#error message not followed by EOL is an error", function()
+    {
+        makeParser("#error \"hello\" 7\n")
+            .should.throw(SyntaxError, /^#error message must be followed by EOL/);
+    });
 });
