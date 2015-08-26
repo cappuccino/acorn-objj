@@ -6,7 +6,7 @@
     {
       "type": "objj_PreprocessorStatement",
       "start": 0,
-      "end": 28
+      "end": 38
     },
     {
       "type": "ExpressionStatement",
@@ -15,7 +15,7 @@
       "expression": {
         "type": "BinaryExpression",
         "start": 0,
-        "end": 28,
+        "end": 38,
         "left": {
           "type": "Literal",
           "start": 0,

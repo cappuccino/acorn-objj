@@ -11,7 +11,7 @@ testOp(a, +, 2);
 makeFloat(7, 27);
 // 7.27;
 
-#define makeScientific(coefficient, exponent)  (827 - 413) / coefficient ## e ## exponent + 13
+#define makeScientific(coefficient, exponent)  (827 - 413) / coefficient ## exponent + 13
 
-makeScientific(7, 27);
+makeScientific(7, e27);
 // (827 - 413) / 7e+27 + 13;

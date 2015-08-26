@@ -20,7 +20,7 @@
       "expression": {
         "type": "CallExpression",
         "start": 54,
-        "end": 111,
+        "end": 149,
         "callee": {
           "type": "Identifier",
           "start": 54,

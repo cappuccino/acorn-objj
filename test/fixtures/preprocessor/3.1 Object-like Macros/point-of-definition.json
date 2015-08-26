@@ -38,7 +38,7 @@
       "expression": {
         "type": "AssignmentExpression",
         "start": 88,
-        "end": 93,
+        "end": 95,
         "operator": "=",
         "left": {
           "type": "Identifier",

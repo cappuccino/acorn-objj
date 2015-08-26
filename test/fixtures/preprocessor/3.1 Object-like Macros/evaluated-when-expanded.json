@@ -20,7 +20,7 @@
       "expression": {
         "type": "AssignmentExpression",
         "start": 87,
-        "end": 92,
+        "end": 102,
         "operator": "=",
         "left": {
           "type": "Identifier",

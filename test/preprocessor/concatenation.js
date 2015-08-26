@@ -54,10 +54,28 @@ describe("Concatenation", function()
 
     it("concatenation that forms an invalid token is an error", function()
     {
-        var issues = [];
+        var issues = [],
+            defines = "#define test(arg1, arg2) paste(arg1, arg2)\n" +
+                      "#define paste(arg1, arg2) arg1 ## arg2\n",
+            source = defines + "test(\"paste\", + \"me\")\n";
 
-        makeParser("#define paste(arg1, arg2) arg1 ## arg2\npaste(\"paste\", + \"me\")\n", null, issues)();
-        issues.length.should.equal(1);
-        issues[0].message.should.equal("pasting formed '\"paste\"+', an invalid token");
+        makeParser(source, null, issues)();
+
+        issues.length.should.equal(3);
+        utils.testIssue(issues[0], "error", "pasting formed '\"paste\"+', an invalid token", "test(\"paste\", + \"me\")", 3, 0);
+        utils.testIssue(issues[1], "note", "expanded from macro 'test'", "#define test(arg1, arg2) paste(arg1, arg2)", 1, 25);
+        utils.testIssue(issues[2], "note", "expanded from macro 'paste'", "#define paste(arg1, arg2) arg1 ## arg2", 2, 31);
+
+        source = defines + "test(\"paste\", paste(+, \"me\"))\n";
+        issues = [];
+
+        makeParser(source, null, issues)();
+
+        issues.length.should.equal(5);
+        utils.testIssue(issues[0], "error", "pasting formed '+\"me\"', an invalid token", "test(\"paste\", paste(+, \"me\"))", 3, 14);
+        utils.testIssue(issues[1], "note", "expanded from macro 'paste'", "#define paste(arg1, arg2) arg1 ## arg2", 2, 31);
+        utils.testIssue(issues[2], "error", "pasting formed '\"paste\"+', an invalid token", "test(\"paste\", paste(+, \"me\"))", 3, 0);
+        utils.testIssue(issues[3], "note", "expanded from macro 'test'", "#define test(arg1, arg2) paste(arg1, arg2)", 1, 25);
+        utils.testIssue(issues[4], "note", "expanded from macro 'paste'", "#define paste(arg1, arg2) arg1 ## arg2", 2, 31);
     });
 });

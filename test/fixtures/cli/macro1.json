@@ -11,7 +11,7 @@
         {
           "type": "VariableDeclarator",
           "start": 4,
-          "end": 9,
+          "end": 13,
           "id": {
             "type": "Identifier",
             "start": 4,

@@ -25,7 +25,7 @@
         "expression": {
           "type": "CallExpression",
           "start": 106,
-          "end": 138,
+          "end": 184,
           "callee": {
             "type": "MemberExpression",
             "start": 106,

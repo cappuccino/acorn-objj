@@ -1,7 +1,7 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 462,
+  "end": 458,
   "body": [
     {
       "type": "objj_PreprocessorStatement",
@@ -20,7 +20,7 @@
       "expression": {
         "type": "AssignmentExpression",
         "start": 175,
-        "end": 166,
+        "end": 183,
         "operator": "+=",
         "left": {
           "type": "Identifier",
@@ -49,7 +49,7 @@
       "expression": {
         "type": "Literal",
         "start": 0,
-        "end": 284,
+        "end": 302,
         "value": 7.27,
         "raw": "7.27"
       }
@@ -62,15 +62,15 @@
     {
       "type": "ExpressionStatement",
       "start": 361,
-      "end": 432,
+      "end": 428,
       "expression": {
         "type": "BinaryExpression",
         "start": 361,
-        "end": 408,
+        "end": 427,
         "left": {
           "type": "BinaryExpression",
           "start": 361,
-          "end": 403,
+          "end": 398,
           "left": {
             "type": "BinaryExpression",
             "start": 362,
@@ -95,7 +95,7 @@
           "right": {
             "type": "Literal",
             "start": 0,
-            "end": 403,
+            "end": 398,
             "value": 7e+27,
             "raw": "7e27"
           }
@@ -103,8 +103,8 @@
         "operator": "+",
         "right": {
           "type": "Literal",
-          "start": 406,
-          "end": 408,
+          "start": 401,
+          "end": 403,
           "value": 13,
           "raw": "13"
         }

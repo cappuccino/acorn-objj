@@ -6,7 +6,7 @@
     {
       "type": "objj_PreprocessorStatement",
       "start": 27,
-      "end": 60
+      "end": 69
     },
     {
       "type": "EmptyStatement",
@@ -20,7 +20,7 @@
       "expression": {
         "type": "Literal",
         "start": 92,
-        "end": 70,
+        "end": 94,
         "value": 2,
         "raw": "2"
       }
@@ -32,7 +32,7 @@
       "expression": {
         "type": "Literal",
         "start": 108,
-        "end": 95,
+        "end": 111,
         "value": 1,
         "raw": "1"
       }

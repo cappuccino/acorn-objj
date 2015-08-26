@@ -26,7 +26,7 @@
       "expression": {
         "type": "Literal",
         "start": 138,
-        "end": 143,
+        "end": 158,
         "value": "arg",
         "raw": "\"arg\""
       }

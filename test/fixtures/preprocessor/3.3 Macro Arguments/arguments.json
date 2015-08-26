@@ -15,7 +15,7 @@
       "expression": {
         "type": "AssignmentExpression",
         "start": 74,
-        "end": 77,
+        "end": 87,
         "operator": "=",
         "left": {
           "type": "Identifier",
@@ -67,7 +67,7 @@
       "expression": {
         "type": "AssignmentExpression",
         "start": 119,
-        "end": 122,
+        "end": 132,
         "operator": "=",
         "left": {
           "type": "Identifier",
@@ -123,7 +123,7 @@
       "expression": {
         "type": "AssignmentExpression",
         "start": 164,
-        "end": 167,
+        "end": 182,
         "operator": "=",
         "left": {
           "type": "Identifier",

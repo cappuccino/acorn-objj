@@ -161,7 +161,7 @@
     {
       "type": "IfStatement",
       "start": 152,
-      "end": 237,
+      "end": 254,
       "loc": {
         "start": {
           "line": 11,
@@ -452,7 +452,7 @@
       "alternate": {
         "type": "ExpressionStatement",
         "start": 245,
-        "end": 237,
+        "end": 254,
         "loc": {
           "start": {
             "line": 16,

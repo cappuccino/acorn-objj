@@ -2,6 +2,7 @@
 
 var cli = require("../../lib/cli"),
     fs = require("fs"),
+    issueHandler = require("acorn-issue-handler"),
     parse = require("../../lib/parse"),
     path = require("path"),
     stripColor = require("chalk").stripColor;
@@ -81,4 +82,32 @@ exports.makeDescribes = function(description, filename, isDir)
                 require(path.resolve(path.join("test", dir, d)));
         });
     });
+};
+
+exports.testIssue = function(issue, severity, message, source, line, column)
+{
+    var type;
+
+    switch (severity)
+    {
+        case "error":
+        default:
+            type = issueHandler.Error;
+            break;
+
+        case "warning":
+            type = issueHandler.Warning;
+            break;
+
+        case "note":
+            type = issueHandler.Note;
+            break;
+    }
+
+    issue.should.be.an.instanceof(type);
+    issue.severity.should.equal(severity);
+    issue.message.should.equal(message);
+    issue.source.should.equal(source);
+    issue.lineInfo.line.should.equal(line);
+    issue.lineInfo.column.should.equal(column);
 };

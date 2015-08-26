@@ -50,11 +50,11 @@
     {
       "type": "ExpressionStatement",
       "start": 9,
-      "end": 129,
+      "end": 142,
       "expression": {
         "type": "Literal",
         "start": 9,
-        "end": 129,
+        "end": 142,
         "value": "v0.12.7",
         "raw": "\"v0.12.7\""
       }

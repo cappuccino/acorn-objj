@@ -72,7 +72,7 @@
       "expression": {
         "type": "CallExpression",
         "start": 124,
-        "end": 145,
+        "end": 155,
         "callee": {
           "type": "MemberExpression",
           "start": 124,
@@ -142,7 +142,7 @@
       "expression": {
         "type": "Identifier",
         "start": 263,
-        "end": 256,
+        "end": 263,
         "name": "bar"
       }
     }

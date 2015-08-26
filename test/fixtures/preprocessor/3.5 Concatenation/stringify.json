@@ -15,7 +15,7 @@
       "expression": {
         "type": "Literal",
         "start": 0,
-        "end": 78,
+        "end": 91,
         "value": "foo",
         "raw": "\"foo\""
       }

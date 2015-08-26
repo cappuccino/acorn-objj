@@ -48,7 +48,7 @@
         {
           "type": "VariableDeclarator",
           "start": 118,
-          "end": 89,
+          "end": 124,
           "id": {
             "type": "Identifier",
             "start": 118,

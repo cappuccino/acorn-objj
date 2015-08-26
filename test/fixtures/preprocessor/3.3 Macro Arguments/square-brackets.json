@@ -15,7 +15,7 @@
       "expression": {
         "type": "AssignmentExpression",
         "start": 111,
-        "end": 114,
+        "end": 138,
         "operator": "=",
         "left": {
           "type": "Identifier",
@@ -26,7 +26,7 @@
         "right": {
           "type": "ArrayExpression",
           "start": 131,
-          "end": 114,
+          "end": 138,
           "elements": [
             {
               "type": "Identifier",

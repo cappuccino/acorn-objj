@@ -15,7 +15,7 @@
       "expression": {
         "type": "AssignmentExpression",
         "start": 129,
-        "end": 132,
+        "end": 158,
         "operator": "=",
         "left": {
           "type": "Identifier",
@@ -26,7 +26,7 @@
         "right": {
           "type": "BinaryExpression",
           "start": 155,
-          "end": 132,
+          "end": 158,
           "left": {
             "type": "BinaryExpression",
             "start": 155,

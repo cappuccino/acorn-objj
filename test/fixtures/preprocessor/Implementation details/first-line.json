@@ -15,7 +15,7 @@
       "expression": {
         "type": "AssignmentExpression",
         "start": 67,
-        "end": 72,
+        "end": 76,
         "operator": "=",
         "left": {
           "type": "Identifier",

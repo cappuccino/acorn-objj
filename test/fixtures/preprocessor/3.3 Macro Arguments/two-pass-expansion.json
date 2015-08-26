@@ -20,7 +20,7 @@
       "expression": {
         "type": "AssignmentExpression",
         "start": 180,
-        "end": 183,
+        "end": 196,
         "operator": "=",
         "left": {
           "type": "Identifier",
@@ -31,7 +31,7 @@
         "right": {
           "type": "BinaryExpression",
           "start": 129,
-          "end": 183,
+          "end": 196,
           "left": {
             "type": "BinaryExpression",
             "start": 129,
@@ -75,7 +75,7 @@
       "expression": {
         "type": "AssignmentExpression",
         "start": 288,
-        "end": 291,
+        "end": 317,
         "operator": "=",
         "left": {
           "type": "Identifier",
@@ -86,7 +86,7 @@
         "right": {
           "type": "BinaryExpression",
           "start": 129,
-          "end": 291,
+          "end": 317,
           "left": {
             "type": "BinaryExpression",
             "start": 129,

@@ -13,7 +13,7 @@
       "expression": {
         "type": "Literal",
         "start": 0,
-        "end": 152,
+        "end": 176,
         "value": "p = \\\"foo\\\\n\\\"",
         "raw": "\"p = \\\"foo\\\\n\\\"\""
       }
@@ -24,7 +24,7 @@
       "expression": {
         "type": "Literal",
         "start": 0,
-        "end": 177,
+        "end": 222,
         "value": "p = 'foo\\n'",
         "raw": "\"p = 'foo\\n'\""
       }
@@ -35,7 +35,7 @@
       "expression": {
         "type": "Literal",
         "start": 0,
-        "end": 223,
+        "end": 265,
         "value": "'bar \\n'",
         "raw": "\"'bar \\n'\""
       }
@@ -47,7 +47,7 @@
       "expression": {
         "type": "Literal",
         "start": 0,
-        "end": 266,
+        "end": 306,
         "value": "\\\"bar\t\\\\n\\\"",
         "raw": "\"\\\"bar\t\\\\n\\\"\""
       }
