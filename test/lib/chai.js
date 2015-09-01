@@ -72,8 +72,8 @@ chai.Assertion.addMethod("equalFixture", function(name, source)
         obj === contents,
         format("expected %s of %s to match %s", type, sourcePath, fixturePath),
         format("expected %s of %s to not match %s", type, sourcePath, fixturePath),
-        obj, // expected
-        contents, // actual
+        contents, // expected
+        obj, // actual
         true // show diff
     );
 });
