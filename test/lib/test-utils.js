@@ -16,7 +16,7 @@ exports.captureStream = function(stream, silent)
     {
         buffer += chunk.toString(); // chunk is a String or Buffer
 
-        if (!silent)
+        if (silent !== true)
             oldWrite.apply(stream, arguments);
     };
 
@@ -78,7 +78,7 @@ exports.makeDescribes = function(description, filename, isDir)
 
         dirs.forEach(function(d)
         {
-            if (/^.+\.js$/.test(d))
+            if (/^.+\.js$/.test(d) === true)
                 require(path.resolve(path.join("test", dir, d)));
         });
     });
