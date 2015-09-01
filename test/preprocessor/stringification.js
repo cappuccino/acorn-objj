@@ -43,12 +43,12 @@ describe("Stringification", function()
     it("stringify not followed by a name is an error", function()
     {
         makeParser("#define foo(arg) #7\n")
-            .should.throw(SyntaxError, /^# \(stringify\) must be followed by a name/);
+            .should.throw(SyntaxError, /# \(stringify\) must be followed by a name/);
     });
 
     it("stringify followed by a name that is not a macro parameter is an error", function()
     {
         makeParser("#define foo(arg) #bar\n")
-            .should.throw(SyntaxError, /^# is not followed by a macro parameter/);
+            .should.throw(SyntaxError, /# is not followed by a macro parameter/);
     });
 });

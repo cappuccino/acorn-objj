@@ -30,21 +30,21 @@ describe("@import", function()
     it("should fail for unterminated filenames", function()
     {
         makeParser("@import \"foo.j\n")
-            .should.throw(SyntaxError, /^Unterminated string constant/);
+            .should.throw(SyntaxError, /Unterminated string constant/);
 
         makeParser("@import \"foo.j")
-            .should.throw(SyntaxError, /^Unterminated string constant/);
+            .should.throw(SyntaxError, /Unterminated string constant/);
 
         makeParser("@import <foo.j\n")
-            .should.throw(SyntaxError, /^Unterminated import statement/);
+            .should.throw(SyntaxError, /Unterminated import statement/);
 
         makeParser("@import <foo.j")
-            .should.throw(SyntaxError, /^Unterminated import statement/);
+            .should.throw(SyntaxError, /Unterminated import statement/);
     });
 
     it("should fail for malformed filenames", function()
     {
         makeParser("@import >foo.j<")
-            .should.throw(SyntaxError, /^Expected " or < after @import/);
+            .should.throw(SyntaxError, /Expected " or < after @import/);
     });
 });

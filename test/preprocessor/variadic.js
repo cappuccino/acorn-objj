@@ -58,12 +58,12 @@ describe("Variadic macros", function()
     it("using __VA_ARGS__ in a macro body when there are named variadic parameters is an error", function()
     {
         makeParser("#define foo(args...) __VA_ARGS__\n")
-            .should.throw(SyntaxError, /^__VA_ARGS__ may not be used when there are named variadic parameters/);
+            .should.throw(SyntaxError, /__VA_ARGS__ may not be used when there are named variadic parameters/);
     });
 
     it("using __VA_ARGS__ in a macro body when there no variadic parameters is an error", function()
     {
         makeParser("#define foo(args) __VA_ARGS__\n")
-            .should.throw(SyntaxError, /^__VA_ARGS__ may only be used within the body of a variadic macro/);
+            .should.throw(SyntaxError, /__VA_ARGS__ may only be used within the body of a variadic macro/);
     });
 });

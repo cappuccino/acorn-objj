@@ -23,7 +23,7 @@ describe("Argument prescan", function()
     it("argument prescan can cause arguments to be multiplied", function()
     {
         makeParser("#define foo  a,b\n#define bar(x) lose(x)\n#define lose(x) (1 + (x))\nbar(foo);\n")
-            .should.throw(SyntaxError, /^Macro defines 1 parameter, called with 2 arguments/);
+            .should.throw(SyntaxError, /Macro defines 1 parameter, called with 2 arguments/);
     });
 
     it("argument prescan expansion can be solved with extra parens", function()
@@ -34,5 +34,10 @@ describe("Argument prescan", function()
     it("argument prescan allows nested calls to a macro", function()
     {
         testFixture("preprocessor", dir + "nested");
+    });
+
+    it("a self-referential macro argument is not expanded twice", function()
+    {
+        testFixture("preprocessor", dir + "self-referential");
     });
 });

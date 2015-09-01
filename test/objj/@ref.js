@@ -22,15 +22,15 @@ describe("@ref", function()
     it("should generate an error with an empty reference", function()
     {
         makeParser("var r = @ref()")
-            .should.throw(SyntaxError, /^Empty reference/);
+            .should.throw(SyntaxError, /Empty reference/);
     });
 
     it("should generate an error if reference is not surrounded by parens", function()
     {
         makeParser("var r = @ref[foo)")
-            .should.throw(SyntaxError, /^Expected '\('/);
+            .should.throw(SyntaxError, /Expected '\('/);
 
         makeParser("var r = @ref(foo]")
-            .should.throw(SyntaxError, /^Expected '\)'/);
+            .should.throw(SyntaxError, /Expected '\)'/);
     });
 });

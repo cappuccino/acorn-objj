@@ -47,7 +47,7 @@ describe("Message send", function()
     it("should fail with subscript -> strict implicit semicolon -> message send", function()
     {
         makeParser("test[i]\n[foo bar];", { strictSemicolons: true })
-            .should.throw(SyntaxError, /^Expected a semicolon/);
+            .should.throw(SyntaxError, /Expected a semicolon/);
     });
 
     it("should parse variable arguments and store them in the varArgs attribute", function()
@@ -58,6 +58,6 @@ describe("Message send", function()
     it("should fail if a selector component is not followed by a colon", function()
     {
         makeParser("[view setTitle!title]")
-            .should.throw(SyntaxError, /^Expected ':' in selector/);
+            .should.throw(SyntaxError, /Expected ':' in selector/);
     });
 });

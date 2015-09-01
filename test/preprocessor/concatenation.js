@@ -43,13 +43,13 @@ describe("Concatenation", function()
     it("## at the beginning of a macro expansion is an error", function()
     {
         makeParser("#define foo(arg) ## arg\n")
-            .should.throw(SyntaxError, /^'##' cannot be at the beginning of a macro expansion/);
+            .should.throw(SyntaxError, /'##' cannot be at the beginning of a macro expansion/);
     });
 
     it("## at the end of a macro expansion is an error", function()
     {
         makeParser("#define foo(arg) arg ##\n")
-            .should.throw(SyntaxError, /^'##' cannot be at the end of a macro expansion/);
+            .should.throw(SyntaxError, /'##' cannot be at the end of a macro expansion/);
     });
 
     it("concatenation that forms an invalid token is an error", function()

@@ -22,12 +22,12 @@ describe("@{}", function()
     it("should fail with missing commas between items", function()
     {
         makeParser("var a = @{\"one\": 1 \"two\": 2}")
-            .should.throw(SyntaxError, /^Expected ','/);
+            .should.throw(SyntaxError, /Expected ','/);
     });
 
     it("should fail with missing ':' after keys", function()
     {
         makeParser("var a = @{\"one\" 1, \"two\": 2}")
-            .should.throw(SyntaxError, /^Expected ':'/);
+            .should.throw(SyntaxError, /Expected ':'/);
     });
 });

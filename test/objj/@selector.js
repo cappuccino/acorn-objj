@@ -22,24 +22,24 @@ describe("@selector", function()
     it("should generate an error with an empty selector", function()
     {
         makeParser("var s = @selector()")
-            .should.throw(SyntaxError, /^Empty selector/);
+            .should.throw(SyntaxError, /Empty selector/);
     });
 
     it("should generate an error with missing selector components", function()
     {
         makeParser("var s = @selector(foo::)")
-            .should.throw(SyntaxError, /^Missing selector component/);
+            .should.throw(SyntaxError, /Missing selector component/);
     });
 
     it("should generate an error if ( does not follow @selector", function()
     {
         makeParser("var s = @selector{}")
-            .should.throw(SyntaxError, /^Expected '\('/);
+            .should.throw(SyntaxError, /Expected '\('/);
     });
 
     it("should generate an error with a malformed selector", function()
     {
         makeParser("var s = @selector(foo})")
-            .should.throw(SyntaxError, /^Expected ':'/);
+            .should.throw(SyntaxError, /Expected ':'/);
     });
 });

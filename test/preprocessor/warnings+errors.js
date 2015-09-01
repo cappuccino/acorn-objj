@@ -16,31 +16,31 @@ describe("Warnings & errors", function()
     it("command line macro definition with missing name is an error", function()
     {
         makeParser("x = foo;\n", { objjOptions: { macros: ["=1"] }})
-            .should.throw(SyntaxError, /^Invalid option-defined macro definition:/);
+            .should.throw(SyntaxError, /Invalid option-defined macro definition:/);
     });
 
     it("invalid # directive is an error", function()
     {
         makeParser("#foo\n")
-            .should.throw(SyntaxError, /^Invalid preprocessing directive/);
+            .should.throw(SyntaxError, /Invalid preprocessing directive/);
     });
 
     it("# must be the first token on a line", function()
     {
         makeParser("x #define FOO\n")
-            .should.throw(SyntaxError, /^# must be the first non-whitespace character on a line/);
+            .should.throw(SyntaxError, /# must be the first non-whitespace character on a line/);
     });
 
     it("#define without a macro name is an error", function()
     {
         makeParser("#define\n")
-            .should.throw(SyntaxError, /^Macro name missing/);
+            .should.throw(SyntaxError, /Macro name missing/);
     });
 
     it("#undef without a macro name is an error", function()
     {
         makeParser("#undef\n")
-            .should.throw(SyntaxError, /^Macro name missing/);
+            .should.throw(SyntaxError, /Macro name missing/);
     });
 
     it("redefining a macro with a different definition is a warning", function()
@@ -75,18 +75,18 @@ describe("Warnings & errors", function()
     it("using __VA_ARGS__ as a macro name is an error", function()
     {
         makeParser("#define __VA_ARGS__\n")
-            .should.throw(SyntaxError, /^__VA_ARGS__ may only be used within the body of a variadic macro/);
+            .should.throw(SyntaxError, /__VA_ARGS__ may only be used within the body of a variadic macro/);
     });
 
     it("using 'defined' as a macro name is an error", function()
     {
         makeParser("#define defined\n")
-            .should.throw(SyntaxError, /^'defined' may not be used as a macro name/);
+            .should.throw(SyntaxError, /'defined' may not be used as a macro name/);
     });
 
     it("'\\' not followed by EOL in a macro definition is an error", function()
     {
         makeParser("#define foo \\ bar\n")
-            .should.throw(SyntaxError, /^Expected EOL after '\\'/);
+            .should.throw(SyntaxError, /Expected EOL after '\\'/);
     });
 });

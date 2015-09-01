@@ -22,15 +22,15 @@ describe("@deref", function()
     it("should generate an error with an empty dereference", function()
     {
         makeParser("@deref()")
-            .should.throw(SyntaxError, /^Empty dereference/);
+            .should.throw(SyntaxError, /Empty dereference/);
     });
 
     it("should generate an error if reference is not surrounded by parens", function()
     {
         makeParser("@deref[foo)")
-            .should.throw(SyntaxError, /^Expected '\('/);
+            .should.throw(SyntaxError, /Expected '\('/);
 
         makeParser("@deref(foo]")
-            .should.throw(SyntaxError, /^Expected '\)' after ref/);
+            .should.throw(SyntaxError, /Expected '\)' after ref/);
     });
 });

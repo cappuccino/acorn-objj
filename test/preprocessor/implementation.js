@@ -45,7 +45,7 @@ describe("Implementation", function()
         macroList.length.should.equal(4);
         macroList[0].should.equal("FOO=");
         macroList[1].should.equal("BAR=7");
-        macroList[2].should.equal("foo(  arg1  ,arg2 )=");
-        macroList[3].should.equal("bar(  arg1  ,arg2 )=(   arg1  ) +(arg2  )");
+        macroList[2].should.equal("foo(arg1  ,arg2)=");
+        macroList[3].should.equal("bar(arg1  ,arg2)=(   arg1  ) +(arg2  )");
     });
 });
