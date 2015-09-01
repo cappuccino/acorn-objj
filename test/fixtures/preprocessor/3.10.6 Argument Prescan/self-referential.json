@@ -1,0 +1,41 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 203,
+  "body": [
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 0,
+      "end": 21
+    },
+    {
+      "type": "objj_PreprocessorStatement",
+      "start": 22,
+      "end": 33
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 34,
+      "end": 51,
+      "expression": {
+        "type": "BinaryExpression",
+        "start": 34,
+        "end": 51,
+        "left": {
+          "type": "Identifier",
+          "start": 34,
+          "end": 37,
+          "name": "foo"
+        },
+        "operator": "+",
+        "right": {
+          "type": "Literal",
+          "start": 40,
+          "end": 41,
+          "value": 7,
+          "raw": "7"
+        }
+      }
+    }
+  ]
+}
