@@ -1,3 +1,0 @@
-#if FOO
-#else
-#else

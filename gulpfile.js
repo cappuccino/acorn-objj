@@ -71,20 +71,16 @@ gulp.task("generate-fixtures", function()
     fixturesPath = "test/fixtures";
 
     var cliFixtures = [
-            [["--no-preprocessor", "--no-color"], "hash-bang.js", "hash-bang.txt"],
+            [["--no-color"], "hash-bang.js", "hash-bang.txt"],
             [["--allow-hash-bang"], "hash-bang.js"],
             [[], "compact.js", "pretty.json"],
             [["--compact"], "compact.js"],
             [[], "ecma.js", "ecma.txt"],
             [["--ecma", "6"], "ecma.js"],
             [["--locations"], "compact.js", "locations.json"],
-            [["--macro", "FOO"], "macro1.js"],
-            [["--macro", "[FOO, BAR=7]"], "macro2.js"],
             [["--no-objj"], "objj.j", "objj.txt"],
             [["--no-objj"], "no-objj.js"],
-            [["--strict-semicolons"], "strict-semicolons.js", "strict-semicolons.txt"],
-            [["--no-color"], "AbortError.js", "AbortError.txt"],
-            [["--no-color"], "#warning.js", "#warning.txt"]
+            [["--strict-semicolons"], "strict-semicolons.js", "strict-semicolons.txt"]
         ];
 
     cliFixtures.forEach(function(fixture)

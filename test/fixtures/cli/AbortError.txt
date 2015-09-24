@@ -1,8 +1,0 @@
-test/fixtures/cli/AbortError.js:3:2: error: expected #endif, saw #else
-#else
- ^
-test/fixtures/cli/AbortError.js:1:2: note: matching #if is here:
-#if FOO
- ^
-
-1 error generated.

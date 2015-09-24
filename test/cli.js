@@ -28,7 +28,7 @@ describe("cli", function()
 
     it("should generate an error if there is #! without --allow-hash-bang", function()
     {
-        var result = run(["--no-preprocessor", "--no-color", path.join(dir, "hash-bang.js")]);
+        var result = run(["--no-color", path.join(dir, "hash-bang.js")]);
 
         result.output.should.equalFixture("cli/hash-bang.txt", "hash-bang.js");
         result.exitCode.should.equal(1);
@@ -47,14 +47,6 @@ describe("cli", function()
         var result = run(["--stack-trace", "--no-color", path.join(dir, "ecma.js")]);
 
         result.output.should.match(/^(.*\n)+1 error generated\.\n\nSyntaxError: Expected ';' after expression \(1:4\)\n\s+at Parser.pp.raise \(.+?\n/g);
-        result.exitCode.should.equal(1);
-    });
-
-    it("should generate a stack trace with --stack-trace for thrown acorn-issue-handler#Error", function()
-    {
-        var result = run(["--stack-trace", "--no-color", path.join(dir, "stack-trace.js")]);
-
-        result.output.should.match(/^(.*\n)+1 error generated\.\n\nError: Expected #endif, saw #else\n\s+at Parser.acorn.Parser.objj_expectedPreEndif \(.+?\n/g);
         result.exitCode.should.equal(1);
     });
 
@@ -121,9 +113,9 @@ describe("cli", function()
             .should.equalFixture("cli/no-objj.json");
     });
 
-    it("should not load the objj plugin with --no-objj and --no-preprocessor", function()
+    it("should not recognize objj keywords with --no-objj", function()
     {
-        run(["--no-objj", "--no-preprocessor", path.join(dir, "no-objj.js")]);
+        run(["--no-objj", path.join(dir, "no-objj.js")]);
     });
 
     it("should not generate any output with --silent", function()
@@ -179,33 +171,5 @@ describe("cli", function()
 
         run(["-"], { stdin: stream }).output
             .should.equalFixture("cli/pretty.json", "compact.js");
-    });
-
-    it("should define 'FOO=1' for '--macro FOO'", function()
-    {
-        run(["--macro", "FOO", path.join(dir, "macro1.js")]).output
-            .should.equalFixture("cli/macro1.json");
-    });
-
-    it("should define 'FOO=1' and 'BAR=7' for '--macro [FOO, BAR=7]'", function()
-    {
-        run(["--macro", "[FOO, BAR=7]", path.join(dir, "macro2.js")]).output
-            .should.equalFixture("cli/macro2.json");
-    });
-
-    it("should not log AbortError", function()
-    {
-        var result = run(["--no-color", path.join(dir, "AbortError.js")]);
-
-        result.output.should.equalFixture("cli/AbortError.txt");
-        result.exitCode.should.equal(1);
-    });
-
-    it("should generate an AST and warnings with #warning", function()
-    {
-        var result = run(["--no-color", path.join(dir, "#warning.js")]);
-
-        result.output.should.equalFixture("cli/#warning.txt");
-        result.exitCode.should.equal(0);
     });
 });

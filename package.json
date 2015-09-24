@@ -1,6 +1,6 @@
 {
   "name": "acorn-objj",
-  "description": "JavaScript (ECMAScript) and Objective-J parser with GNU C-compliant preprocessor.",
+  "description": "JavaScript (ECMAScript) and Objective-J parser.",
   "homepage": "https://github.com/cappuccino/acorn-objj",
   "version": "1.0.0-beta.1",
   "engines": {
@@ -62,10 +62,6 @@
     "objj",
     "acorn",
     "Cappuccino",
-    "parser",
-    "preprocessor",
-    "pre-processor",
-    "pre processor",
-    "processor"
+    "parser"
   ]
 }
