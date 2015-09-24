@@ -4,8 +4,7 @@ var utils = require("../lib/test-utils");
 
 // jscs: disable requireMultipleVarDecl
 
-var makeParser = utils.makeParser,
-    testFixture = utils.testFixture;
+var makeParser = utils.makeParser;
 
 /* global describe, it */
 

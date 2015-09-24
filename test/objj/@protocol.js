@@ -51,4 +51,10 @@ describe("@protocol", function()
         makeParser("@protocol Foo\n- (void)foo\n@end", { strictSemicolons: true })
             .should.throw(SyntaxError, /Expected a semicolon/);
     });
+
+    it("should generate an error if a method declaration does not start with +/-", function()
+    {
+        makeParser("@protocol Foo\n(void)foo\n@end")
+            .should.throw(SyntaxError, /Method declaration must start with '\+' or '-'/);
+    });
 });
