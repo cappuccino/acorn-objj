@@ -16,6 +16,6 @@ describe("Tokenizer", function()
 {
     it("tokenizer should fail with unrecognized @ keywords", function()
     {
-        makeParser("@foo").should.throw(SyntaxError, /^Unrecognized Objective-J keyword/);
+        makeParser("@foo").should.throw(SyntaxError, /Unrecognized Objective-J keyword/);
     });
 });

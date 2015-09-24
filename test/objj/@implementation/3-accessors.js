@@ -37,12 +37,12 @@ describe("accessors", function()
     it("should generate an error for unknown @accessor attributes", function()
     {
         makeParser("@implementation Foo\n{ int foo @accessors(bar); }\n@end")
-            .should.throw(SyntaxError, /^Unknown accessors attribute/);
+            .should.throw(SyntaxError, /Unknown accessors attribute/);
     });
 
     it("should generate an error for unterminated @accessor attributes", function()
     {
         makeParser("@implementation Foo\n{ int foo @accessors(readonly]; }\n@end")
-            .should.throw(SyntaxError, /^Expected '\)' after accessor attributes/);
+            .should.throw(SyntaxError, /Expected '\)' after accessor attributes/);
     });
 });

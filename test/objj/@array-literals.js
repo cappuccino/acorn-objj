@@ -22,6 +22,6 @@ describe("@[]", function()
     it("should fail with missing commas between elements", function()
     {
         makeParser("var a = @[1 2]")
-            .should.throw(SyntaxError, /^Expected ','/);
+            .should.throw(SyntaxError, /Expected ','/);
     });
 });

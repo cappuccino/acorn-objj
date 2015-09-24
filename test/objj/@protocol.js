@@ -37,18 +37,18 @@ describe("@protocol", function()
     it("should generate an error if conforming protocols are not separated by ','", function()
     {
         makeParser("@protocol Foo <Bar Baz>")
-            .should.throw(SyntaxError, /^Expected ',' between protocol names/);
+            .should.throw(SyntaxError, /Expected ',' between protocol names/);
     });
 
     it("should generate an error if EOF is reached before @end", function()
     {
         makeParser("@protocol Foo")
-            .should.throw(SyntaxError, /^Expected @end after @protocol/);
+            .should.throw(SyntaxError, /Expected @end after @protocol/);
     });
 
     it("should generate an error in strict-semicolon mode if a method declaration does not end with ';'", function()
     {
         makeParser("@protocol Foo\n- (void)foo\n@end", { strictSemicolons: true })
-            .should.throw(SyntaxError, /^Expected a semicolon/);
+            .should.throw(SyntaxError, /Expected a semicolon/);
     });
 });

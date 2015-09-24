@@ -37,24 +37,24 @@ describe("declaration", function()
     it("should generate an error if @implementation or @interface is nested", function()
     {
         makeParser("@implementation Foo\n@implementation")
-            .should.throw(SyntaxError, /^Expected @end before @implementation/);
+            .should.throw(SyntaxError, /Expected @end before @implementation/);
     });
 
     it("should generate an error if the category is not terminated with ')'", function()
     {
         makeParser("@implementation Foo (Bar]")
-            .should.throw(SyntaxError, /^Expected '\)' after category name/);
+            .should.throw(SyntaxError, /Expected '\)' after category name/);
     });
 
     it("should generate an error if the protocols are not separated by ','", function()
     {
         makeParser("@implementation Foo <Bar Baz>")
-            .should.throw(SyntaxError, /^Expected ',' between protocol names/);
+            .should.throw(SyntaxError, /Expected ',' between protocol names/);
     });
 
     it("should generate an error if EOF is reached before @end", function()
     {
         makeParser("@implementation Foo")
-            .should.throw(SyntaxError, /^Expected @end after @implementation/);
+            .should.throw(SyntaxError, /Expected @end after @implementation/);
     });
 });

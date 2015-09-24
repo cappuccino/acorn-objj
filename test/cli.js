@@ -46,7 +46,7 @@ describe("cli", function()
     {
         var result = run(["--stack-trace", "--no-color", path.join(dir, "ecma.js")]);
 
-        result.output.should.match(/^(.*\n)+1 error generated\.\n\nSyntaxError: Expected ';' after expression \(1:4\)\n\s+at Parser.pp.raise \(.+?\n/g);
+        result.output.should.match(/^(.*\n)+1 error generated\.\n\nSyntaxError: Expected ';' after expression\n\s+at Parser.acorn.Parser.objj_semicolon \(.+?\n/g);
         result.exitCode.should.equal(1);
     });
 

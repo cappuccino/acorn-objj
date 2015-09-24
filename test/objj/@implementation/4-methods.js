@@ -62,6 +62,6 @@ describe("methods", function()
     it("should generate an error for missing ... after ,", function()
     {
         makeParser("@implementation Foo\n- (void)foo:(int)f,\n@end")
-            .should.throw(SyntaxError, /^Expected '...' after ','/);
+            .should.throw(SyntaxError, /Expected '...' after ','/);
     });
 });
