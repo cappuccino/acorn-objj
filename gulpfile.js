@@ -15,9 +15,9 @@ var $ = loadPlugins();
 
 // Cleaning
 
-gulp.task("clean", function(done)
+gulp.task("clean", function()
 {
-    del("test/fixtures/**/*.{json,txt}", done);
+    return del("test/fixtures/**/*.{json,txt}");
 });
 
 // Linting
