@@ -1,4 +1,5 @@
 {
+    "excludeFiles": ["test/acorn/**"],
     "disallowEmptyBlocks": true,
     "disallowMixedSpacesAndTabs": true,
     "disallowMultipleLineBreaks": true,
