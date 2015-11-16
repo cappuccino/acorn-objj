@@ -1,4 +1,9 @@
 {
     "plugins": ["jscs-cappuccino"],
-    "preset": "cappuccino"
+    "preset": "cappuccino",
+    "excludeFiles": [
+        "coverage/**",
+        "test/fixtures/**",
+        "test/acorn/**"
+    ]
 }
