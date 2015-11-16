@@ -16363,6 +16363,66 @@ test("var x", {
   }
 });
 
+test("var await", {
+  type: "Program",
+  body: [
+    {
+      type: "VariableDeclaration",
+      declarations: [
+        {
+          type: "VariableDeclarator",
+          id: {
+            type: "Identifier",
+            name: "await",
+            loc: {
+              start: {
+                line: 1,
+                column: 4
+              },
+              end: {
+                line: 1,
+                column: 9
+              }
+            }
+          },
+          init: null,
+          loc: {
+            start: {
+              line: 1,
+              column: 4
+            },
+            end: {
+              line: 1,
+              column: 9
+            }
+          }
+        }
+      ],
+      kind: "var",
+      loc: {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 9
+        }
+      }
+    }
+  ],
+  loc: {
+    start: {
+      line: 1,
+      column: 0
+    },
+    end: {
+      line: 1,
+      column: 9
+    }
+  }
+});
+
 test("var x, y;", {
   type: "Program",
   body: [
@@ -22066,7 +22126,6 @@ test("try { } catch (e) { }", {
               }
             }
           },
-          guard: null,
           body: {
             type: "BlockStatement",
             body: [],
@@ -22154,7 +22213,6 @@ test("try { } catch (eval) { }", {
               }
             }
           },
-          guard: null,
           body: {
             type: "BlockStatement",
             body: [],
@@ -22242,7 +22300,6 @@ test("try { } catch (arguments) { }", {
               }
             }
           },
-          guard: null,
           body: {
             type: "BlockStatement",
             body: [],
@@ -22330,7 +22387,6 @@ test("try { } catch (e) { say(e) }", {
               }
             }
           },
-          guard: null,
           body: {
             type: "BlockStatement",
             body: [
@@ -22632,7 +22688,6 @@ test("try { doThat(); } catch (e) { say(e) }", {
               }
             }
           },
-          guard: null,
           body: {
             type: "BlockStatement",
             body: [
@@ -22819,7 +22874,6 @@ test("try { doThat(); } catch (e) { say(e) } finally { cleanup(stuff) }", {
               }
             }
           },
-          guard: null,
           body: {
             type: "BlockStatement",
             body: [
@@ -27020,6 +27074,9 @@ testFail("({ get i() { }, get i() { } })",
 testFail("({ set i(x) { }, set i(x) { } })",
          "Redefinition of property (1:21)");
 
+testFail("'use strict'; ({ __proto__: 1, __proto__: 2 })",
+         "Redefinition of property (1:31)");
+
 testFail("function t(...) { }",
          "Unexpected token (1:11)");
 
@@ -27392,7 +27449,7 @@ testFail("\"use strict\"; function static() { }",
          "The keyword 'static' is reserved (1:23)");
 
 testFail("function a(t, t) { \"use strict\"; }",
-         "Argument name clash in strict mode (1:14)");
+         "Argument name clash (1:14)");
 
 testFail("function a(eval) { \"use strict\"; }",
          "Binding eval in strict mode (1:11)");
@@ -27401,13 +27458,13 @@ testFail("function a(package) { \"use strict\"; }",
          "Binding package in strict mode (1:11)");
 
 testFail("function a() { \"use strict\"; function b(t, t) { }; }",
-         "Argument name clash in strict mode (1:43)");
+         "Argument name clash (1:43)");
 
 testFail("(function a(t, t) { \"use strict\"; })",
-         "Argument name clash in strict mode (1:15)");
+         "Argument name clash (1:15)");
 
 testFail("function a() { \"use strict\"; (function b(t, t) { }); }",
-         "Argument name clash in strict mode (1:44)");
+         "Argument name clash (1:44)");
 
 testFail("(function a(eval) { \"use strict\"; })",
          "Binding eval in strict mode (1:12)");
@@ -27425,15 +27482,15 @@ testFail("throw\n10;", "Illegal newline after throw (1:5)");
 
 // ECMA < 6 mode should work as before
 
-testFail("const a;", "Unexpected token (1:6)");
+testFail("const a;", "The keyword 'const' is reserved (1:0)");
 
 testFail("let x;", "Unexpected token (1:4)");
 
-testFail("const a = 1;", "Unexpected token (1:6)");
+testFail("const a = 1;", "The keyword 'const' is reserved (1:0)");
 
 testFail("let a = 1;", "Unexpected token (1:4)");
 
-testFail("for(const x = 0;;);", "Unexpected token (1:10)");
+testFail("for(const x = 0;;);", "The keyword 'const' is reserved (1:4)");
 
 testFail("for(let x = 0;;);", "Unexpected token (1:8)");
 
@@ -28928,7 +28985,7 @@ test('var x = (1 + 2)', {}, {
 
 test("function f(f) { 'use strict'; }", {});
 
-// https://github.com/marijnh/acorn/issues/180
+// https://github.com/ternjs/acorn/issues/180
 test("#!/usr/bin/node\n;", {}, {
   allowHashBang: true,
   onComment: [{
@@ -28939,7 +28996,7 @@ test("#!/usr/bin/node\n;", {}, {
   }]
 });
 
-// https://github.com/marijnh/acorn/issues/204
+// https://github.com/ternjs/acorn/issues/204
 test("(function () {} / 1)", {
   type: "Program",
   body: [{
@@ -28984,6 +29041,31 @@ test("function f() {} / 1 /", {
   ]
 });
 
+// https://github.com/ternjs/acorn/issues/320
+
+test("do /x/; while (false);", {
+  type: "Program",
+  body: [
+    {
+      type: "DoWhileStatement",
+      body: {
+        type: "ExpressionStatement",
+        expression: {
+          type: "Literal",
+          value: /x/,
+          raw: "/x/",
+          regex: { pattern: "x", flags: "" }
+        }
+      },
+      test: {
+        type: "Literal",
+        value: false,
+        raw: "false"
+      }
+    }
+  ]
+});
+
 var semicolons = []
 testAssert("var x\nreturn\n10", function() {
   var result = semicolons.join(" ");
@@ -29003,7 +29085,7 @@ testAssert("[1,2,] + {foo: 1,}", function() {
 }, {onTrailingComma: function(pos) { trailingCommas.push(pos); },
     loose: false})
 
-// https://github.com/marijnh/acorn/issues/275
+// https://github.com/ternjs/acorn/issues/275
 
 testFail("({ get prop(x) {} })", "getter should have no params (1:11)");
 testFail("({ set prop() {} })", "setter should have exactly one param (1:11)");

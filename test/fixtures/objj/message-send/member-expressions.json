@@ -23,6 +23,28 @@
             "start": 48,
             "end": 116,
             "objj": {
+              "receiver": {
+                "type": "objj_MessageSendExpression",
+                "start": 49,
+                "end": 67,
+                "objj": {
+                  "receiver": {
+                    "type": "Identifier",
+                    "start": 50,
+                    "end": 60,
+                    "name": "CPTextView"
+                  },
+                  "selectors": [
+                    {
+                      "type": "Identifier",
+                      "start": 61,
+                      "end": 66,
+                      "name": "alloc"
+                    }
+                  ],
+                  "args": []
+                }
+              },
               "selectors": [
                 {
                   "type": "Identifier",
@@ -63,29 +85,7 @@
                   "value": "Hello",
                   "raw": "@\"Hello\""
                 }
-              ],
-              "receiver": {
-                "type": "objj_MessageSendExpression",
-                "start": 49,
-                "end": 67,
-                "objj": {
-                  "selectors": [
-                    {
-                      "type": "Identifier",
-                      "start": 61,
-                      "end": 66,
-                      "name": "alloc"
-                    }
-                  ],
-                  "args": [],
-                  "receiver": {
-                    "type": "Identifier",
-                    "start": 50,
-                    "end": 60,
-                    "name": "CPTextView"
-                  }
-                }
-              }
+              ]
             }
           }
         }

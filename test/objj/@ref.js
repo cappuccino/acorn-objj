@@ -1,36 +1,34 @@
 "use strict";
 
-var utils = require("../lib/test-utils");
+const
+    expect = require("code").expect,
+    utils = require("../lib/test-utils");
 
-// jscs: disable requireMultipleVarDecl
-
-var makeParser = utils.makeParser,
+const  // jscs: ignore requireMultipleVarDecl
+    makeParser = utils.makeParser,
     testFixture = utils.testFixture;
 
-/* global describe, it */
-
-// jscs: enable
 // jscs: disable maximumLineLength
 
-describe("@ref", function()
+describe("@ref", () =>
 {
-    it("should generate objj_Reference nodes", function()
+    it("should generate objj_Reference nodes", () =>
     {
         testFixture("objj", "@ref");
     });
 
-    it("should generate an error with an empty reference", function()
+    it("should generate an error with an empty reference", () =>
     {
-        makeParser("var r = @ref()")
-            .should.throw(SyntaxError, /Empty reference/);
+        expect(makeParser("var r = @ref()"))
+            .to.throw(SyntaxError, /Empty reference/);
     });
 
-    it("should generate an error if reference is not surrounded by parens", function()
+    it("should generate an error if reference is not surrounded by parens", () =>
     {
-        makeParser("var r = @ref[foo)")
-            .should.throw(SyntaxError, /Expected '\('/);
+        expect(makeParser("var r = @ref[foo)"))
+            .to.throw(SyntaxError, /Expected '\('/);
 
-        makeParser("var r = @ref(foo]")
-            .should.throw(SyntaxError, /Expected '\)'/);
+        expect(makeParser("var r = @ref(foo]"))
+            .to.throw(SyntaxError, /Expected '\)'/);
     });
 });

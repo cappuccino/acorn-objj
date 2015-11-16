@@ -1,47 +1,45 @@
 "use strict";
 
-var utils = require("../lib/test-utils");
+const
+    expect = require("code").expect,
+    utils = require("../lib/test-utils");
 
-// jscs: disable requireMultipleVarDecl
-
-var makeParser = utils.makeParser,
+const  // jscs: ignore requireMultipleVarDecl
+    makeParser = utils.makeParser,
     testFixture = utils.testFixture;
 
-/* global describe, it */
-
-// jscs: enable
 // jscs: disable maximumLineLength
 
-describe("@import", function()
+describe("@import", () =>
 {
-    it("should generate objj_ImportStatement nodes with local:true for @import \"path\"", function()
+    it("should generate objj_ImportStatement nodes with local:true for @import \"path\"", () =>
     {
         testFixture("objj", "@import/local");
     });
 
-    it("should generate objj_ImportStatement nodes with local:false for @import <path>", function()
+    it("should generate objj_ImportStatement nodes with local:false for @import <path>", () =>
     {
         testFixture("objj", "@import/system");
     });
 
-    it("should fail for unterminated filenames", function()
+    it("should fail for unterminated filenames", () =>
     {
-        makeParser("@import \"foo.j\n")
-            .should.throw(SyntaxError, /Unterminated string constant/);
+        expect(makeParser("@import \"foo.j\n"))
+            .to.throw(SyntaxError, /Unterminated string constant/);
 
-        makeParser("@import \"foo.j")
-            .should.throw(SyntaxError, /Unterminated string constant/);
+        expect(makeParser("@import \"foo.j"))
+            .to.throw(SyntaxError, /Unterminated string constant/);
 
-        makeParser("@import <foo.j\n")
-            .should.throw(SyntaxError, /Unterminated import statement/);
+        expect(makeParser("@import <foo.j\n"))
+            .to.throw(SyntaxError, /Unterminated import statement/);
 
-        makeParser("@import <foo.j")
-            .should.throw(SyntaxError, /Unterminated import statement/);
+        expect(makeParser("@import <foo.j"))
+            .to.throw(SyntaxError, /Unterminated import statement/);
     });
 
-    it("should fail for malformed filenames", function()
+    it("should fail for malformed filenames", () =>
     {
-        makeParser("@import >foo.j<")
-            .should.throw(SyntaxError, /Expected " or < after @import/);
+        expect(makeParser("@import >foo.j<"))
+            .to.throw(SyntaxError, /Expected " or < after @import/);
     });
 });

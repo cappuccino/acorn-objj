@@ -1,13 +1,13 @@
 "use strict";
 
-var driver = require("./acorn/driver.js"),
+const
+    driver = require("./acorn/driver.js"),
+    expect = require("code").expect,
     parse = require("../lib/parse.js").parse;
 
 require("./acorn/tests.js");
 
-/* global describe, it */
-
-var mode = {},
+let mode = {},
     stats = mode.stats = { testsRun: 0, failed: 0 };
 
 function report(state, code)
@@ -15,7 +15,7 @@ function report(state, code)
     if (state !== "ok")
     {
         ++stats.failed;
-        console.log("\"" + code + "\"");
+        console.log(`"${code}"`);
     }
 
     ++stats.testsRun;
@@ -28,11 +28,11 @@ function doParse(source, options)
     return parse(source, options);
 }
 
-describe("acorn", function()
+describe("acorn", () =>
 {
-    it("all standard acorn tests should pass", function()
+    it("all standard acorn tests should pass", () =>
     {
         driver.runTests({ parse: doParse }, report);
-        stats.failed.should.equal(0);
+        expect(stats.failed).to.equal(0);
     });
 });

@@ -12,6 +12,12 @@
         "start": 26,
         "end": 54,
         "objj": {
+          "receiver": {
+            "type": "Identifier",
+            "start": 27,
+            "end": 31,
+            "name": "view"
+          },
           "selectors": [
             {
               "type": "Identifier",
@@ -26,6 +32,11 @@
               "start": 41,
               "end": 53,
               "objj": {
+                "receiver": {
+                  "type": "objj_Self",
+                  "start": 42,
+                  "end": 46
+                },
                 "selectors": [
                   {
                     "type": "Identifier",
@@ -34,22 +45,10 @@
                     "name": "title"
                   }
                 ],
-                "args": [],
-                "receiver": {
-                  "type": "Identifier",
-                  "start": 42,
-                  "end": 46,
-                  "name": "self"
-                }
+                "args": []
               }
             }
-          ],
-          "receiver": {
-            "type": "Identifier",
-            "start": 27,
-            "end": 31,
-            "name": "view"
-          }
+          ]
         }
       }
     }

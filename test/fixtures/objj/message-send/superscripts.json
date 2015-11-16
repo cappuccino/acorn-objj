@@ -70,6 +70,12 @@
         "start": 185,
         "end": 194,
         "objj": {
+          "receiver": {
+            "type": "Identifier",
+            "start": 186,
+            "end": 189,
+            "name": "foo"
+          },
           "selectors": [
             {
               "type": "Identifier",
@@ -78,13 +84,7 @@
               "name": "bar"
             }
           ],
-          "args": [],
-          "receiver": {
-            "type": "Identifier",
-            "start": 186,
-            "end": 189,
-            "name": "foo"
-          }
+          "args": []
         }
       }
     }

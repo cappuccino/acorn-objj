@@ -12,6 +12,12 @@
         "start": 67,
         "end": 163,
         "objj": {
+          "receiver": {
+            "type": "Identifier",
+            "start": 68,
+            "end": 74,
+            "name": "button"
+          },
           "selectors": [
             {
               "type": "Identifier",
@@ -26,6 +32,12 @@
               "start": 84,
               "end": 162,
               "objj": {
+                "receiver": {
+                  "type": "Identifier",
+                  "start": 85,
+                  "end": 93,
+                  "name": "CPString"
+                },
                 "selectors": [
                   {
                     "type": "Identifier",
@@ -49,6 +61,11 @@
                     "start": 128,
                     "end": 139,
                     "objj": {
+                      "receiver": {
+                        "type": "objj_Self",
+                        "start": 129,
+                        "end": 133
+                      },
                       "selectors": [
                         {
                           "type": "Identifier",
@@ -57,13 +74,7 @@
                           "name": "name"
                         }
                       ],
-                      "args": [],
-                      "receiver": {
-                        "type": "Identifier",
-                        "start": 129,
-                        "end": 133,
-                        "name": "self"
-                      }
+                      "args": []
                     }
                   },
                   {
@@ -77,6 +88,12 @@
                     "start": 148,
                     "end": 161,
                     "objj": {
+                      "receiver": {
+                        "type": "Identifier",
+                        "start": 149,
+                        "end": 154,
+                        "name": "array"
+                      },
                       "selectors": [
                         {
                           "type": "Identifier",
@@ -85,31 +102,13 @@
                           "name": "count"
                         }
                       ],
-                      "args": [],
-                      "receiver": {
-                        "type": "Identifier",
-                        "start": 149,
-                        "end": 154,
-                        "name": "array"
-                      }
+                      "args": []
                     }
                   }
-                ],
-                "receiver": {
-                  "type": "Identifier",
-                  "start": 85,
-                  "end": 93,
-                  "name": "CPString"
-                }
+                ]
               }
             }
-          ],
-          "receiver": {
-            "type": "Identifier",
-            "start": 68,
-            "end": 74,
-            "name": "button"
-          }
+          ]
         }
       }
     }

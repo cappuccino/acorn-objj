@@ -1,27 +1,25 @@
 "use strict";
 
-var utils = require("../lib/test-utils");
+const
+    expect = require("code").expect,
+    utils = require("../lib/test-utils");
 
-// jscs: disable requireMultipleVarDecl
-
-var makeParser = utils.makeParser,
+const  // jscs: ignore requireMultipleVarDecl
+    makeParser = utils.makeParser,
     testFixture = utils.testFixture;
 
-/* global describe, it */
-
-// jscs: enable
 // jscs: disable maximumLineLength
 
-describe("@[]", function()
+describe("@[]", () =>
 {
-    it("should generate objj_ArrayLiteral nodes", function()
+    it("should generate objj_ArrayLiteral nodes", () =>
     {
         testFixture("objj", "array-literal");
     });
 
-    it("should fail with missing commas between elements", function()
+    it("should fail with missing commas between elements", () =>
     {
-        makeParser("var a = @[1 2]")
-            .should.throw(SyntaxError, /Expected ','/);
+        expect(makeParser("var a = @[1 2]"))
+            .to.throw(SyntaxError, /Expected ','/);
     });
 });

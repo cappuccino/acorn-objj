@@ -1,63 +1,78 @@
 "use strict";
 
-var utils = require("../../lib/test-utils");
+const
+    expect = require("code").expect,
+    utils = require("../../lib/test-utils");
 
-// jscs: disable requireMultipleVarDecl
-
-var makeParser = utils.makeParser,
+const  // jscs: ignore requireMultipleVarDecl
+    makeParser = utils.makeParser,
     testFixture = utils.testFixture;
 
-/* global describe, it */
-
-// jscs: enable
 // jscs: disable maximumLineLength
 
-describe("ivars", function()
+describe("ivars", () =>
 {
-    it("should generate objj_ClassDeclaration with empty ivars array attribute for {}", function()
+    it("should generate objj_ClassDeclaration with empty ivars array attribute for {}", () =>
     {
         testFixture("objj", "ivars/empty");
     });
 
-    it("should generate objj_IvarDeclaration and objj_ObjectiveJType nodes with isClass:false for built in types", function()
+    it("should generate objj_IvarDeclaration and objj_ObjectiveJType nodes with isClass:false for built in types", () =>
     {
         testFixture("objj", "ivars/types");
     });
 
-    it("should generate objj_ObjectiveJType nodes with isOutlet:true for ivars marked with @outlet or IBOutlet", function()
+    it("should generate objj_ObjectiveJType nodes with isOutlet:true for ivars marked with @outlet or IBOutlet", () =>
     {
         testFixture("objj", "ivars/outlets");
     });
 
-    it("should generate objj_ObjectiveJType nodes with protocols array attribute set for id<Foo, Bar>", function()
+    it("should generate objj_ObjectiveJType nodes with protocols array attribute set for id<Foo, Bar>", () =>
     {
         testFixture("objj", "ivars/protocols");
     });
 
-    it("should generate an empty protocol list error for id<> as a type", function()
+    it("should generate an empty protocol list error for id<> as a type", () =>
     {
-        makeParser("@implementation Foo\n{ id<> foo }\n@end")
-            .should.throw(SyntaxError, /Empty protocol list/);
+        expect(makeParser("@implementation Foo\n{ id<> foo }\n@end"))
+            .to.throw(SyntaxError, /Empty protocol list/);
     });
 
-    it("should generate an error for a missing comma in a protocal list", function()
+    it("should generate an error for a missing comma in a protocol list", () =>
     {
-        makeParser("@implementation Foo\n{ id<Test Me> foo }\n@end")
-            .should.throw(SyntaxError, /Expected a comma between protocols/);
+        expect(makeParser("@implementation Foo\n{ id<Test Me> foo }\n@end"))
+            .to.throw(SyntaxError, /Expected a comma between protocols/);
     });
 
-    it("should generate an error for a missing semicolon with strictSemicolons", function()
+    it("should generate an error for a missing semicolon with strictSemicolons", () =>
     {
-        makeParser("@implementation Foo\n{ int foo }\n@end", { strictSemicolons: true })
-            .should.throw(SyntaxError, /Expected a semicolon/);
+        expect(makeParser("@implementation Foo\n{ int foo }\n@end", { strictSemicolons: true }))
+            .to.throw(SyntaxError, /Expected a semicolon/);
     });
 
-    it("should generate an error in strict mode if a reserved word is used for the type or name", function()
+    it("should generate an error in strict mode if a reserved word is used for the type or name", () =>
     {
-        makeParser("@implementation Foo\n{ super foo }\n@end", { sourceType: "module" })
-            .should.throw(SyntaxError, /Binding 'super' in strict mode/);
+        // Set sourceType: "module" to force strict mode
+        expect(makeParser("@implementation Foo\n{ export foo }\n@end", { sourceType: "module" }))
+            .to.throw(SyntaxError, /The keyword 'export' is reserved/);
 
-        makeParser("@implementation Foo\n{ int export }\n@end", { sourceType: "module" })
-            .should.throw(SyntaxError, /Binding 'export' in strict mode/);
+        expect(makeParser("@implementation Foo\n{ int export }\n@end", { sourceType: "module" }))
+            .to.throw(SyntaxError, /The keyword 'export' is reserved/);
+    });
+
+    it("should generate an error if a keyword is used for the type or name", () =>
+    {
+        expect(makeParser("@implementation Foo\n{ break foo }\n@end"))
+            .to.throw(SyntaxError, /Unexpected token/);
+
+        expect(makeParser("@implementation Foo\n{ int break }\n@end"))
+            .to.throw(SyntaxError, /Unexpected token/);
+
+        // super is a keyword in ES6+
+        expect(makeParser("@implementation Foo\n{ super foo }\n@end", { ecmaVersion: 6 }))
+            .to.throw(SyntaxError, /Unexpected token/);
+
+        expect(makeParser("@implementation Foo\n{ int super }\n@end", { ecmaVersion: 6 }))
+            .to.throw(SyntaxError, /Unexpected token/);
     });
 });

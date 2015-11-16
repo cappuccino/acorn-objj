@@ -1,60 +1,58 @@
 "use strict";
 
-var utils = require("../../lib/test-utils");
+const
+    expect = require("code").expect,
+    utils = require("../../lib/test-utils");
 
-// jscs: disable requireMultipleVarDecl
-
-var makeParser = utils.makeParser,
+const  // jscs: ignore requireMultipleVarDecl
+    makeParser = utils.makeParser,
     testFixture = utils.testFixture;
 
-/* global describe, it */
-
-// jscs: enable
 // jscs: disable maximumLineLength
 
-describe("declaration", function()
+describe("declaration", () =>
 {
-    it("should generate objj_ClassDeclaration node", function()
+    it("should generate objj_ClassDeclaration node", () =>
     {
         testFixture("objj", "@implementation/simple");
     });
 
-    it("should generate superclass attribute for subclasses", function()
+    it("should generate superclass attribute for subclasses", () =>
     {
         testFixture("objj", "@implementation/superclass");
     });
 
-    it("should generate category attribute for categories", function()
+    it("should generate category attribute for categories", () =>
     {
         testFixture("objj", "@implementation/category");
     });
 
-    it("should generate protocols array attribute for classes conforming to protocols", function()
+    it("should generate protocols array attribute for classes conforming to protocols", () =>
     {
         testFixture("objj", "@implementation/protocols");
     });
 
-    it("should generate an error if @implementation or @interface is nested", function()
+    it("should generate an error if @implementation or @interface is nested", () =>
     {
-        makeParser("@implementation Foo\n@implementation")
-            .should.throw(SyntaxError, /Expected @end before @implementation/);
+        expect(makeParser("@implementation Foo\n@implementation"))
+            .to.throw(SyntaxError, /Expected @end before @implementation/);
     });
 
-    it("should generate an error if the category is not terminated with ')'", function()
+    it("should generate an error if the category is not terminated with ')'", () =>
     {
-        makeParser("@implementation Foo (Bar]")
-            .should.throw(SyntaxError, /Expected '\)' after category name/);
+        expect(makeParser("@implementation Foo (Bar]"))
+            .to.throw(SyntaxError, /Expected '\)' after category name/);
     });
 
-    it("should generate an error if the protocols are not separated by ','", function()
+    it("should generate an error if the protocols are not separated by ','", () =>
     {
-        makeParser("@implementation Foo <Bar Baz>")
-            .should.throw(SyntaxError, /Expected ',' between protocol names/);
+        expect(makeParser("@implementation Foo <Bar Baz>"))
+            .to.throw(SyntaxError, /Expected ',' between protocol names/);
     });
 
-    it("should generate an error if EOF is reached before @end", function()
+    it("should generate an error if EOF is reached before @end", () =>
     {
-        makeParser("@implementation Foo")
-            .should.throw(SyntaxError, /Expected @end after @implementation/);
+        expect(makeParser("@implementation Foo"))
+            .to.throw(SyntaxError, /Expected @end after @implementation/);
     });
 });

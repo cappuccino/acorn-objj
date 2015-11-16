@@ -1,60 +1,58 @@
 "use strict";
 
-var utils = require("../lib/test-utils");
+const
+    expect = require("code").expect,
+    utils = require("../lib/test-utils");
 
-// jscs: disable requireMultipleVarDecl
-
-var makeParser = utils.makeParser,
+const  // jscs: ignore requireMultipleVarDecl
+    makeParser = utils.makeParser,
     testFixture = utils.testFixture;
 
-/* global describe, it */
-
-// jscs: enable
 // jscs: disable maximumLineLength
 
-describe("@protocol", function()
+describe("@protocol", () =>
 {
-    it("should generate objj_ProtocolDeclaration node with no protocols attributes for @protocol Foo", function()
+    it("should generate objj_ProtocolDeclaration node with no protocols attributes for @protocol Foo", () =>
     {
         testFixture("objj", "@protocol/plain");
     });
 
-    it("should generate protocols array attribute for @protocol that has a conforming protocol list", function()
+    it("should generate protocols array attribute for @protocol that has a conforming protocol list", () =>
     {
         testFixture("objj", "@protocol/super-protocols");
     });
 
-    it("should generate required objj_MethodDeclaration nodes for unmarked methods", function()
+    it("should generate required objj_MethodDeclaration nodes for unmarked methods", () =>
     {
         testFixture("objj", "@protocol/unmarked-methods");
     });
 
-    it("should generate required and optional objj_MethodDeclaration nodes for marked methods", function()
+    it("should generate required and optional objj_MethodDeclaration nodes for marked methods", () =>
     {
         testFixture("objj", "@protocol/marked-methods");
     });
 
-    it("should generate an error if conforming protocols are not separated by ','", function()
+    it("should generate an error if conforming protocols are not separated by ','", () =>
     {
-        makeParser("@protocol Foo <Bar Baz>")
-            .should.throw(SyntaxError, /Expected ',' between protocol names/);
+        expect(makeParser("@protocol Foo <Bar Baz>"))
+            .to.throw(SyntaxError, /Expected ',' between protocol names/);
     });
 
-    it("should generate an error if EOF is reached before @end", function()
+    it("should generate an error if EOF is reached before @end", () =>
     {
-        makeParser("@protocol Foo")
-            .should.throw(SyntaxError, /Expected @end after @protocol/);
+        expect(makeParser("@protocol Foo"))
+            .to.throw(SyntaxError, /Expected @end after @protocol/);
     });
 
-    it("should generate an error in strict-semicolon mode if a method declaration does not end with ';'", function()
+    it("should generate an error in strict-semicolon mode if a method declaration does not end with ';'", () =>
     {
-        makeParser("@protocol Foo\n- (void)foo\n@end", { strictSemicolons: true })
-            .should.throw(SyntaxError, /Expected a semicolon/);
+        expect(makeParser("@protocol Foo\n- (void)foo\n@end", { strictSemicolons: true }))
+            .to.throw(SyntaxError, /Expected a semicolon/);
     });
 
-    it("should generate an error if a method declaration does not start with +/-", function()
+    it("should generate an error if a method declaration does not start with +/-", () =>
     {
-        makeParser("@protocol Foo\n(void)foo\n@end")
-            .should.throw(SyntaxError, /Method declaration must start with '\+' or '-'/);
+        expect(makeParser("@protocol Foo\n(void)foo\n@end"))
+            .to.throw(SyntaxError, /Method declaration must start with '\+' or '-'/);
     });
 });

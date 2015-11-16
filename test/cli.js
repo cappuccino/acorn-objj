@@ -1,175 +1,173 @@
 "use strict";
 
-var cli = require("../lib/cli"),
+const
+    cli = require("../lib/cli"),
+    expect = require("code").expect,
     fs = require("fs"),
     path = require("path"),
-    run = require("./lib/test-utils.js").run,
-    util = require("util");
+    utils = require("./lib/test-utils.js");
 
-/* global before, describe, it */
+const  // jscs: ignore requireMultipleVarDecl
+    readFixture = utils.readFixture,
+    run = utils.run;
 
-describe("cli", function()
+describe("cli", () =>
 {
-    var dir = "test/fixtures/cli",
-        executable;
+    const dir = "test/fixtures/cli";
 
-    before(function()
+    let executable;
+
+    before(() => executable = cli.getEnvironment().executable);
+
+    it("should generate an error if the file does not exist", () =>
     {
-        executable = cli.getEnvironment().executable;
+        const result = run(["--no-color", "foo.j"]);
+
+        expect(result.output).to.match(/^acorn-objj: error: ENOENT: no such file or directory, open '.+'/);
+        expect(result.exitCode).to.equal(1);
     });
 
-    it("should generate an error if the file does not exist", function()
+    it("should generate an error if there is #! without --allow-hash-bang", () =>
     {
-        var result = run(["--no-color", "foo.j"]);
+        const result = run(["--no-color", path.join(dir, "hash-bang.js")]);
 
-        result.output.should.equal("acorn-objj: error: ENOENT, no such file or directory 'foo.j'\n");
-        result.exitCode.should.equal(1);
+        expect(result.output).to.equal(readFixture("cli/hash-bang.txt", true));
+        expect(result.exitCode).to.equal(1);
     });
 
-    it("should generate an error if there is #! without --allow-hash-bang", function()
+    it("should generate a stack trace with --stack-trace for thrown Error", () =>
     {
-        var result = run(["--no-color", path.join(dir, "hash-bang.js")]);
+        const result = run(["--no-color", "--stack-trace", "foo.j"]);
 
-        result.output.should.equalFixture("cli/hash-bang.txt", "hash-bang.js");
-        result.exitCode.should.equal(1);
+        expect(result.output).to.match(/^acorn-objj: error: ENOENT: no such file or directory, open 'foo\.j'\n\nError: ENOENT: no such file or directory, open 'foo\.j'\n\s+at Error \(native\)/);
+        expect(result.exitCode).to.equal(1);
     });
 
-    it("should generate a stack trace with --stack-trace for thrown Error", function()
+    it("should generate a stack trace with --stack-trace for thrown SyntaxError", () =>
     {
-        var result = run(["--no-color", "--stack-trace", "foo.j"]);
+        const result = run(["--stack-trace", "--no-color", path.join(dir, "ecma.js")]);
 
-        result.output.should.match(/^acorn-objj: error: ENOENT, no such file or directory 'foo\.j'\n\nError: ENOENT, no such file or directory 'foo\.j'\n\s+at Error \(native\)/);
-        result.exitCode.should.equal(1);
+        expect(result.output).to.match(/^(.*\n)+1 error generated\.\n\nSyntaxError: Expected ';' after expression\n\s+at Parser.acorn.Parser.objj_semicolon \(.+?\n/g);
+        expect(result.exitCode).to.equal(1);
     });
 
-    it("should generate a stack trace with --stack-trace for thrown SyntaxError", function()
+    it("should not generate an error if there is #! with --allow-hash-bang", () =>
     {
-        var result = run(["--stack-trace", "--no-color", path.join(dir, "ecma.js")]);
-
-        result.output.should.match(/^(.*\n)+1 error generated\.\n\nSyntaxError: Expected ';' after expression\n\s+at Parser.acorn.Parser.objj_semicolon \(.+?\n/g);
-        result.exitCode.should.equal(1);
+        expect(run(["--allow-hash-bang", path.join(dir, "hash-bang.js")]).output)
+            .to.equal(readFixture("cli/hash-bang.json"));
     });
 
-    it("should not generate an error if there is #! with --allow-hash-bang", function()
+    it("should generate pretty-printed JSON by default", () =>
     {
-        run(["--allow-hash-bang", path.join(dir, "hash-bang.js")]).output
-            .should.equalFixture("cli/hash-bang.json", "hash-bang.js");
+        expect(run([path.join(dir, "compact.js")]).output)
+            .to.equal(readFixture("cli/pretty.json"));
     });
 
-    it("should generate pretty-printed JSON by default", function()
+    it("should generate compact JSON with --compact", () =>
     {
-        run([path.join(dir, "compact.js")]).output
-            .should.equalFixture("cli/pretty.json", "compact.js");
+        expect(run(["--compact", path.join(dir, "compact.js")]).output)
+            .to.equal(readFixture("cli/compact.json"));
     });
 
-    it("should generate compact JSON with --compact", function()
+    it("should not parse ECMAScript 6 by default", () =>
     {
-        run(["--compact", path.join(dir, "compact.js")]).output
-            .should.equalFixture("cli/compact.json");
+        const result = run([path.join(dir, "ecma.js")]);
+
+        expect(result.output).to.equal(readFixture("cli/ecma.txt"));
+        expect(result.exitCode).to.equal(1);
     });
 
-    it("should not parse ECMAScript 6 by default", function()
+    it("should parse EMCAScript 6 with --ecma 6", () =>
     {
-        var result = run([path.join(dir, "ecma.js")]);
-
-        result.output.should.equalFixture("cli/ecma.txt", "ecma.js");
-        result.exitCode.should.equal(1);
+        expect(run(["--ecma", "6", path.join(dir, "ecma.js")]).output)
+            .to.equal(readFixture("cli/ecma.json"));
     });
 
-    it("should parse EMCAScript 6 with --ecma 6", function()
+    it("should show help with --help", () =>
     {
-        run(["--ecma", "6", path.join(dir, "ecma.js")]).output
-            .should.equalFixture("cli/ecma.json");
+        const prefix =
+            `${cli.getVersionString()} \nUsage: ${executable} [options] file\n\nParses a file and outputs an AST.`;
+
+        expect(run(["--help"]).output).to.startWith(prefix);
     });
 
-    it("should show help with --help", function()
+    it("should generate location data with --locations", () =>
     {
-        var prefix = util.format(
-            "%s \nUsage: %s [options] file\n\nParses a file and outputs an AST.",
-            cli.getVersionString(),
-            executable
-        );
-
-        run(["--help"]).output.indexOf(prefix).should.equal(0);
+        expect(run(["--locations", path.join(dir, "compact.js")]).output)
+            .to.equal(readFixture("cli/locations.json"));
     });
 
-    it("should generate location data with --locations", function()
+    it("should fail on Objective-J code with --no-objj", () =>
     {
-        run(["--locations", path.join(dir, "compact.js")]).output
-            .should.equalFixture("cli/locations.json");
+        const result = run(["--no-objj", path.join(dir, "objj.j")]);
+
+        expect(result.output).to.equal(readFixture("cli/objj.txt"));
+        expect(result.exitCode).to.equal(1);
     });
 
-    it("should fail on Objective-J code with --no-objj", function()
+    it("should not recognize Objective-J keywords with --no-objj", () =>
     {
-        var result = run(["--no-objj", path.join(dir, "objj.j")]);
-
-        result.output.should.equalFixture("cli/objj.txt", "objj.j");
-        result.exitCode.should.equal(1);
+        expect(run(["--no-objj", path.join(dir, "no-objj.js")]).output)
+            .to.equal(readFixture("cli/no-objj.json"));
     });
 
-    it("should not recognize Objective-J keywords with --no-objj", function()
-    {
-        run(["--no-objj", path.join(dir, "no-objj.js")]).output
-            .should.equalFixture("cli/no-objj.json");
-    });
-
-    it("should not recognize objj keywords with --no-objj", function()
+    it("should not recognize objj keywords with --no-objj", () =>
     {
         run(["--no-objj", path.join(dir, "no-objj.js")]);
     });
 
-    it("should not generate any output with --silent", function()
+    it("should not generate any output with --silent", () =>
     {
-        var result = run(["--silent", path.join(dir, "compact.js")]);
+        let result = run(["--silent", path.join(dir, "compact.js")]);
 
         /* eslint-disable no-unused-expressions */
 
-        result.exitCode.should.equal(0);
-        result.output.should.be.empty;
+        expect(result.exitCode).to.equal(0);
+        expect(result.output).to.be.empty;
 
         result = run(["--silent", path.join(dir, "ecma.js")]);
 
-        result.exitCode.should.equal(1);
-        result.output.should.be.empty;
+        expect(result.exitCode).to.equal(1);
+        expect(result.output).to.be.empty;
 
         /* eslint-enable */
     });
 
-    it("should generate an error for missing semicolons with --strict-semicolons", function()
+    it("should generate an error for missing semicolons with --strict-semicolons", () =>
     {
-        var result = run(["--strict-semicolons", path.join(dir, "strict-semicolons.js")]);
+        const result = run(["--strict-semicolons", path.join(dir, "strict-semicolons.js")]);
 
-        result.output.should.equalFixture("cli/strict-semicolons.txt", "strict-semicolons.js");
-        result.exitCode.should.equal(1);
+        expect(result.output).to.equal(readFixture("cli/strict-semicolons.txt"));
+        expect(result.exitCode).to.equal(1);
     });
 
-    it("should show the executable name, version and acorn version with --version", function()
+    it("should show the executable name, version and acorn version with --version", () =>
     {
-        run(["--version"]).output.should.equal(cli.getVersionString() + "\n");
+        expect(run(["--version"]).output).to.equal(cli.getVersionString() + "\n");
     });
 
-    it("should generate an error if no input file is given", function()
+    it("should generate an error if no input file is given", () =>
     {
-        var result = run([]);
+        const result = run([]);
 
-        result.output.should.equal("acorn-objj: error: No input file\n");
-        result.exitCode.should.equal(1);
+        expect(result.output).to.equal("acorn-objj: error: No input file\n");
+        expect(result.exitCode).to.equal(1);
     });
 
-    it("should generate an error if more than one input file is given", function()
+    it("should generate an error if more than one input file is given", () =>
     {
-        var result = run(["foo.js", "bar.js"]);
+        const result = run(["foo.js", "bar.js"]);
 
-        result.output.should.equal("acorn-objj: error: Only one file may be parsed at a time\n");
-        result.exitCode.should.equal(1);
+        expect(result.output).to.equal("acorn-objj: error: Only one file may be parsed at a time\n");
+        expect(result.exitCode).to.equal(1);
     });
 
-    it("should read from stdin if the input file is '-'", function()
+    it("should read from stdin if the input file is '-'", () =>
     {
-        var fd = fs.openSync(path.join(dir, "compact.js"), "r"),
-            stream = fs.createReadStream("", { fd: fd });
+        const fd = fs.openSync(path.join(dir, "compact.js"), "r"),
+            stream = fs.createReadStream("", { fd });
 
-        run(["-"], { stdin: stream }).output
-            .should.equalFixture("cli/pretty.json", "compact.js");
+        expect(run(["-"], { stdin: stream }).output)
+            .to.equal(readFixture("cli/pretty.json"));
     });
 });

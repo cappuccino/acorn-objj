@@ -1,20 +1,23 @@
 "use strict";
 
-var utils = require("../lib/test-utils");
+const
+    expect = require("code").expect,
+    utils = require("../lib/test-utils");
 
-// jscs: disable requireMultipleVarDecl
+const makeParser = utils.makeParser; // jscs: ignore requireMultipleVarDecl
 
-var makeParser = utils.makeParser;
-
-/* global describe, it */
-
-// jscs: enable
 // jscs: disable maximumLineLength
 
-describe("Tokenizer", function()
+describe("Tokenizer", () =>
 {
-    it("tokenizer should fail with unrecognized @ keywords", function()
+    it("tokenizer should fail with unrecognized @ keywords", () =>
     {
-        makeParser("@foo").should.throw(SyntaxError, /Unrecognized Objective-J keyword/);
+        expect(makeParser("@foo")).to.throw(SyntaxError, /Unrecognized Objective-J keyword/);
+    });
+
+    it("should generate a reserved word error when using 'super' in ES < 6", () =>
+    {
+        expect(makeParser("var super;"))
+            .to.throw(SyntaxError, /The keyword 'super' is reserved/);
     });
 });

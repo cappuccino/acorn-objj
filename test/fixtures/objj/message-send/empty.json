@@ -12,6 +12,12 @@
         "start": 81,
         "end": 95,
         "objj": {
+          "receiver": {
+            "type": "Identifier",
+            "start": 82,
+            "end": 91,
+            "name": "something"
+          },
           "selectors": [
             null
           ],
@@ -23,13 +29,7 @@
               "value": 7,
               "raw": "7"
             }
-          ],
-          "receiver": {
-            "type": "Identifier",
-            "start": 82,
-            "end": 91,
-            "name": "something"
-          }
+          ]
         }
       }
     }

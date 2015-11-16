@@ -1,12 +1,10 @@
 "use strict";
 
-var testFixture = require("../lib/test-utils").testFixture;
+const testFixture = require("../lib/test-utils").testFixture;
 
-/* global describe, it */
-
-describe("@ strings", function()
+describe("@ strings", () =>
 {
-    it("should generate Literal string nodes", function()
+    it("should generate Literal string nodes", () =>
     {
         testFixture("objj", "string");
     });

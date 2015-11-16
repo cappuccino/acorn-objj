@@ -1,45 +1,43 @@
 "use strict";
 
-var utils = require("../lib/test-utils");
+const
+    expect = require("code").expect,
+    utils = require("../lib/test-utils");
 
-// jscs: disable requireMultipleVarDecl
-
-var makeParser = utils.makeParser,
+const  // jscs: ignore requireMultipleVarDecl
+    makeParser = utils.makeParser,
     testFixture = utils.testFixture;
 
-/* global describe, it */
-
-// jscs: enable
 // jscs: disable maximumLineLength
 
-describe("@selector", function()
+describe("@selector", () =>
 {
-    it("should generate objj_SelectorLiteralExpression nodes", function()
+    it("should generate objj_SelectorLiteralExpression nodes", () =>
     {
         testFixture("objj", "@selector");
     });
 
-    it("should generate an error with an empty selector", function()
+    it("should generate an error with an empty selector", () =>
     {
-        makeParser("var s = @selector()")
-            .should.throw(SyntaxError, /Empty selector/);
+        expect(makeParser("var s = @selector()"))
+            .to.throw(SyntaxError, /Empty selector/);
     });
 
-    it("should generate an error with missing selector components", function()
+    it("should generate an error with missing selector components", () =>
     {
-        makeParser("var s = @selector(foo::)")
-            .should.throw(SyntaxError, /Missing selector component/);
+        expect(makeParser("var s = @selector(foo::)"))
+            .to.throw(SyntaxError, /Missing selector component/);
     });
 
-    it("should generate an error if ( does not follow @selector", function()
+    it("should generate an error if ( does not follow @selector", () =>
     {
-        makeParser("var s = @selector{}")
-            .should.throw(SyntaxError, /Expected '\('/);
+        expect(makeParser("var s = @selector{}"))
+            .to.throw(SyntaxError, /Expected '\('/);
     });
 
-    it("should generate an error with a malformed selector", function()
+    it("should generate an error with a malformed selector", () =>
     {
-        makeParser("var s = @selector(foo})")
-            .should.throw(SyntaxError, /Expected ':'/);
+        expect(makeParser("var s = @selector(foo})"))
+            .to.throw(SyntaxError, /Expected ':'/);
     });
 });

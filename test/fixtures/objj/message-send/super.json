@@ -12,6 +12,11 @@
         "start": 24,
         "end": 43,
         "objj": {
+          "receiver": {
+            "type": "objj_Super",
+            "start": 25,
+            "end": 30
+          },
           "selectors": [
             {
               "type": "Identifier",
@@ -20,8 +25,7 @@
               "name": "doSomething"
             }
           ],
-          "args": [],
-          "receiver": "super"
+          "args": []
         }
       }
     }
