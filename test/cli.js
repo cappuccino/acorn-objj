@@ -39,7 +39,7 @@ describe("cli", () =>
     {
         const result = run(["--no-color", "--stack-trace", "foo.j"]);
 
-        expect(result.output).to.match(/^acorn-objj: error: ENOENT: no such file or directory, open 'foo\.j'\n\nError: ENOENT: no such file or directory, open 'foo\.j'\n\s+at Error \(native\)/);
+        expect(result.output).to.match(/^acorn-objj: error: ENOENT: no such file or directory, open '.+?'\n\nError: ENOENT: no such file or directory, open '.+?'\n\s+at Error \(native\)/);
         expect(result.exitCode).to.equal(1);
     });
 
