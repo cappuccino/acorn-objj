@@ -1,2 +1,13 @@
+.editorconfig
+.eslintignore
+.eslintrc
+.gitignore
+.istanbul.yml
+.jscsrc
+.npmignore
+.travis.yml
+appveyor.yml
+
+.idea/
 coverage/
 test/
