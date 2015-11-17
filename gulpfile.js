@@ -79,7 +79,8 @@ gulp.task("generate-fixtures", () =>
         [["--locations"], "compact.js", "locations.json"],
         [["--no-objj"], "objj.j", "objj.txt"],
         [["--no-objj"], "no-objj.js"],
-        [["--strict-semicolons"], "strict-semicolons.js", "strict-semicolons.txt"]
+        [["--strict-semicolons"], "strict-semicolons.js", "strict-semicolons.txt"],
+        [["--module", "--ecma", "5"], "module.js", "module.txt"]
     ];
 
     for (let fixture of cliFixtures)

@@ -141,6 +141,15 @@ describe("cli", () =>
         expect(result.exitCode).to.equal(1);
     });
 
+    it("should generate an error for reserved words with --module", () =>
+    {
+        // --module forces strict mode
+        const result = run(["--module", "--ecma", "5", path.join(dir, "module.js")]);
+
+        expect(result.output).to.equal(readFixture("cli/module.txt"));
+        expect(result.exitCode).to.equal(1);
+    });
+
     it("should show the executable name, version and acorn version with --version", () =>
     {
         expect(run(["--version"]).output).to.equal(cli.getVersionString() + "\n");
