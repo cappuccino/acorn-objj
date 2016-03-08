@@ -10,3 +10,6 @@ insert_final_newline = true
 
 [{package.json, test/acorn/*.js}]
 indent_size = 2
+
+[*.yml]
+indent_size = 2
