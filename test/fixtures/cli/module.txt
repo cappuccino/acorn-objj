@@ -1,6 +1,1 @@
-
-test/fixtures/cli/module.js:3:5: error: the keyword 'export' is reserved
-var export;
-    ^
-
-1 error generated.
+acorn-objj: error: The keyword 'export' is reserved (3:4)

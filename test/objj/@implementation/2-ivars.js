@@ -8,7 +8,7 @@ const  // jscs: ignore requireMultipleVarDecl
     makeParser = utils.makeParser,
     testFixture = utils.testFixture;
 
-// jscs: disable maximumLineLength
+/* eslint-disable max-len */
 
 describe("ivars", () =>
 {
@@ -53,10 +53,10 @@ describe("ivars", () =>
     it("should generate an error in strict mode if a reserved word is used for the type or name", () =>
     {
         // Set sourceType: "module" to force strict mode
-        expect(makeParser("@implementation Foo\n{ export foo }\n@end", { sourceType: "module" }))
+        expect(makeParser("@implementation Foo\n{ export foo }\n@end", { ecmaVersion: 5, sourceType: "module" }))
             .to.throw(SyntaxError, /The keyword 'export' is reserved/);
 
-        expect(makeParser("@implementation Foo\n{ int export }\n@end", { sourceType: "module" }))
+        expect(makeParser("@implementation Foo\n{ int export }\n@end", { ecmaVersion: 5, sourceType: "module" }))
             .to.throw(SyntaxError, /The keyword 'export' is reserved/);
     });
 

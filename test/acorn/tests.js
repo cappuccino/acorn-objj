@@ -26669,6 +26669,9 @@ test("price_9̶9̶_89", {
   ]
 });
 
+// `\0` is valid even in strict mode
+test("function hello() { 'use strict'; \"\\0\"; }", {});
+
 // option tests
 
 test("var a = 1;", {
@@ -27404,6 +27407,12 @@ testFail("function hello() { 'use strict'; function inner(arguments) {} }",
          "Binding arguments in strict mode (1:48)");
 
 testFail("function hello() { 'use strict'; \"\\1\"; }",
+         "Octal literal in strict mode (1:34)");
+
+testFail("function hello() { 'use strict'; \"\\00\"; }",
+         "Octal literal in strict mode (1:34)");
+
+testFail("function hello() { 'use strict'; \"\\000\"; }",
          "Octal literal in strict mode (1:34)");
 
 testFail("function hello() { 'use strict'; 021; }",
@@ -29090,3 +29099,25 @@ testAssert("[1,2,] + {foo: 1,}", function() {
 testFail("({ get prop(x) {} })", "getter should have no params (1:11)");
 testFail("({ set prop() {} })", "setter should have exactly one param (1:11)");
 testFail("({ set prop(x, y) {} })", "setter should have exactly one param (1:11)");
+
+// https://github.com/ternjs/acorn/issues/363
+
+test("/[a-z]/gim", {
+  type: "Program",
+  body: [
+    {
+      type: "ExpressionStatement",
+      expression: {
+        type: "Literal",
+        value: /[a-z]/gim,
+        regex: {
+          pattern: "[a-z]",
+          flags: "gim"
+        }
+      }
+    }
+  ]
+});
+testFail("/[a-z]/u", "Invalid regular expression flag (1:1)");
+testFail("/[a-z]/y", "Invalid regular expression flag (1:1)");
+testFail("/[a-z]/s", "Invalid regular expression flag (1:1)");

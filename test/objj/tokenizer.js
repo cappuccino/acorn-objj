@@ -17,7 +17,7 @@ describe("Tokenizer", () =>
 
     it("should generate a reserved word error when using 'super' in ES < 6", () =>
     {
-        expect(makeParser("var super;"))
+        expect(makeParser("var super;", { ecmaVersion: 5 }))
             .to.throw(SyntaxError, /The keyword 'super' is reserved/);
     });
 });

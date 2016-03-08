@@ -8,7 +8,7 @@ const  // jscs: ignore requireMultipleVarDecl
     makeParser = utils.makeParser,
     testFixture = utils.testFixture;
 
-// jscs: disable maximumLineLength
+/* eslint-disable max-len */
 
 describe("@ref", () =>
 {

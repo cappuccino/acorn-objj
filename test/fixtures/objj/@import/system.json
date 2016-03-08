@@ -12,5 +12,6 @@
         "filename": "Frameworks/Foo.j"
       }
     }
-  ]
+  ],
+  "sourceType": "script"
 }

@@ -180,5 +180,6 @@
         "raw": "\"hello\""
       }
     }
-  ]
+  ],
+  "sourceType": "script"
 }

@@ -8,7 +8,7 @@ const // jscs: ignore requireMultipleVarDecl
     makeParser = utils.makeParser,
     testFixture = utils.testFixture;
 
-// jscs: disable maximumLineLength
+/* eslint-disable max-len */
 
 describe("Type declarations", () =>
 {
@@ -37,8 +37,8 @@ describe("Type declarations", () =>
         expect(makeParser("@global int")).to.throw(SyntaxError, /Unexpected token/);
         expect(makeParser("@typedef int")).to.throw(SyntaxError, /Unexpected token/);
 
-        expect(makeParser("@class export")).to.throw(SyntaxError, /The keyword 'export' is reserved/);
-        expect(makeParser("@global export")).to.throw(SyntaxError, /The keyword 'export' is reserved/);
-        expect(makeParser("@typedef export")).to.throw(SyntaxError, /The keyword 'export' is reserved/);
+        expect(makeParser("@class export", { ecmaVersion: 5 })).to.throw(SyntaxError, /The keyword 'export' is reserved/);
+        expect(makeParser("@global export", { ecmaVersion: 5 })).to.throw(SyntaxError, /The keyword 'export' is reserved/);
+        expect(makeParser("@typedef export", { ecmaVersion: 5 })).to.throw(SyntaxError, /The keyword 'export' is reserved/);
     });
 });

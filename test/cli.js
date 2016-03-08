@@ -11,13 +11,15 @@ const  // jscs: ignore requireMultipleVarDecl
     readFixture = utils.readFixture,
     run = utils.run;
 
+/* eslint-disable max-len */
+
 describe("cli", () =>
 {
     const dir = "test/fixtures/cli";
 
     let executable;
 
-    before(() => executable = cli.getEnvironment().executable);
+    before(() => { executable = cli.getEnvironment().executable; });
 
     it("should generate an error if the file does not exist", () =>
     {
@@ -47,7 +49,7 @@ describe("cli", () =>
     {
         const result = run(["--stack-trace", "--no-color", path.join(dir, "ecma.js")]);
 
-        expect(result.output).to.match(/^(.*\n)+1 error generated\.\n\nSyntaxError: Expected ';' after expression\n\s+at Parser.acorn.Parser.objj_semicolon \(.+?\n/g);
+        expect(result.output).to.match(/^(.*\n)+1 error generated\.\n\nSyntaxError: Expected ';' after expression\n\s+at Parser.objj_semicolon \(.+?\n/g);
         expect(result.exitCode).to.equal(1);
     });
 

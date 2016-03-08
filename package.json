@@ -33,34 +33,34 @@
     "postversion": "git push && git push --tags && npm publish"
   },
   "dependencies": {
-    "acorn": "^2.4.0",
-    "acorn-issue-handler": "^1.0.0",
+    "acorn": "^3.0.4",
+    "acorn-issue-handler": "^1.0.2",
     "chalk": "^1.1.1",
-    "optionator": "^0.6.0"
+    "optionator": "^0.8.1"
   },
   "devDependencies": {
     "capture-stream": "^0.1.2",
-    "code": "^2.0.1",
+    "code": "^2.1.0",
     "del": "^2.0.0",
-    "eslint": "^1.9.0",
-    "eslint-clang-formatter": "^1.1.2",
-    "eslint-config-cappuccino": "^1.1.22",
-    "gulp": "^3.9.0",
+    "eslint": "^2.3.0",
+    "eslint-clang-formatter": "^1.2.2",
+    "eslint-config-cappuccino": "^1.3.3",
+    "gulp": "^3.9.1",
     "gulp-changed": "^1.3.0",
-    "gulp-eslint": "^1.0.0",
+    "gulp-eslint": "^2.0.0",
     "gulp-jscs": "^3.0.0",
     "gulp-jscs-stylish": "^1.1.2",
-    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-load-plugins": "^1.2.0",
     "gulp-mocha": "^2.1.2",
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.7",
-    "jscs": "^2.5.1",
-    "jscs-cappuccino": "^1.0.6",
-    "jscs-clang-reporter": "^1.1.9",
     "istanbul": "^0.4.2",
+    "jscs": "^2.11.0",
+    "jscs-cappuccino": "^1.1.0",
+    "jscs-clang-reporter": "^1.1.11",
     "mocha": "^2.4.5",
     "path-exists": "^2.0.0",
     "run-sequence": "^1.1.1",
-    "through2": "^2.0.0"
+    "through2": "^2.0.1"
   }
 }

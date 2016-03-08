@@ -12,5 +12,6 @@
         "filename": "foo/bar.j"
       }
     }
-  ]
+  ],
+  "sourceType": "script"
 }

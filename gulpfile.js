@@ -37,7 +37,7 @@ gulp.task("clean", () => del("test/fixtures/**/*.{json,txt}"));
 
 gulp.task("lint:eslint", () =>
     gulp.src(paths.lint)
-        .pipe($.eslint())
+        .pipe($.eslint({ rulePaths: ["node_modules/eslint-config-cappuccino/lib/rules"] }))
         .pipe($.eslint.format("node_modules/eslint-clang-formatter"))
         .pipe($.eslint.failAfterError())
 );
