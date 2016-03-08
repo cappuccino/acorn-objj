@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/Development/Libs/cappuccino/acorn-objj/.idea/acorn-objj.iml" filepath="$USER_HOME$/Development/Libs/cappuccino/acorn-objj/.idea/acorn-objj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/acorn-objj.iml" filepath="$PROJECT_DIR$/.idea/acorn-objj.iml" />
     </modules>
   </component>
 </project>
