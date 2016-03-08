@@ -32,7 +32,7 @@ describe("@selector", () =>
     it("should generate an error if ( does not follow @selector", () =>
     {
         expect(makeParser("var s = @selector{}"))
-            .to.throw(SyntaxError, /Expected '\('/);
+            .to.throw(SyntaxError, /Expected '\(' after @selector/);
     });
 
     it("should generate an error with a malformed selector", () =>
