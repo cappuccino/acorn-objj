@@ -1,8 +1,9 @@
 "use strict";
 
 exports.cli = require("./lib/cli.js");
-exports.parse = exports.cli.parse;
-exports.parseFile = exports.cli.parseFile;
+exports.initOptions = exports.cli.initOptions;
+exports.acornOptionDefinitions = exports.cli.acornOptionDefinitions;
+exports.parse = require("./lib/parse.js");
 exports.utils = require("./lib/utils.js");
 
 /*
