@@ -32,6 +32,11 @@ describe("@protocol", () =>
         testFixture("objj", "@protocol/marked-methods");
     });
 
+    it("should generate objj_ProtocolLiteralExpression nodes for @protocol() literals", () =>
+    {
+        testFixture("objj", "@protocol/literal");
+    });
+
     it("should generate an error if conforming protocols are not separated by ','", () =>
     {
         expect(makeParser("@protocol Foo <Bar Baz>"))
@@ -54,5 +59,23 @@ describe("@protocol", () =>
     {
         expect(makeParser("@protocol Foo\n(void)foo\n@end"))
             .to.throw(SyntaxError, /Method declaration must start with '\+' or '-'/);
+    });
+
+    it("should generate an error if ( does not follow @protocol", () =>
+    {
+        expect(makeParser("var s = @protocol{}"))
+            .to.throw(SyntaxError, /Expected '\(' after @protocol/);
+    });
+
+    it("should generate an error with an empty protocol name", () =>
+    {
+        expect(makeParser("var s = @protocol()"))
+            .to.throw(SyntaxError, /Unexpected token/);
+    });
+
+    it("should generate an error if ) does not follow the protocol name", () =>
+    {
+        expect(makeParser("var s = @protocol(SomeProtocol}"))
+            .to.throw(SyntaxError, /Expected '\)' after protocol name/);
     });
 });

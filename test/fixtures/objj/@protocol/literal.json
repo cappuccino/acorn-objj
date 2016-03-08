@@ -1,0 +1,40 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 33,
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "start": 0,
+      "end": 32,
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 4,
+          "end": 31,
+          "id": {
+            "type": "Identifier",
+            "start": 4,
+            "end": 5,
+            "name": "p"
+          },
+          "init": {
+            "type": "objj_ProtocolLiteralExpression",
+            "start": 8,
+            "end": 31,
+            "objj": {
+              "protocol": {
+                "type": "Identifier",
+                "start": 18,
+                "end": 30,
+                "name": "SomeProtocol"
+              }
+            }
+          }
+        }
+      ],
+      "kind": "var"
+    }
+  ],
+  "sourceType": "script"
+}
