@@ -1,0 +1,4 @@
+---
+  extends: cappuccino
+  #rules:
+  #  no-invalid-this: 0 # It's currently broken for static class methods
