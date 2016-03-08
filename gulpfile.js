@@ -147,15 +147,20 @@ gulp.task("mocha-dot", mochaTask("dot"));
 
 let coverResults = "";
 
-gulp.task("cover", cb =>
+function getIstanbulExecArgs()
 {
     let node = process.execPath,
         istanbul = path.join(__dirname, "node_modules", ".bin", "istanbul");
 
+    return `'${node}' '${istanbul}'`;
+}
+
+gulp.task("cover", cb =>
+{
     // Add --colors to force colorizing, normally chalk won't because
     // it doesn't think it is writing to a terminal.
     exec(
-        `'${node}' '${istanbul}' cover --colors node_modules/mocha/bin/_mocha -- --reporter dot --colors`,
+        `${getIstanbulExecArgs()} cover --colors node_modules/mocha/bin/_mocha -- --reporter dot --colors`,
         (error, stdout) =>
         {
             if (error)
@@ -186,7 +191,7 @@ gulp.task("show-cover", ["cover"], cb =>
 
 gulp.task("check-cover", ["cover"], cb =>
 {
-    exec("istanbul check-cover", error =>
+    exec(`${getIstanbulExecArgs()} check-cover`, error =>
     {
         if (error)
         {
