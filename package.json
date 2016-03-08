@@ -57,6 +57,8 @@
     "jscs": "^2.5.1",
     "jscs-cappuccino": "^1.0.6",
     "jscs-clang-reporter": "^1.1.9",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
     "path-exists": "^2.0.0",
     "run-sequence": "^1.1.1",
     "through2": "^2.0.0"

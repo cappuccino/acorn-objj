@@ -149,28 +149,33 @@ let coverResults = "";
 
 gulp.task("cover", cb =>
 {
+    let node = process.execPath,
+        istanbul = path.join(__dirname, "node_modules", ".bin", "istanbul");
+
     // Add --colors to force colorizing, normally chalk won't because
     // it doesn't think it is writing to a terminal.
-
-    exec("istanbul cover --colors node_modules/.bin/_mocha -- --reporter dot --colors", (error, stdout) =>
-    {
-        if (error)
+    exec(
+        `'${node}' '${istanbul}' cover --colors node_modules/mocha/bin/_mocha -- --reporter dot --colors`,
+        (error, stdout) =>
         {
-            error = new PluginError(
-                "istanbul cover",
-                {
-                    message: error.message,
-                    showStack: false
-                }
-            );
+            if (error)
+            {
+                error = new PluginError(
+                    "istanbul cover",
+                    {
+                        message: error.message,
+                        showStack: false
+                    }
+                );
 
-            return cb(error);
+                return cb(error);
+            }
+
+            coverResults = stdout;
+
+            return cb();
         }
-
-        coverResults = stdout;
-
-        return cb();
-    });
+    );
 });
 
 gulp.task("show-cover", ["cover"], cb =>
