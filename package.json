@@ -23,7 +23,7 @@
   },
   "bugs": "https://github.com/cappuccino/acorn-objj/issues",
   "engines": {
-    "node": ">=4.1.0"
+    "node": ">=5.0"
   },
   "bin": {
     "acorn-objj": "./bin/acorn-objj.js"
