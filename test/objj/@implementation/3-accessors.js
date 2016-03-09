@@ -10,7 +10,7 @@ const  // jscs: ignore requireMultipleVarDecl
 
 /* eslint-disable max-len */
 
-describe("accessors", () =>
+describe("@accessors", () =>
 {
     it("should generate an empty accessors object for @acessors or @accessors()", () =>
     {
