@@ -160,7 +160,7 @@ gulp.task("cover", cb =>
     // Add --colors to force colorizing, normally chalk won't because
     // it doesn't think it is writing to a terminal.
     exec(
-        `${getIstanbulExecArgs()} cover --colors node_modules/mocha/bin/_mocha -- --reporter dot --colors`,
+        `${getIstanbulExecArgs()} cover --colors node_modules/.bin/_mocha -- --reporter dot --colors`,
         (error, stdout) =>
         {
             if (error)
