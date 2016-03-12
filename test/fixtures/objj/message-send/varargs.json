@@ -64,7 +64,8 @@
                       "receiver": {
                         "type": "objj_Self",
                         "start": 129,
-                        "end": 133
+                        "end": 133,
+                        "name": "self"
                       },
                       "selectors": [
                         {

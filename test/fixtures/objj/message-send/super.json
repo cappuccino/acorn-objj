@@ -15,7 +15,8 @@
           "receiver": {
             "type": "objj_Super",
             "start": 25,
-            "end": 30
+            "end": 30,
+            "name": "super"
           },
           "selectors": [
             {
