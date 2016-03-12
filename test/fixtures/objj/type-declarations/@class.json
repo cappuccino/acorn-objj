@@ -1,7 +1,7 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 18,
+  "end": 51,
   "body": [
     {
       "type": "ExpressionStatement",
@@ -12,12 +12,46 @@
         "start": 0,
         "end": 17,
         "objj": {
-          "id": {
-            "type": "Identifier",
-            "start": 7,
-            "end": 17,
-            "name": "CPTextView"
-          }
+          "ids": [
+            {
+              "type": "Identifier",
+              "start": 7,
+              "end": 17,
+              "name": "CPTextView"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 18,
+      "end": 50,
+      "expression": {
+        "type": "objj_ClassStatement",
+        "start": 18,
+        "end": 50,
+        "objj": {
+          "ids": [
+            {
+              "type": "Identifier",
+              "start": 25,
+              "end": 33,
+              "name": "CPString"
+            },
+            {
+              "type": "Identifier",
+              "start": 35,
+              "end": 41,
+              "name": "CPDate"
+            },
+            {
+              "type": "Identifier",
+              "start": 43,
+              "end": 50,
+              "name": "CPArray"
+            }
+          ]
         }
       }
     }
