@@ -47,7 +47,7 @@ describe("cli", () =>
 
     it("should generate a stack trace with --stack-trace for thrown SyntaxError", () =>
     {
-        const result = run(["--stack-trace", "--no-color", path.join(dir, "ecma.js")]);
+        const result = run(["--ecma", "5", "--stack-trace", "--no-color", path.join(dir, "ecma.js")]);
 
         expect(result.output).to.match(/^(.*\n)+1 error generated\.\n\nSyntaxError: Expected ';' after expression\n\s+at Parser.objj_semicolon \(.+?\n/g);
         expect(result.exitCode).to.equal(1);
@@ -71,17 +71,17 @@ describe("cli", () =>
             .to.equal(readFixture("cli/compact.json"));
     });
 
-    it("should not parse ECMAScript 6 by default", () =>
+    it("should not parse ECMAScript 6 with --ecma 5", () =>
     {
-        const result = run([path.join(dir, "ecma.js")]);
+        const result = run(["--ecma", "5", path.join(dir, "ecma.js")]);
 
         expect(result.output).to.equal(readFixture("cli/ecma.txt"));
         expect(result.exitCode).to.equal(1);
     });
 
-    it("should parse EMCAScript 6 with --ecma 6", () =>
+    it("should parse EMCAScript 6 by default", () =>
     {
-        expect(run(["--ecma", "6", path.join(dir, "ecma.js")]).output)
+        expect(run([path.join(dir, "ecma.js")]).output)
             .to.equal(readFixture("cli/ecma.json"));
     });
 
@@ -122,17 +122,13 @@ describe("cli", () =>
     {
         let result = run(["--silent", path.join(dir, "compact.js")]);
 
-        /* eslint-disable no-unused-expressions */
-
         expect(result.exitCode).to.equal(0);
-        expect(result.output).to.be.empty;
+        expect(result.output).to.be.empty();
 
-        result = run(["--silent", path.join(dir, "ecma.js")]);
+        result = run(["--ecma", "5", "--silent", path.join(dir, "ecma.js")]);
 
         expect(result.exitCode).to.equal(1);
-        expect(result.output).to.be.empty;
-
-        /* eslint-enable */
+        expect(result.output).to.be.empty();
     });
 
     it("should generate an error for missing semicolons with --strict-semicolons", () =>
