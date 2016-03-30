@@ -107,7 +107,7 @@ gulp.task("generate-fixtures", () =>
             // Don't bother if the source file has not changed since
             // the last write of the dest file.
             if (sourceStat.mtime <= destStat.mtime)
-                break;
+                continue;
         }
         catch (ex)
         {
