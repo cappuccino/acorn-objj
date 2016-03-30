@@ -148,6 +148,29 @@ describe("cli", () =>
         expect(result.exitCode).to.equal(1);
     });
 
+    it("should use an absolute file path in error messages if the path is not within the cwd", () =>
+    {
+        const cwd = process.cwd();
+
+        process.chdir("lib");
+
+        // --module forces strict mode
+        const result = run(["--module", "--ecma", "5", path.join("..", dir, "module.js")]);
+
+        process.chdir(cwd);
+        
+        // Extract the file path
+        let file = result.output.trim(),
+            pos = file.indexOf(":");
+
+        if (pos > 0)
+            file = file.substr(0, pos);
+        else
+            file = "";
+
+        expect(path.isAbsolute(file)).to.be.true();
+    });
+
     it("should show the executable name, version and acorn version with --version", () =>
     {
         expect(run(["--version"]).output).to.equal(cli.getVersionString() + "\n");
