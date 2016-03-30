@@ -31,7 +31,7 @@ describe("Message send", () =>
     {
         testFixture("objj", "message-send/member-expressions");
     });
-
+    
     it("should correctly set the receiver to \"super\"", () =>
     {
         testFixture("objj", "message-send/super");

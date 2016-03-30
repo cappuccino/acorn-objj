@@ -1,0 +1,145 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 129,
+  "body": [
+    {
+      "type": "objj_ClassDeclaration",
+      "start": 0,
+      "end": 128,
+      "objj": {
+        "name": {
+          "type": "Identifier",
+          "start": 16,
+          "end": 20,
+          "name": "Self"
+        },
+        "body": [
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 22,
+            "end": 122,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 25,
+                "end": 27,
+                "objj": {
+                  "isClass": false,
+                  "name": "id"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 28,
+                  "end": 32,
+                  "name": "init"
+                }
+              ],
+              "args": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 33,
+                "end": 122,
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "start": 39,
+                    "end": 59,
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "start": 39,
+                      "end": 58,
+                      "operator": "=",
+                      "left": {
+                        "type": "objj_Self",
+                        "start": 39,
+                        "end": 43,
+                        "name": "self"
+                      },
+                      "right": {
+                        "type": "objj_MessageSendExpression",
+                        "start": 46,
+                        "end": 58,
+                        "objj": {
+                          "receiver": {
+                            "type": "objj_Super",
+                            "start": 47,
+                            "end": 52,
+                            "name": "super"
+                          },
+                          "selectors": [
+                            {
+                              "type": "Identifier",
+                              "start": 53,
+                              "end": 57,
+                              "name": "init"
+                            }
+                          ],
+                          "args": []
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "IfStatement",
+                    "start": 65,
+                    "end": 102,
+                    "test": {
+                      "type": "objj_Self",
+                      "start": 69,
+                      "end": 73,
+                      "name": "self"
+                    },
+                    "consequent": {
+                      "type": "ExpressionStatement",
+                      "start": 83,
+                      "end": 102,
+                      "expression": {
+                        "type": "objj_MessageSendExpression",
+                        "start": 83,
+                        "end": 101,
+                        "objj": {
+                          "receiver": {
+                            "type": "objj_Self",
+                            "start": 84,
+                            "end": 88,
+                            "name": "self"
+                          },
+                          "selectors": [
+                            {
+                              "type": "Identifier",
+                              "start": 89,
+                              "end": 100,
+                              "name": "doSomething"
+                            }
+                          ],
+                          "args": []
+                        }
+                      }
+                    },
+                    "alternate": null
+                  },
+                  {
+                    "type": "ReturnStatement",
+                    "start": 108,
+                    "end": 120,
+                    "argument": {
+                      "type": "objj_Self",
+                      "start": 115,
+                      "end": 119,
+                      "name": "self"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "sourceType": "script"
+}
