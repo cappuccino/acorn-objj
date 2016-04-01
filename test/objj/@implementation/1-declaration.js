@@ -32,10 +32,15 @@ describe("declaration", () =>
         testFixture("objj", "@implementation/protocols");
     });
 
-    it("should generate an error if @implementation or @interface is nested", () =>
+    it("should allow certain statements other than methods between @implementation and @end", () =>
     {
-        expect(makeParser("@implementation Foo\n@implementation"))
-            .to.throw(SyntaxError, /Expected @end before @implementation/);
+        testFixture("objj", "@implementation/statements");
+    });
+
+    it("should generate an error if invalid statements are found between @implementation and @end", () =>
+    {
+        expect(makeParser("@implementation Foo\ntest()\n@end"))
+            .to.throw(SyntaxError, /Unexpected statement within an @implementation/);
     });
 
     it("should generate an error if the category is not terminated with ')'", () =>
