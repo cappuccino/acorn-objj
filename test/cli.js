@@ -158,10 +158,10 @@ describe("cli", () =>
         const result = run(["--module", "--ecma", "5", path.join("..", dir, "module.js")]);
 
         process.chdir(cwd);
-        
+
         // Extract the file path
         let file = result.output.trim(),
-            pos = file.indexOf(":");
+            pos = file.indexOf(path.join(dir, "module.js") + ":");
 
         if (pos > 0)
             file = file.substr(0, pos);
