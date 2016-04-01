@@ -1,6 +1,6 @@
 {
   "name": "acorn-objj",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JavaScript (ECMAScript) and Objective-J parser.",
   "homepage": "https://github.com/cappuccino/acorn-objj",
   "keywords": [
