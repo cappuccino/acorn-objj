@@ -38,7 +38,7 @@
                   "name": "req1"
                 }
               ],
-              "args": []
+              "params": []
             }
           },
           {
@@ -64,7 +64,7 @@
                   "name": "req2"
                 }
               ],
-              "args": []
+              "params": []
             }
           }
         ],
@@ -92,7 +92,7 @@
                   "name": "foo"
                 }
               ],
-              "args": []
+              "params": []
             }
           },
           {
@@ -118,7 +118,7 @@
                   "name": "bar"
                 }
               ],
-              "args": []
+              "params": []
             }
           }
         ]

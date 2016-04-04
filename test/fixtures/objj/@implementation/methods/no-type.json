@@ -38,7 +38,7 @@
                   "name": "initWithFoo"
                 }
               ],
-              "args": [
+              "params": [
                 {
                   "id": {
                     "type": "Identifier",

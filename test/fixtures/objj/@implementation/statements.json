@@ -184,7 +184,7 @@
                   "name": "setColorScheme"
                 }
               ],
-              "args": [
+              "params": [
                 {
                   "type": {
                     "type": "objj_ObjectiveJType",

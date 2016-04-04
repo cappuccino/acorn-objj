@@ -34,7 +34,7 @@
                   "name": "someAction"
                 }
               ],
-              "args": [],
+              "params": [],
               "body": {
                 "type": "BlockStatement",
                 "start": 43,
@@ -62,7 +62,7 @@
                   "name": "ibAction"
                 }
               ],
-              "args": [],
+              "params": [],
               "body": {
                 "type": "BlockStatement",
                 "start": 69,

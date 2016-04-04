@@ -38,7 +38,7 @@
                   "name": "foo"
                 }
               ],
-              "args": []
+              "params": []
             }
           },
           {
@@ -64,7 +64,7 @@
                   "name": "bar"
                 }
               ],
-              "args": []
+              "params": []
             }
           }
         ]

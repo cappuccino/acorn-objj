@@ -38,7 +38,7 @@
                   "name": "init"
                 }
               ],
-              "args": [],
+              "params": [],
               "body": {
                 "type": "BlockStatement",
                 "start": 33,

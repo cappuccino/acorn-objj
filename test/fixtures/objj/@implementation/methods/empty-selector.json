@@ -39,7 +39,7 @@
                 },
                 null
               ],
-              "args": [
+              "params": [
                 {
                   "type": {
                     "type": "objj_ObjectiveJType",

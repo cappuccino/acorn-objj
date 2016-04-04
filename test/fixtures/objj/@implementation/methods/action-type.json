@@ -43,7 +43,7 @@
                   "name": "someOtherAction"
                 }
               ],
-              "args": [],
+              "params": [],
               "body": {
                 "type": "BlockStatement",
                 "start": 95,
@@ -80,7 +80,7 @@
                   "name": "someOtherAction"
                 }
               ],
-              "args": [],
+              "params": [],
               "body": {
                 "type": "BlockStatement",
                 "start": 135,

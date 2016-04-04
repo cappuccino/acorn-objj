@@ -29,7 +29,7 @@
                   "name": "noReturnType"
                 }
               ],
-              "args": [],
+              "params": [],
               "body": {
                 "type": "BlockStatement",
                 "start": 63,
