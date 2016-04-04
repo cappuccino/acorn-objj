@@ -33,7 +33,7 @@
               "end": 53,
               "objj": {
                 "receiver": {
-                  "type": "objj_Self",
+                  "type": "Identifier",
                   "start": 42,
                   "end": 46,
                   "name": "self"

@@ -22,4 +22,10 @@ describe("self", () =>
         expect(makeParser("@implementation Test - (void)test { super = 7; } @end"))
             .to.throw(SyntaxError, /Assigning to rvalue/);
     });
+
+    it("should fail if super is used outside of a method", () =>
+    {
+        expect(makeParser("function test() { var super = 7; }"))
+            .to.throw(SyntaxError, /Unexpected token/);
+    });
 });

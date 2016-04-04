@@ -1,2 +1,8 @@
-// receiver === "super"
-[super doSomething];
+@implementation Test
+
+- (void)test
+{
+    [super doSomething];
+}
+
+@end

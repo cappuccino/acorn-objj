@@ -11,3 +11,9 @@
 }
 
 @end
+
+function test()
+{
+    // This is legal outside of an objj method
+    var self = 7;
+}

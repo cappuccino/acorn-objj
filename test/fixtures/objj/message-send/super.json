@@ -1,33 +1,80 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 45,
+  "end": 70,
   "body": [
     {
-      "type": "ExpressionStatement",
-      "start": 24,
-      "end": 44,
-      "expression": {
-        "type": "objj_MessageSendExpression",
-        "start": 24,
-        "end": 43,
-        "objj": {
-          "receiver": {
-            "type": "objj_Super",
-            "start": 25,
-            "end": 30,
-            "name": "super"
-          },
-          "selectors": [
-            {
-              "type": "Identifier",
-              "start": 31,
-              "end": 42,
-              "name": "doSomething"
+      "type": "objj_ClassDeclaration",
+      "start": 0,
+      "end": 69,
+      "objj": {
+        "name": {
+          "type": "Identifier",
+          "start": 16,
+          "end": 20,
+          "name": "Test"
+        },
+        "body": [
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 22,
+            "end": 63,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 25,
+                "end": 29,
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 30,
+                  "end": 34,
+                  "name": "test"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 35,
+                "end": 63,
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "start": 41,
+                    "end": 61,
+                    "expression": {
+                      "type": "objj_MessageSendExpression",
+                      "start": 41,
+                      "end": 60,
+                      "objj": {
+                        "receiver": {
+                          "type": "Super",
+                          "start": 42,
+                          "end": 47
+                        },
+                        "selectors": [
+                          {
+                            "type": "Identifier",
+                            "start": 48,
+                            "end": 59,
+                            "name": "doSomething"
+                          }
+                        ],
+                        "args": []
+                      }
+                    }
+                  }
+                ]
+              }
             }
-          ],
-          "args": []
-        }
+          }
+        ]
       }
     }
   ],
