@@ -35,6 +35,10 @@
     signed long long sll;
     unsigned long long ull;
 
+    CPInteger cpi;
+    CPUInteger cpui;
+    CPTimeInterval cpti;
+
     CPTextView text;
     void v;
 

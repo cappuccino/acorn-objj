@@ -1,12 +1,12 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 582,
+  "end": 648,
   "body": [
     {
       "type": "objj_ClassDeclaration",
       "start": 0,
-      "end": 581,
+      "end": 647,
       "objj": {
         "name": {
           "type": "Identifier",
@@ -589,13 +589,79 @@
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 540,
-            "end": 544,
+            "start": 539,
+            "end": 542,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
                 "start": 529,
-                "end": 539,
+                "end": 538,
+                "objj": {
+                  "isClass": false,
+                  "name": "CPInteger"
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 539,
+                "end": 542,
+                "name": "cpi"
+              }
+            }
+          },
+          {
+            "type": "objj_IvarDeclaration",
+            "start": 559,
+            "end": 563,
+            "objj": {
+              "type": {
+                "type": "objj_ObjectiveJType",
+                "start": 548,
+                "end": 558,
+                "objj": {
+                  "isClass": false,
+                  "name": "CPUInteger"
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 559,
+                "end": 563,
+                "name": "cpui"
+              }
+            }
+          },
+          {
+            "type": "objj_IvarDeclaration",
+            "start": 584,
+            "end": 588,
+            "objj": {
+              "type": {
+                "type": "objj_ObjectiveJType",
+                "start": 569,
+                "end": 583,
+                "objj": {
+                  "isClass": false,
+                  "name": "CPTimeInterval"
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 584,
+                "end": 588,
+                "name": "cpti"
+              }
+            }
+          },
+          {
+            "type": "objj_IvarDeclaration",
+            "start": 606,
+            "end": 610,
+            "objj": {
+              "type": {
+                "type": "objj_ObjectiveJType",
+                "start": 595,
+                "end": 605,
                 "objj": {
                   "name": "CPTextView",
                   "isClass": true
@@ -603,21 +669,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 540,
-                "end": 544,
+                "start": 606,
+                "end": 610,
                 "name": "text"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 555,
-            "end": 556,
+            "start": 621,
+            "end": 622,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 550,
-                "end": 554,
+                "start": 616,
+                "end": 620,
                 "objj": {
                   "isClass": false,
                   "name": "void"
@@ -625,21 +691,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 555,
-                "end": 556,
+                "start": 621,
+                "end": 622,
                 "name": "v"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 566,
-            "end": 572,
+            "start": 632,
+            "end": 638,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 563,
-                "end": 565,
+                "start": 629,
+                "end": 631,
                 "objj": {
                   "isClass": false,
                   "name": "id"
@@ -647,8 +713,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 566,
-                "end": 572,
+                "start": 632,
+                "end": 638,
                 "name": "someId"
               }
             }
