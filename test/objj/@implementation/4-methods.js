@@ -57,6 +57,11 @@ describe("methods", () =>
         testFixture("objj", "@implementation/methods/varargs");
     });
 
+    it("should generate correct loc objects for Objective-J types when options.locations == true", () =>
+    {
+        testFixture("objj", "@implementation/methods/type-locations", { locations: true });
+    });
+
     it("should generate an error for missing ... after ,", () =>
     {
         expect(makeParser("@implementation Foo\n- (void)foo:(int)f,\n@end"))

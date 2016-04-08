@@ -1,0 +1,269 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 135,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 8,
+      "column": 0
+    }
+  },
+  "body": [
+    {
+      "type": "objj_ClassDeclaration",
+      "start": 0,
+      "end": 134,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 4
+        }
+      },
+      "objj": {
+        "name": {
+          "type": "Identifier",
+          "start": 16,
+          "end": 19,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 16
+            },
+            "end": {
+              "line": 1,
+              "column": 19
+            }
+          },
+          "name": "Foo"
+        },
+        "body": [
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 21,
+            "end": 128,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 1
+              }
+            },
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 24,
+                "end": 36,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 3
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 15
+                  }
+                },
+                "objj": {
+                  "isClass": false,
+                  "name": "instancetype"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 37,
+                  "end": 50,
+                  "loc": {
+                    "start": {
+                      "line": 3,
+                      "column": 16
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 29
+                    }
+                  },
+                  "name": "initWithBytes"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 63,
+                  "end": 69,
+                  "loc": {
+                    "start": {
+                      "line": 3,
+                      "column": 42
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 48
+                    }
+                  },
+                  "name": "length"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 89,
+                  "end": 97,
+                  "loc": {
+                    "start": {
+                      "line": 3,
+                      "column": 68
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 76
+                    }
+                  },
+                  "name": "encoding"
+                }
+              ],
+              "params": [
+                {
+                  "type": {
+                    "type": "objj_ObjectiveJType",
+                    "start": 52,
+                    "end": 56,
+                    "loc": {
+                      "start": {
+                        "line": 3,
+                        "column": 31
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 35
+                      }
+                    },
+                    "objj": {
+                      "isClass": false,
+                      "name": "void"
+                    }
+                  },
+                  "id": {
+                    "type": "Identifier",
+                    "start": 57,
+                    "end": 62,
+                    "loc": {
+                      "start": {
+                        "line": 3,
+                        "column": 36
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 41
+                      }
+                    },
+                    "name": "bytes"
+                  }
+                },
+                {
+                  "type": {
+                    "type": "objj_ObjectiveJType",
+                    "start": 71,
+                    "end": 81,
+                    "loc": {
+                      "start": {
+                        "line": 3,
+                        "column": 50
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 60
+                      }
+                    },
+                    "objj": {
+                      "name": "NSUInteger",
+                      "isClass": true
+                    }
+                  },
+                  "id": {
+                    "type": "Identifier",
+                    "start": 82,
+                    "end": 88,
+                    "loc": {
+                      "start": {
+                        "line": 3,
+                        "column": 61
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 67
+                      }
+                    },
+                    "name": "length"
+                  }
+                },
+                {
+                  "type": {
+                    "type": "objj_ObjectiveJType",
+                    "start": 99,
+                    "end": 115,
+                    "loc": {
+                      "start": {
+                        "line": 3,
+                        "column": 78
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 94
+                      }
+                    },
+                    "objj": {
+                      "name": "NSStringEncoding",
+                      "isClass": true
+                    }
+                  },
+                  "id": {
+                    "type": "Identifier",
+                    "start": 116,
+                    "end": 124,
+                    "loc": {
+                      "start": {
+                        "line": 3,
+                        "column": 95
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 103
+                      }
+                    },
+                    "name": "encoding"
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "start": 125,
+                "end": 128,
+                "loc": {
+                  "start": {
+                    "line": 4,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 1
+                  }
+                },
+                "body": []
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "sourceType": "script"
+}

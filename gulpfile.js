@@ -53,16 +53,18 @@ gulp.task("lint", cb => runSequence("lint:eslint", "lint:jscs", cb));
 
 // Fixtures
 
+const specialFixtureOptions = new Map([
+    ["type-locations.j", { locations: true }]
+]);
+
 gulp.task("generate-fixtures", () =>
 {
     const fixturesPath = "test/fixtures";
 
     function parseFixture(file, encoding, cb)
     {
-        let options = {};
-
-        if (path.basename(file.path) === "multiple-lines.j")
-            options.locations = true;
+        const specialOptions = specialFixtureOptions.get(path.basename(file.path));
+        let options = Object.assign({}, specialOptions);
 
         console.log(file.relative);
         file.contents = new Buffer(parse(file.path, options));
