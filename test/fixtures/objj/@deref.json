@@ -1,12 +1,12 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 42,
+  "end": 86,
   "body": [
     {
       "type": "FunctionDeclaration",
       "start": 0,
-      "end": 41,
+      "end": 85,
       "id": {
         "type": "Identifier",
         "start": 9,
@@ -26,7 +26,7 @@
       "body": {
         "type": "BlockStatement",
         "start": 19,
-        "end": 41,
+        "end": 85,
         "body": [
           {
             "type": "ExpressionStatement",
@@ -50,6 +50,68 @@
                     "name": "ref"
                   }
                 }
+              }
+            }
+          },
+          {
+            "type": "ExpressionStatement",
+            "start": 44,
+            "end": 60,
+            "expression": {
+              "type": "AssignmentExpression",
+              "start": 44,
+              "end": 59,
+              "operator": "=",
+              "left": {
+                "type": "objj_Dereference",
+                "start": 44,
+                "end": 55,
+                "objj": {
+                  "ref": {
+                    "type": "Identifier",
+                    "start": 51,
+                    "end": 54,
+                    "name": "ref"
+                  }
+                }
+              },
+              "right": {
+                "type": "Literal",
+                "start": 58,
+                "end": 59,
+                "value": 7,
+                "raw": "7"
+              }
+            }
+          },
+          {
+            "type": "ExpressionStatement",
+            "start": 65,
+            "end": 83,
+            "expression": {
+              "type": "AssignmentExpression",
+              "start": 65,
+              "end": 82,
+              "operator": "+=",
+              "left": {
+                "type": "objj_Dereference",
+                "start": 65,
+                "end": 76,
+                "objj": {
+                  "ref": {
+                    "type": "Identifier",
+                    "start": 72,
+                    "end": 75,
+                    "name": "ref"
+                  }
+                }
+              },
+              "right": {
+                "type": "Literal",
+                "start": 80,
+                "end": 82,
+                "value": 13,
+                "raw": "13"
               }
             }
           }
