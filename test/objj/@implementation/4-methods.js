@@ -57,6 +57,11 @@ describe("methods", () =>
         testFixture("objj", "@implementation/methods/varargs");
     });
 
+    it("should allow @ref with an optional reference type as a parameter type", () =>
+    {
+        testFixture("objj", "@implementation/methods/ref-type");
+    });
+
     it("should generate correct loc objects for Objective-J types when options.locations == true", () =>
     {
         testFixture("objj", "@implementation/methods/type-locations", { locations: true });
@@ -66,5 +71,20 @@ describe("methods", () =>
     {
         expect(makeParser("@implementation Foo\n- (void)foo:(int)f,\n@end"))
             .to.throw(SyntaxError, /Expected '...' after ','/);
+    });
+
+    it("should generate an error for @ref used as a return type", () =>
+    {
+        expect(makeParser("@implementation Foo\n- (@ref)foo:(int)f,\n@end"))
+            .to.throw(SyntaxError, /@ref cannot be used as a type here/);
+    });
+
+    it("should generate an error for invalid @ref type syntax", () =>
+    {
+        expect(makeParser("@implementation Foo\n- (void)foo:(@ref[int])f,\n@end"))
+            .to.throw(SyntaxError, /Expected '\)' after method argument type/);
+
+        expect(makeParser("@implementation Foo\n- (void)foo:(@ref<int])f,\n@end"))
+            .to.throw(SyntaxError, /Unexpected token/);
     });
 });

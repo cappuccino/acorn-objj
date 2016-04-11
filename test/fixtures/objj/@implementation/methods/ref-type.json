@@ -1,0 +1,218 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 176,
+  "body": [
+    {
+      "type": "objj_ClassDeclaration",
+      "start": 0,
+      "end": 175,
+      "objj": {
+        "name": {
+          "type": "Identifier",
+          "start": 16,
+          "end": 20,
+          "name": "Test"
+        },
+        "body": [
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 22,
+            "end": 87,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 25,
+                "end": 29,
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 30,
+                  "end": 38,
+                  "name": "takeARef"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 49,
+                  "end": 60,
+                  "name": "refWithType"
+                }
+              ],
+              "params": [
+                {
+                  "type": {
+                    "type": "objj_ObjectiveJType",
+                    "start": 40,
+                    "end": 44,
+                    "objj": {
+                      "isClass": false,
+                      "name": "@ref"
+                    }
+                  },
+                  "id": {
+                    "type": "Identifier",
+                    "start": 45,
+                    "end": 48,
+                    "name": "ref"
+                  }
+                },
+                {
+                  "type": {
+                    "type": "objj_ObjectiveJType",
+                    "start": 62,
+                    "end": 71,
+                    "objj": {
+                      "isClass": false,
+                      "name": "@ref",
+                      "refType": {
+                        "type": "objj_ObjectiveJType",
+                        "start": 67,
+                        "end": 70,
+                        "objj": {
+                          "isClass": false,
+                          "name": "int"
+                        }
+                      }
+                    }
+                  },
+                  "id": {
+                    "type": "Identifier",
+                    "start": 72,
+                    "end": 83,
+                    "name": "refWithType"
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "start": 84,
+                "end": 87,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 89,
+            "end": 169,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 92,
+                "end": 96,
+                "objj": {
+                  "isClass": false,
+                  "name": "void"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 97,
+                  "end": 104,
+                  "name": "sendRef"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 105,
+                "end": 169,
+                "body": [
+                  {
+                    "type": "VariableDeclaration",
+                    "start": 111,
+                    "end": 117,
+                    "declarations": [
+                      {
+                        "type": "VariableDeclarator",
+                        "start": 115,
+                        "end": 116,
+                        "id": {
+                          "type": "Identifier",
+                          "start": 115,
+                          "end": 116,
+                          "name": "x"
+                        },
+                        "init": null
+                      }
+                    ],
+                    "kind": "var"
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "start": 123,
+                    "end": 167,
+                    "expression": {
+                      "type": "objj_MessageSendExpression",
+                      "start": 123,
+                      "end": 166,
+                      "objj": {
+                        "receiver": {
+                          "type": "Identifier",
+                          "start": 124,
+                          "end": 128,
+                          "name": "self"
+                        },
+                        "selectors": [
+                          {
+                            "type": "Identifier",
+                            "start": 129,
+                            "end": 137,
+                            "name": "takeARef"
+                          },
+                          {
+                            "type": "Identifier",
+                            "start": 146,
+                            "end": 157,
+                            "name": "refWithType"
+                          }
+                        ],
+                        "args": [
+                          {
+                            "type": "objj_Reference",
+                            "start": 138,
+                            "end": 145,
+                            "objj": {
+                              "ref": {
+                                "type": "Identifier",
+                                "start": 143,
+                                "end": 144,
+                                "name": "x"
+                              }
+                            }
+                          },
+                          {
+                            "type": "objj_Reference",
+                            "start": 158,
+                            "end": 165,
+                            "objj": {
+                              "ref": {
+                                "type": "Identifier",
+                                "start": 163,
+                                "end": 164,
+                                "name": "x"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "sourceType": "script"
+}
