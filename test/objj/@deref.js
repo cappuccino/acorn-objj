@@ -23,7 +23,16 @@ describe("@deref", () =>
             .to.throw(SyntaxError, /Empty dereference/);
     });
 
-    it("should generate an error if reference is not surrounded by parens", () =>
+    it("should generate an error if the reference is not an identifier", () =>
+    {
+        expect(makeParser("@deref(7)"))
+            .to.throw(SyntaxError, /Unexpected token/);
+
+        expect(makeParser("@deref(x ? ref1 : ref2)"))
+            .to.throw(SyntaxError, /Expected '\)' after ref/);
+    });
+
+    it("should generate an error if the reference is not surrounded by parens", () =>
     {
         expect(makeParser("@deref[foo)"))
             .to.throw(SyntaxError, /Expected '\('/);
