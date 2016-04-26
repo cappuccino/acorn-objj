@@ -26801,6 +26801,11 @@ test("switch(a) { case 1: {}\n/foo/ }", {});
 test("({1: {} / 2})", {});
 test("+x++ / 2", {});
 test("foo.in\n{}\n/foo/", {});
+test("var x = function f() {} / 3;", {});
+test("+function f() {} / 3;", {});
+test("foo: function x() {} /regexp/", {});
+test("x = {foo: function x() {} / divide}", {});
+test("foo; function f() {} /regexp/", {});
 
 test("{}/=/", {
   type: "Program",
@@ -27088,7 +27093,7 @@ testFail("function t(...) { }",
          { ecmaVersion: 6 });
 
 testFail("function t(...rest, b) { }",
-         "Unexpected token (1:18)",
+         "Comma is not permitted after the rest element (1:18)",
          { ecmaVersion: 6 });
 
 testFail("function t(if) { }",
