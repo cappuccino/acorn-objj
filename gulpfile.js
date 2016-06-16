@@ -149,12 +149,9 @@ gulp.task("mocha-dot", mochaTask("dot"));
 
 let coverResults = "";
 
-function getIstanbulExecArgs()
+function istanbulExecArgs()
 {
-    let node = process.execPath,
-        istanbul = path.join(__dirname, "node_modules", ".bin", "istanbul");
-
-    return `'${node}' '${istanbul}'`;
+    return "node node_modules/istanbul/lib/cli.js";
 }
 
 gulp.task("cover", cb =>
@@ -162,7 +159,7 @@ gulp.task("cover", cb =>
     // Add --colors to force colorizing, normally chalk won't because
     // it doesn't think it is writing to a terminal.
     exec(
-        `${getIstanbulExecArgs()} cover --colors node_modules/.bin/_mocha -- --reporter dot --colors`,
+        `${istanbulExecArgs()} cover --colors node_modules/mocha/bin/_mocha -- --reporter dot --colors`,
         (error, stdout) =>
         {
             if (error)
@@ -193,7 +190,7 @@ gulp.task("show-cover", ["cover"], cb =>
 
 gulp.task("check-cover", ["cover"], cb =>
 {
-    exec(`${getIstanbulExecArgs()} check-cover`, error =>
+    exec(`${istanbulExecArgs()} check-cover`, error =>
     {
         if (error)
         {
@@ -212,8 +209,5 @@ gulp.task("check-cover", ["cover"], cb =>
     });
 });
 
-// istanbul is broken on Windows
-const tester = process.platform === "win32" ? "mocha-dot" : "check-cover";
-
-gulp.task("test", cb => runSequence("lint", tester, cb));
+gulp.task("test", cb => runSequence("lint", "check-cover", cb));
 gulp.task("default", ["test"]);
