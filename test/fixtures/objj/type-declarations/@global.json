@@ -4,55 +4,45 @@
   "end": 37,
   "body": [
     {
-      "type": "ExpressionStatement",
+      "type": "objj_GlobalStatement",
       "start": 0,
       "end": 21,
-      "expression": {
-        "type": "objj_GlobalStatement",
-        "start": 0,
-        "end": 21,
-        "objj": {
-          "ids": [
-            {
-              "type": "Identifier",
-              "start": 8,
-              "end": 11,
-              "name": "Foo"
-            },
-            {
-              "type": "Identifier",
-              "start": 13,
-              "end": 16,
-              "name": "Bar"
-            },
-            {
-              "type": "Identifier",
-              "start": 18,
-              "end": 21,
-              "name": "Baz"
-            }
-          ]
-        }
+      "objj": {
+        "ids": [
+          {
+            "type": "Identifier",
+            "start": 8,
+            "end": 11,
+            "name": "Foo"
+          },
+          {
+            "type": "Identifier",
+            "start": 13,
+            "end": 16,
+            "name": "Bar"
+          },
+          {
+            "type": "Identifier",
+            "start": 18,
+            "end": 21,
+            "name": "Baz"
+          }
+        ]
       }
     },
     {
-      "type": "ExpressionStatement",
+      "type": "objj_GlobalStatement",
       "start": 22,
       "end": 36,
-      "expression": {
-        "type": "objj_GlobalStatement",
-        "start": 22,
-        "end": 36,
-        "objj": {
-          "ids": [
-            {
-              "type": "Identifier",
-              "start": 30,
-              "end": 36,
-              "name": "FooBar"
-            }
-          ]
-        }
+      "objj": {
+        "ids": [
+          {
+            "type": "Identifier",
+            "start": 30,
+            "end": 36,
+            "name": "FooBar"
+          }
+        ]
       }
     }
   ],

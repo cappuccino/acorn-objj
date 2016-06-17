@@ -4,55 +4,45 @@
   "end": 76,
   "body": [
     {
-      "type": "ExpressionStatement",
+      "type": "objj_TypeDefStatement",
       "start": 0,
       "end": 21,
-      "expression": {
-        "type": "objj_TypeDefStatement",
-        "start": 0,
-        "end": 21,
-        "objj": {
-          "ids": [
-            {
-              "type": "Identifier",
-              "start": 9,
-              "end": 21,
-              "name": "MyButtonType"
-            }
-          ]
-        }
+      "objj": {
+        "ids": [
+          {
+            "type": "Identifier",
+            "start": 9,
+            "end": 21,
+            "name": "MyButtonType"
+          }
+        ]
       }
     },
     {
-      "type": "ExpressionStatement",
+      "type": "objj_TypeDefStatement",
       "start": 22,
       "end": 75,
-      "expression": {
-        "type": "objj_TypeDefStatement",
-        "start": 22,
-        "end": 75,
-        "objj": {
-          "ids": [
-            {
-              "type": "Identifier",
-              "start": 31,
-              "end": 45,
-              "name": "YourButtonType"
-            },
-            {
-              "type": "Identifier",
-              "start": 47,
-              "end": 60,
-              "name": "HisButtonType"
-            },
-            {
-              "type": "Identifier",
-              "start": 62,
-              "end": 75,
-              "name": "HerButtonType"
-            }
-          ]
-        }
+      "objj": {
+        "ids": [
+          {
+            "type": "Identifier",
+            "start": 31,
+            "end": 45,
+            "name": "YourButtonType"
+          },
+          {
+            "type": "Identifier",
+            "start": 47,
+            "end": 60,
+            "name": "HisButtonType"
+          },
+          {
+            "type": "Identifier",
+            "start": 62,
+            "end": 75,
+            "name": "HerButtonType"
+          }
+        ]
       }
     }
   ],

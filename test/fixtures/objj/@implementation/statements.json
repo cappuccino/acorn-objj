@@ -16,63 +16,48 @@
         },
         "body": [
           {
-            "type": "ExpressionStatement",
+            "type": "objj_GlobalStatement",
             "start": 28,
             "end": 39,
-            "expression": {
-              "type": "objj_GlobalStatement",
-              "start": 28,
-              "end": 39,
-              "objj": {
-                "ids": [
-                  {
-                    "type": "Identifier",
-                    "start": 36,
-                    "end": 39,
-                    "name": "Foo"
-                  }
-                ]
-              }
+            "objj": {
+              "ids": [
+                {
+                  "type": "Identifier",
+                  "start": 36,
+                  "end": 39,
+                  "name": "Foo"
+                }
+              ]
             }
           },
           {
-            "type": "ExpressionStatement",
+            "type": "objj_ClassStatement",
             "start": 40,
             "end": 54,
-            "expression": {
-              "type": "objj_ClassStatement",
-              "start": 40,
-              "end": 54,
-              "objj": {
-                "ids": [
-                  {
-                    "type": "Identifier",
-                    "start": 47,
-                    "end": 54,
-                    "name": "CPArray"
-                  }
-                ]
-              }
+            "objj": {
+              "ids": [
+                {
+                  "type": "Identifier",
+                  "start": 47,
+                  "end": 54,
+                  "name": "CPArray"
+                }
+              ]
             }
           },
           {
-            "type": "ExpressionStatement",
+            "type": "objj_TypeDefStatement",
             "start": 55,
             "end": 75,
-            "expression": {
-              "type": "objj_TypeDefStatement",
-              "start": 55,
-              "end": 75,
-              "objj": {
-                "ids": [
-                  {
-                    "type": "Identifier",
-                    "start": 64,
-                    "end": 75,
-                    "name": "ColorScheme"
-                  }
-                ]
-              }
+            "objj": {
+              "ids": [
+                {
+                  "type": "Identifier",
+                  "start": 64,
+                  "end": 75,
+                  "name": "ColorScheme"
+                }
+              ]
             }
           },
           {
