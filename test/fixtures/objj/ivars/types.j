@@ -7,6 +7,9 @@
     SEL sel;
     JSObject js;
 
+    signed sgn;
+    unsigned unsgn;
+
     char c;
     signed char sc;
     unsigned char uc;
@@ -34,10 +37,6 @@
     long long ll;
     signed long long sll;
     unsigned long long ull;
-
-    CPInteger cpi;
-    CPUInteger cpui;
-    CPTimeInterval cpti;
 
     CPTextView text;
     void v;

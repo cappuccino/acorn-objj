@@ -42,6 +42,11 @@ describe("methods", () =>
         testFixture("objj", "@implementation/methods/action-type");
     });
 
+    it("should generate the correct return type for all POD types", () =>
+    {
+        testFixture("objj", "@implementation/methods/return-types");
+    });
+
     it("should generate a null selectors element for empty selectors", () =>
     {
         testFixture("objj", "@implementation/methods/empty-selector");

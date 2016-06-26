@@ -1,0 +1,599 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 432,
+  "body": [
+    {
+      "type": "objj_ClassDeclaration",
+      "start": 0,
+      "end": 431,
+      "objj": {
+        "name": {
+          "type": "Identifier",
+          "start": 16,
+          "end": 20,
+          "name": "Test"
+        },
+        "body": [
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 22,
+            "end": 38,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 25,
+                "end": 31,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 32,
+                  "end": 35,
+                  "name": "sgn"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 36,
+                "end": 38,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 39,
+            "end": 59,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 42,
+                "end": 50,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 51,
+                  "end": 56,
+                  "name": "unsgn"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 57,
+                "end": 59,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 60,
+            "end": 80,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 63,
+                "end": 74,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed char"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 75,
+                  "end": 77,
+                  "name": "sc"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 78,
+                "end": 80,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 81,
+            "end": 103,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 84,
+                "end": 97,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned char"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 98,
+                  "end": 100,
+                  "name": "uc"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 101,
+                "end": 103,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 104,
+            "end": 124,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 107,
+                "end": 118,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed byte"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 119,
+                  "end": 121,
+                  "name": "sb"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 122,
+                "end": 124,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 125,
+            "end": 147,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 128,
+                "end": 141,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned byte"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 142,
+                  "end": 144,
+                  "name": "ub"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 145,
+                "end": 147,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 148,
+            "end": 169,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 151,
+                "end": 163,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed short"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 164,
+                  "end": 166,
+                  "name": "ss"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 167,
+                "end": 169,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 170,
+            "end": 193,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 173,
+                "end": 187,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned short"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 188,
+                  "end": 190,
+                  "name": "us"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 191,
+                "end": 193,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 194,
+            "end": 213,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 197,
+                "end": 207,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed int"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 208,
+                  "end": 210,
+                  "name": "si"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 211,
+                "end": 213,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 214,
+            "end": 235,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 217,
+                "end": 229,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned int"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 230,
+                  "end": 232,
+                  "name": "ui"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 233,
+                "end": 235,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 236,
+            "end": 255,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 239,
+                "end": 250,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed long"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 251,
+                  "end": 252,
+                  "name": "l"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 253,
+                "end": 255,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 256,
+            "end": 278,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 259,
+                "end": 272,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned long"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 273,
+                  "end": 275,
+                  "name": "ul"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 276,
+                "end": 278,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 279,
+            "end": 296,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 282,
+                "end": 290,
+                "objj": {
+                  "isClass": false,
+                  "name": "long int"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 291,
+                  "end": 293,
+                  "name": "li"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 294,
+                "end": 296,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 297,
+            "end": 322,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 300,
+                "end": 315,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed long int"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 316,
+                  "end": 319,
+                  "name": "sli"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 320,
+                "end": 322,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 323,
+            "end": 350,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 326,
+                "end": 343,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned long int"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 344,
+                  "end": 347,
+                  "name": "uli"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 348,
+                "end": 350,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 351,
+            "end": 369,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 354,
+                "end": 363,
+                "objj": {
+                  "isClass": false,
+                  "name": "long long"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 364,
+                  "end": 366,
+                  "name": "ll"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 367,
+                "end": 369,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 370,
+            "end": 396,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 373,
+                "end": 389,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed long long"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 390,
+                  "end": 393,
+                  "name": "sll"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 394,
+                "end": 396,
+                "body": []
+              }
+            }
+          },
+          {
+            "type": "objj_MethodDeclaration",
+            "start": 397,
+            "end": 425,
+            "objj": {
+              "methodType": "-",
+              "returnType": {
+                "type": "objj_ObjectiveJType",
+                "start": 400,
+                "end": 418,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned long long"
+                }
+              },
+              "selectors": [
+                {
+                  "type": "Identifier",
+                  "start": 419,
+                  "end": 422,
+                  "name": "ull"
+                }
+              ],
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "start": 423,
+                "end": 425,
+                "body": []
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "sourceType": "script"
+}

@@ -1,12 +1,12 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 648,
+  "end": 619,
   "body": [
     {
       "type": "objj_ClassDeclaration",
       "start": 0,
-      "end": 647,
+      "end": 618,
       "objj": {
         "name": {
           "type": "Identifier",
@@ -127,13 +127,57 @@
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 117,
-            "end": 118,
+            "start": 119,
+            "end": 122,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
                 "start": 112,
-                "end": 116,
+                "end": 118,
+                "objj": {
+                  "isClass": false,
+                  "name": "signed"
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 119,
+                "end": 122,
+                "name": "sgn"
+              }
+            }
+          },
+          {
+            "type": "objj_IvarDeclaration",
+            "start": 137,
+            "end": 142,
+            "objj": {
+              "type": {
+                "type": "objj_ObjectiveJType",
+                "start": 128,
+                "end": 136,
+                "objj": {
+                  "isClass": false,
+                  "name": "unsigned"
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 137,
+                "end": 142,
+                "name": "unsgn"
+              }
+            }
+          },
+          {
+            "type": "objj_IvarDeclaration",
+            "start": 154,
+            "end": 155,
+            "objj": {
+              "type": {
+                "type": "objj_ObjectiveJType",
+                "start": 149,
+                "end": 153,
                 "objj": {
                   "isClass": false,
                   "name": "char"
@@ -141,21 +185,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 117,
-                "end": 118,
+                "start": 154,
+                "end": 155,
                 "name": "c"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 136,
-            "end": 138,
+            "start": 173,
+            "end": 175,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 124,
-                "end": 135,
+                "start": 161,
+                "end": 172,
                 "objj": {
                   "isClass": false,
                   "name": "signed char"
@@ -163,21 +207,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 136,
-                "end": 138,
+                "start": 173,
+                "end": 175,
                 "name": "sc"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 158,
-            "end": 160,
+            "start": 195,
+            "end": 197,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 144,
-                "end": 157,
+                "start": 181,
+                "end": 194,
                 "objj": {
                   "isClass": false,
                   "name": "unsigned char"
@@ -185,21 +229,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 158,
-                "end": 160,
+                "start": 195,
+                "end": 197,
                 "name": "uc"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 172,
-            "end": 173,
+            "start": 209,
+            "end": 210,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 167,
-                "end": 171,
+                "start": 204,
+                "end": 208,
                 "objj": {
                   "isClass": false,
                   "name": "byte"
@@ -207,21 +251,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 172,
-                "end": 173,
+                "start": 209,
+                "end": 210,
                 "name": "b"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 191,
-            "end": 193,
+            "start": 228,
+            "end": 230,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 179,
-                "end": 190,
+                "start": 216,
+                "end": 227,
                 "objj": {
                   "isClass": false,
                   "name": "signed byte"
@@ -229,21 +273,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 191,
-                "end": 193,
+                "start": 228,
+                "end": 230,
                 "name": "sb"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 213,
-            "end": 215,
+            "start": 250,
+            "end": 252,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 199,
-                "end": 212,
+                "start": 236,
+                "end": 249,
                 "objj": {
                   "isClass": false,
                   "name": "unsigned byte"
@@ -251,21 +295,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 213,
-                "end": 215,
+                "start": 250,
+                "end": 252,
                 "name": "ub"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 228,
-            "end": 229,
+            "start": 265,
+            "end": 266,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 222,
-                "end": 227,
+                "start": 259,
+                "end": 264,
                 "objj": {
                   "isClass": false,
                   "name": "short"
@@ -273,21 +317,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 228,
-                "end": 229,
+                "start": 265,
+                "end": 266,
                 "name": "s"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 248,
-            "end": 250,
+            "start": 285,
+            "end": 287,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 235,
-                "end": 247,
+                "start": 272,
+                "end": 284,
                 "objj": {
                   "isClass": false,
                   "name": "signed short"
@@ -295,21 +339,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 248,
-                "end": 250,
+                "start": 285,
+                "end": 287,
                 "name": "ss"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 271,
-            "end": 273,
+            "start": 308,
+            "end": 310,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 256,
-                "end": 270,
+                "start": 293,
+                "end": 307,
                 "objj": {
                   "isClass": false,
                   "name": "unsigned short"
@@ -317,21 +361,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 271,
-                "end": 273,
+                "start": 308,
+                "end": 310,
                 "name": "us"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 284,
-            "end": 285,
+            "start": 321,
+            "end": 322,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 280,
-                "end": 283,
+                "start": 317,
+                "end": 320,
                 "objj": {
                   "isClass": false,
                   "name": "int"
@@ -339,21 +383,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 284,
-                "end": 285,
+                "start": 321,
+                "end": 322,
                 "name": "i"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 302,
-            "end": 304,
+            "start": 339,
+            "end": 341,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 291,
-                "end": 301,
+                "start": 328,
+                "end": 338,
                 "objj": {
                   "isClass": false,
                   "name": "signed int"
@@ -361,21 +405,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 302,
-                "end": 304,
+                "start": 339,
+                "end": 341,
                 "name": "si"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 323,
-            "end": 325,
+            "start": 360,
+            "end": 362,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 310,
-                "end": 322,
+                "start": 347,
+                "end": 359,
                 "objj": {
                   "isClass": false,
                   "name": "unsigned int"
@@ -383,21 +427,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 323,
-                "end": 325,
+                "start": 360,
+                "end": 362,
                 "name": "ui"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 337,
-            "end": 338,
+            "start": 374,
+            "end": 375,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 332,
-                "end": 336,
+                "start": 369,
+                "end": 373,
                 "objj": {
                   "isClass": false,
                   "name": "long"
@@ -405,21 +449,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 337,
-                "end": 338,
+                "start": 374,
+                "end": 375,
                 "name": "l"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 356,
-            "end": 357,
+            "start": 393,
+            "end": 394,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 344,
-                "end": 355,
+                "start": 381,
+                "end": 392,
                 "objj": {
                   "isClass": false,
                   "name": "signed long"
@@ -427,21 +471,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 356,
-                "end": 357,
+                "start": 393,
+                "end": 394,
                 "name": "l"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 377,
-            "end": 379,
+            "start": 414,
+            "end": 416,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 363,
-                "end": 376,
+                "start": 400,
+                "end": 413,
                 "objj": {
                   "isClass": false,
                   "name": "unsigned long"
@@ -449,21 +493,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 377,
-                "end": 379,
+                "start": 414,
+                "end": 416,
                 "name": "ul"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 395,
-            "end": 397,
+            "start": 432,
+            "end": 434,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 386,
-                "end": 394,
+                "start": 423,
+                "end": 431,
                 "objj": {
                   "isClass": false,
                   "name": "long int"
@@ -471,21 +515,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 395,
-                "end": 397,
+                "start": 432,
+                "end": 434,
                 "name": "li"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 419,
-            "end": 422,
+            "start": 456,
+            "end": 459,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 403,
-                "end": 418,
+                "start": 440,
+                "end": 455,
                 "objj": {
                   "isClass": false,
                   "name": "signed long int"
@@ -493,21 +537,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 419,
-                "end": 422,
+                "start": 456,
+                "end": 459,
                 "name": "sli"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 446,
-            "end": 449,
+            "start": 483,
+            "end": 486,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 428,
-                "end": 445,
+                "start": 465,
+                "end": 482,
                 "objj": {
                   "isClass": false,
                   "name": "unsigned long int"
@@ -515,21 +559,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 446,
-                "end": 449,
+                "start": 483,
+                "end": 486,
                 "name": "uli"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 466,
-            "end": 468,
+            "start": 503,
+            "end": 505,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 456,
-                "end": 465,
+                "start": 493,
+                "end": 502,
                 "objj": {
                   "isClass": false,
                   "name": "long long"
@@ -537,21 +581,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 466,
-                "end": 468,
+                "start": 503,
+                "end": 505,
                 "name": "ll"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 491,
-            "end": 494,
+            "start": 528,
+            "end": 531,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 474,
-                "end": 490,
+                "start": 511,
+                "end": 527,
                 "objj": {
                   "isClass": false,
                   "name": "signed long long"
@@ -559,21 +603,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 491,
-                "end": 494,
+                "start": 528,
+                "end": 531,
                 "name": "sll"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 519,
-            "end": 522,
+            "start": 556,
+            "end": 559,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 500,
-                "end": 518,
+                "start": 537,
+                "end": 555,
                 "objj": {
                   "isClass": false,
                   "name": "unsigned long long"
@@ -581,87 +625,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 519,
-                "end": 522,
+                "start": 556,
+                "end": 559,
                 "name": "ull"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 539,
-            "end": 542,
+            "start": 577,
+            "end": 581,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 529,
-                "end": 538,
-                "objj": {
-                  "isClass": false,
-                  "name": "CPInteger"
-                }
-              },
-              "id": {
-                "type": "Identifier",
-                "start": 539,
-                "end": 542,
-                "name": "cpi"
-              }
-            }
-          },
-          {
-            "type": "objj_IvarDeclaration",
-            "start": 559,
-            "end": 563,
-            "objj": {
-              "type": {
-                "type": "objj_ObjectiveJType",
-                "start": 548,
-                "end": 558,
-                "objj": {
-                  "isClass": false,
-                  "name": "CPUInteger"
-                }
-              },
-              "id": {
-                "type": "Identifier",
-                "start": 559,
-                "end": 563,
-                "name": "cpui"
-              }
-            }
-          },
-          {
-            "type": "objj_IvarDeclaration",
-            "start": 584,
-            "end": 588,
-            "objj": {
-              "type": {
-                "type": "objj_ObjectiveJType",
-                "start": 569,
-                "end": 583,
-                "objj": {
-                  "isClass": false,
-                  "name": "CPTimeInterval"
-                }
-              },
-              "id": {
-                "type": "Identifier",
-                "start": 584,
-                "end": 588,
-                "name": "cpti"
-              }
-            }
-          },
-          {
-            "type": "objj_IvarDeclaration",
-            "start": 606,
-            "end": 610,
-            "objj": {
-              "type": {
-                "type": "objj_ObjectiveJType",
-                "start": 595,
-                "end": 605,
+                "start": 566,
+                "end": 576,
                 "objj": {
                   "name": "CPTextView",
                   "isClass": true
@@ -669,21 +647,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 606,
-                "end": 610,
+                "start": 577,
+                "end": 581,
                 "name": "text"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 621,
-            "end": 622,
+            "start": 592,
+            "end": 593,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 616,
-                "end": 620,
+                "start": 587,
+                "end": 591,
                 "objj": {
                   "isClass": false,
                   "name": "void"
@@ -691,21 +669,21 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 621,
-                "end": 622,
+                "start": 592,
+                "end": 593,
                 "name": "v"
               }
             }
           },
           {
             "type": "objj_IvarDeclaration",
-            "start": 632,
-            "end": 638,
+            "start": 603,
+            "end": 609,
             "objj": {
               "type": {
                 "type": "objj_ObjectiveJType",
-                "start": 629,
-                "end": 631,
+                "start": 600,
+                "end": 602,
                 "objj": {
                   "isClass": false,
                   "name": "id"
@@ -713,8 +691,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 632,
-                "end": 638,
+                "start": 603,
+                "end": 609,
                 "name": "someId"
               }
             }
